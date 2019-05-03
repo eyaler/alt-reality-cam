@@ -10,11 +10,10 @@
 
 ## matching
 #maximal supression of input objects could also depend on overlap, size, important/good classes; these are also relevant in matching
-# use frequencies for supression/importance scoring
+# use frequencies for supression/importance scoring (only for arc)
 #give a score based on height in heirarchy (disregarding parent)
 #heirarchical leeway: son or brother
-#heirarchy can change returned labels
-#test 0,0.5,10 + varlen
+#problem with sorting
 
 #should we use detection scores for similarity?
 #euclidean vs diagonal distance
@@ -42,6 +41,7 @@ from match import find_similar, filter_duplicate_boxes
 supression_threshold = 0.3
 supression_topk = 5
 images_topk = 5
+hierarchy_factor = 0.5
 res_x = 1920
 res_y = 1080
 serve_path = 'serve'
@@ -77,14 +77,14 @@ height, width = image.shape[:2]
 input_list = [{'bbox':[int(box[1]*width),int(box[0]*height),int(box[3]*width),int(box[2]*height)], 'label':mid2label[label], 'score':score.item()} for box,label,score in zip (result["detection_boxes"], result["detection_class_names"], result["detection_scores"])]
 output_list = []
 query = [mid2label[label] for label in result["detection_class_names"]]
-sim = find_similar(result["detection_boxes"], result["detection_class_names"], top_k=images_topk)
+sim = find_similar(result["detection_boxes"], result["detection_class_names"], top_k=images_topk, hierarchy_factor=hierarchy_factor)
 scores = []
 for k in range(len(sim)):
     img = get_image_from_s3(sim[k][0], save_path=os.path.join(folder, 'bias0_img%d.jpg' % (k+1)), show=show_image)
-    scores.append(sim[k][5])
+    scores.append(sim[k][6])
     if save_output_overlay or show_overlay:
-        draw_boxes(img, sim[k][3], [result["detection_class_names"][i] for i in sim[k][2]], save_path=os.path.join(folder, 'bias0_img%d_overlay.jpg' % (k+1)) if save_output_overlay else None, show=show_overlay)
-found = [mid2label[result["detection_class_names"][i]] for s in sim for i in filter_duplicate_boxes(s[2], s[4])]
+        draw_boxes(img, sim[k][3], sim[k][5], save_path=os.path.join(folder, 'bias0_img%d_overlay.jpg' % (k+1)) if save_output_overlay else None, show=show_overlay)
+found = [mid2label[l] for s in sim for l in filter_duplicate_boxes(s[5], s[4])]
 output_list.append({'type':'zero', 'query':query, 'found':found, 'scores':scores, 'count':len(sim)})
 json_dict = {'time':timestamp, 'input':input_list, 'output':output_list}
 with open(os.path.join(folder, 'labels.json'), 'w') as f:
