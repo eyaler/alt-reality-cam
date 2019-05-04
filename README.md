@@ -25,3 +25,13 @@ Match #4:
 
 Match #5:
 ![Match #5](https://github.com/eyaler/alt-reality-cam/raw/master/demo/1/bias0_img5_overlay.jpg "Match #5")
+
+More examples in [demo](https://github.com/eyaler/alt-reality-cam/tree/master/demo)
+
+To run:
+
+1) get_data.sh
+
+2) prepare_data.py
+
+3) arc.py
