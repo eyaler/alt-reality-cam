@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import joblib
 import json
+from collections import defaultdict
+import os
 
 def rotate(b, r):
     # counter clockwise!
@@ -16,14 +18,14 @@ def rotate(b, r):
 def fix_order(b):
     return [b[2], b[0], b[3], b[1]] #ymin, xmin, ymax, xmax
 
-df1 = pd.read_csv('train-annotations-bbox.csv')
-df2 = pd.read_csv('validation-annotations-bbox.csv')
-df3 = pd.read_csv('test-annotations-bbox.csv')
+df1 = pd.read_csv(os.path.join('open_images_v4', 'train-annotations-bbox.csv'))
+df2 = pd.read_csv(os.path.join('open_images_v4', 'validation-annotations-bbox.csv'))
+df3 = pd.read_csv(os.path.join('open_images_v4', 'test-annotations-bbox.csv'))
 data = pd.concat([df1,df2,df3])
 
-df1 = pd.read_csv('train-images-boxable-with-rotation.csv')
-df2 = pd.read_csv('validation-images-with-rotation.csv')
-df3 = pd.read_csv('test-images-with-rotation.csv')
+df1 = pd.read_csv(os.path.join('open_images_v4', 'train-images-boxable-with-rotation.csv'))
+df2 = pd.read_csv(os.path.join('open_images_v4', 'validation-images-with-rotation.csv'))
+df3 = pd.read_csv(os.path.join('open_images_v4', 'test-images-with-rotation.csv'))
 meta = pd.concat([df1,df2,df3])
 
 data.set_index('LabelName', inplace=True)
@@ -41,49 +43,61 @@ for cat in cats:
     box = np.asarray([fix_order(rotate(b,r)) for b,r in zip(box,rot)])
     objects[cat] = (box, ids)
     mid2freq[cat] = len(rows)
-joblib.dump(objects,'data.joblib')
+joblib.dump(objects,os.path.join('data','data.joblib'))
 
 id2url = dict(zip(meta.index, meta.OriginalURL))
-joblib.dump(id2url,'id2url.joblib')
+joblib.dump(id2url,os.path.join('data','id2url.joblib'))
 
 id2rot = dict(zip(meta.index, meta.Rotation))
-joblib.dump(id2rot,'id2rot.joblib')
+joblib.dump(id2rot,os.path.join('data','id2rot.joblib'))
 
 id2set = dict(zip(meta.index, meta.Subset))
-joblib.dump(id2set,'id2set.joblib')
+joblib.dump(id2set,os.path.join('data','id2set.joblib'))
 
-desc = pd.read_csv('class-descriptions-boxable.csv', names=['mid','label'])
+desc = pd.read_csv(os.path.join('open_images_v4', 'class-descriptions-boxable.csv'), names=['mid','label'])
 mid2label=dict(zip(desc.mid,desc.label))
-joblib.dump(mid2label,'mid2label.joblib')
+joblib.dump(mid2label,os.path.join('data','mid2label.joblib'))
 label2mid=dict(zip(desc.label,desc.mid))
-joblib.dump(label2mid,'label2mid.joblib')
+joblib.dump(label2mid,os.path.join('data','label2mid.joblib'))
 
 norm = sum(mid2freq.values())
 mid2freq = {k:v/norm for k,v in mid2freq.items()}
-joblib.dump(mid2freq,'mid2freq.joblib')
-pd.DataFrame((mid2label[k],v) for k,v in mid2freq.items()).sort_values(1,0).to_csv('freqs.csv', index=False, header=False)
+joblib.dump(mid2freq,os.path.join('data','mid2freq.joblib'))
+pd.DataFrame((mid2label[k],v) for k,v in mid2freq.items()).sort_values(1,0).to_csv(os.path.join('data','freq.csv'), index=False, header=False)
 mid2rank = {k:1/np.sqrt(i+1) for i,(k,v) in enumerate(sorted(mid2freq.items(), key=lambda x: x[::-1]))}
-joblib.dump(mid2rank,'mid2rank.joblib')
+joblib.dump(mid2rank,os.path.join('data','mid2rank.joblib'))
 
-with open('bbox_labels_600_hierarchy.json') as f:
+with open(os.path.join('open_images_v4', 'bbox_labels_600_hierarchy.json')) as f:
     hierarchy = json.load(f)
 
-def find_parents(tree, mid, parent=None, type=None, level=0):
-    parents = set()
+def find_parents(tree, mid, parent=None, ptype=None, level=-1):
+    parents = []
+    if level==-1:
+        tree = [tree]
     for item in tree:
         if item['LabelName'] == mid:
-            parents.add((parent, type, level))
+            parents.append((parent, ptype, level))
         if 'Subcategory' in item:
-            parents.update(find_parents(item['Subcategory'], mid, item['LabelName'], 'Subcategory', level+1))
+            parents.extend(find_parents(item['Subcategory'], mid, item['LabelName'], 'Subcategory', level+1))
         if 'Part' in item:
-            parents.update(find_parents(item['Part'], mid, item['LabelName'], 'Part', level+1))
-    if level==0:
+            parents.extend(find_parents(item['Part'], mid, item['LabelName'], 'Part', level+1))
+    if level==-1:
         filtered = []
         for parent in sorted(parents, reverse=True):
             if len(filtered)==0 or parent[:2] != filtered[-1][:2]:
                 filtered.append(parent)
-        parents = set(filtered)
+        parents = filtered
     return parents
 
-mid2parents = {mid: find_parents([hierarchy], mid) for mid in mid2label}
-joblib.dump(mid2parents,'mid2parents.joblib')
+mid2parents = {mid: find_parents(hierarchy, mid) for mid in mid2label}
+joblib.dump(mid2parents,os.path.join('data','mid2parents.joblib'))
+
+def find_all_children(mid2parents):
+    children = defaultdict(list)
+    for child, parents in mid2parents.items():
+        for parent in parents:
+            children[parent[0]].append((child, parent[1], parent[2]+1))
+    return dict(children)
+
+mid2children = find_all_children(mid2parents)
+joblib.dump(mid2children,os.path.join('data','mid2children.joblib'))

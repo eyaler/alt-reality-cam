@@ -7,12 +7,11 @@ and also include support for the FontAwesome icon fonts.
 """
 
 import os
-from typing import List, Tuple, Dict
+from typing import Dict
 import cv2
 import numpy as np
 from PIL import Image, ImageFont, ImageDraw
-import visual
-from region import Region
+from .region import Region
 
 __author__ = "Jakrin Juangbhanich"
 __email__ = "juangbhanich.k@gmail.com"

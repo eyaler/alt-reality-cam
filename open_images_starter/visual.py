@@ -4,11 +4,11 @@
 Library to do some cool visual stuff.
 """
 
-from typing import List, Tuple
+from typing import List
 import cv2
 import numpy as np
 import colorsys
-from region import Region
+from .region import Region
 
 __author__ = "Jakrin Juangbhanich"
 __email__ = "juangbhanich.k@gmail.com"

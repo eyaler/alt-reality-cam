@@ -4,14 +4,13 @@ from PIL import Image, ImageDraw, ImageColor, ImageFont
 from urllib.request import urlopen, Request
 from io import BytesIO
 import joblib
-import text
-import visual
-from region import Region
+from open_images_starter import text, visual
+from open_images_starter.region import Region
 import os
 
-id2rot = joblib.load('id2rot.joblib')
-id2set = joblib.load('id2set.joblib')
-mid2label = joblib.load('mid2label.joblib')
+id2rot = joblib.load(os.path.join('data','id2rot.joblib'))
+id2set = joblib.load(os.path.join('data','id2set.joblib'))
+mid2label = joblib.load(os.path.join('data','mid2label.joblib'))
 def get_image_from_s3(index, save_path=None, show=False):
     image = get_image('https://s3.amazonaws.com/open-images-dataset/' + id2set[index] + '/' + index + '.jpg', rotate=id2rot[index])
 
@@ -55,7 +54,7 @@ def display_image(image):
     plt.grid(False)
     plt.imshow(image)
     plt.draw()
-    plt.waitforbuttonpress(0)
+    while not plt.waitforbuttonpress(0): pass
     plt.close()
 
 def draw_bounding_box_on_image(image,
@@ -112,15 +111,18 @@ def get_image_boxes(objects, index):
     return result
 
 
-def draw_boxes(image, boxes, class_names, scores=None, max_boxes=10, min_score=0.1, style='new', save_path=None, show=False):
+def draw_boxes(image, boxes, class_names, scores=None, max_boxes=None, min_score=None, uid=None, style='new', save_path=None, show=False):
     """Overlay labeled boxes on an image with formatted scores and label names."""
     used_classes = set()
+    used_uid = set()
     inds = []
     for i in range(len(boxes)):
-        if scores is None or scores[i] >= min_score:
+        if (min_score is None or scores is None or scores[i] >= min_score) and (uid is None or uid[i] not in used_uid):
             inds.append(i)
             used_classes.add(class_names[i])
-            if len(inds)>=max_boxes:
+            if uid is not None:
+                used_uid.add(uid[i])
+            if max_boxes is not None and len(inds)>=max_boxes:
                 break
 
     if style == 'new':
