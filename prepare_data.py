@@ -5,6 +5,8 @@ import json
 from collections import defaultdict
 import os
 
+os.makedirs('data', exist_ok=True)
+
 def rotate(b, r):
     # counter clockwise!
     if r==270:
