@@ -9,6 +9,11 @@ objects = joblib.load(os.path.join('data','data.joblib'))
 mid2parents = joblib.load(os.path.join('data','mid2parents.joblib'))
 mid2children = joblib.load(os.path.join('data','mid2children.joblib'))
 
+def count_subs(mid):
+    return sum([child[1] == 'Subcategory' for child in mid2children[mid]])
+
+
+
 def varlen_similarity(distances, matched_indices, n, source_confidences, hierarchy_factors):
     similarity_scores = -np.asarray(distances)/np.asarray(hierarchy_factors)
     if source_confidences is not None:
@@ -86,7 +91,6 @@ if __name__ == "__main__":
     labels = ['/m/01g317', '/m/06c54', '/m/01940j', '/m/0zvk5', '/m/09j2d']
     source_confidences = [1,1,1,1,1]
     top_k = 5
-
     result = find_similar(boxes, labels, source_confidences=source_confidences, top_k=top_k, hierarchy_factor=0.5)
 
     show_results(result, labels)

@@ -1,10 +1,10 @@
 mkdir open_images_v4
 cd open_images_v4
 wget https://storage.googleapis.com/openimages/2018_04/train/train-annotations-bbox.csv
-wget https://storage.googleapis.com/openimages/2018_04/validation/validation-annotations-bbox.csv
-wget https://storage.googleapis.com/openimages/2018_04/test/test-annotations-bbox.csv
+wget https://storage.googleapis.com/openimages/v5/validation/validation-annotations-bbox.csv
+wget https://storage.googleapis.com/openimages/v5/test/test-annotations-bbox.csv
 wget https://storage.googleapis.com/openimages/2018_04/train/train-images-boxable-with-rotation.csv
 wget https://storage.googleapis.com/openimages/2018_04/validation/validation-images-with-rotation.csv
 wget https://storage.googleapis.com/openimages/2018_04/test/test-images-with-rotation.csv
-wget https://storage.googleapis.com/openimages/2018_04/class-descriptions-boxable.csv
+wget https://storage.googleapis.com/openimages/v5/class-descriptions-boxable.csv
 wget https://storage.googleapis.com/openimages/2018_04/bbox_labels_600_hierarchy.json

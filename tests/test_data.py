@@ -3,10 +3,10 @@ import pandas as pd
 from util import draw_boxes, display_image, get_image_from_s3, get_image_boxes
 import os
 
-objects = joblib.load(os.path.join('data','data.joblib'))
-id2url = joblib.load(os.path.join('data','id2url.joblib'))
+objects = joblib.load(os.path.join('..','data','data.joblib'))
+id2url = joblib.load(os.path.join('..','data','id2url.joblib'))
 
-meta = pd.read_csv(os.path.join('open_images_v4', 'validation-images-with-rotation.csv'))
+meta = pd.read_csv(os.path.join('..','open_images_', 'validation-images-with-rotation.csv'))
 meta.set_index('ImageID', inplace=True)
 
 print('data loaded')

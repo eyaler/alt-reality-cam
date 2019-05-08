@@ -20,14 +20,14 @@ def rotate(b, r):
 def fix_order(b):
     return [b[2], b[0], b[3], b[1]] #ymin, xmin, ymax, xmax
 
-df1 = pd.read_csv(os.path.join('open_images_v4', 'train-annotations-bbox.csv'))
-df2 = pd.read_csv(os.path.join('open_images_v4', 'validation-annotations-bbox.csv'))
-df3 = pd.read_csv(os.path.join('open_images_v4', 'test-annotations-bbox.csv'))
+df1 = pd.read_csv(os.path.join('open_images', 'train-annotations-bbox.csv'))
+df2 = pd.read_csv(os.path.join('open_images', 'validation-annotations-bbox.csv'))
+df3 = pd.read_csv(os.path.join('open_images', 'test-annotations-bbox.csv'))
 data = pd.concat([df1,df2,df3])
 
-df1 = pd.read_csv(os.path.join('open_images_v4', 'train-images-boxable-with-rotation.csv'))
-df2 = pd.read_csv(os.path.join('open_images_v4', 'validation-images-with-rotation.csv'))
-df3 = pd.read_csv(os.path.join('open_images_v4', 'test-images-with-rotation.csv'))
+df1 = pd.read_csv(os.path.join('open_images', 'train-images-boxable-with-rotation.csv'))
+df2 = pd.read_csv(os.path.join('open_images', 'validation-images-with-rotation.csv'))
+df3 = pd.read_csv(os.path.join('open_images', 'test-images-with-rotation.csv'))
 meta = pd.concat([df1,df2,df3])
 
 data.set_index('LabelName', inplace=True)
@@ -56,7 +56,7 @@ joblib.dump(id2rot,os.path.join('data','id2rot.joblib'))
 id2set = dict(zip(meta.index, meta.Subset))
 joblib.dump(id2set,os.path.join('data','id2set.joblib'))
 
-desc = pd.read_csv(os.path.join('open_images_v4', 'class-descriptions-boxable.csv'), names=['mid','label'])
+desc = pd.read_csv(os.path.join('open_images', 'class-descriptions-boxable.csv'), names=['mid','label'])
 mid2label=dict(zip(desc.mid,desc.label))
 joblib.dump(mid2label,os.path.join('data','mid2label.joblib'))
 label2mid=dict(zip(desc.label,desc.mid))
@@ -69,7 +69,7 @@ pd.DataFrame((mid2label[k],v) for k,v in mid2freq.items()).sort_values(1,0).to_c
 mid2rank = {k:1/np.sqrt(i+1) for i,(k,v) in enumerate(sorted(mid2freq.items(), key=lambda x: x[::-1]))}
 joblib.dump(mid2rank,os.path.join('data','mid2rank.joblib'))
 
-with open(os.path.join('open_images_v4', 'bbox_labels_600_hierarchy.json')) as f:
+with open(os.path.join('open_images', 'bbox_labels_600_hierarchy.json')) as f:
     hierarchy = json.load(f)
 
 def find_parents(tree, mid, parent=None, ptype=None, level=-1):
@@ -103,3 +103,4 @@ def find_all_children(mid2parents):
 
 mid2children = find_all_children(mid2parents)
 joblib.dump(mid2children,os.path.join('data','mid2children.joblib'))
+
