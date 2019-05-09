@@ -8,28 +8,19 @@ from time import time
 objects = joblib.load(os.path.join('data','data.joblib'))
 mid2parents = joblib.load(os.path.join('data','mid2parents.joblib'))
 mid2children = joblib.load(os.path.join('data','mid2children.joblib'))
+mid2subcnt = joblib.load(os.path.join('data','mid2subcnt.joblib'))
 
-def count_subs(mid):
-    return sum([child[1] == 'Subcategory' for child in mid2children[mid]])
-
-
-
-def varlen_similarity(distances, matched_indices, n, source_confidences, hierarchy_factors):
-    similarity_scores = -np.asarray(distances)/np.asarray(hierarchy_factors)
-    if source_confidences is not None:
-        similarity_scores /= np.asarray(source_confidences)[matched_indices]
+def varlen_similarity(distances, matched_indices, n, norm_factors):
+    similarity_scores = -np.asarray(distances)/np.asarray(norm_factors)
     return similarity_scores, (len(similarity_scores), np.mean(similarity_scores))
 
-def exp_similarity(distances, matched_indices, n, source_confidences, hierarchy_factors, factor=1):
+def exp_similarity(distances, matched_indices, n, norm_factors, factor=1):
     similarity_scores = np.zeros(n)
-    conf = 1
-    if source_confidences is not None:
-        conf = np.asarray(source_confidences)[matched_indices]
-    similarity_scores[matched_indices] = np.exp(-factor*np.asarray(distances)/np.asarray(hierarchy_factors)/conf)
+    similarity_scores[matched_indices] = np.exp(-factor*np.asarray(distances)/np.asarray(norm_factors))
     return similarity_scores[matched_indices], (np.mean(similarity_scores),)
 
 similarity_func = exp_similarity
-def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_factor=None, allowed_ids = None):
+def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_factor=0, polypedo_discount=1, allowed_ids = None):
     start = time()
     if allowed_ids is not None and not type(allowed_ids) in [list, tuple]:
             allowed_ids = [allowed_ids]
@@ -66,10 +57,10 @@ def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_f
             id2scores[k][1].append(i) #label index
             id2scores[k][2].append(np.asarray(b)) #box
             id2scores[k][3].append(uid) #box index - for duplicate matches
-            id2scores[k][4].append(1 if hindex==0 else hierarchy_factor)
+            id2scores[k][4].append((1 if source_confidences is None else source_confidences[i])*(1 if hindex==0 else hierarchy_factor)*polypedo_discount**max(mid2subcnt[label], mid2subcnt[real_label]))
             id2scores[k][5].append(label)
-    result = [(k, matched_indices, box, uid, label, *similarity_func(distances, matched_indices, len(boxes), source_confidences, hierarchy_factors)) for k, (distances, matched_indices, box, uid, hierarchy_factors, label) in id2scores.items() if allowed_ids is None or k in allowed_ids]
-    print('took %d sec' % (time() - start))
+    result = [(k, matched_indices, box, uid, labels, *similarity_func(distances, matched_indices, len(boxes), norm_factors)) for k, (distances, matched_indices, box, uid, norm_factors, labels) in id2scores.items() if allowed_ids is None or k in allowed_ids]
+    print('matching took %d sec' % (time() - start))
     return sorted(result, key=lambda x: x[-1], reverse=True)[:top_k]
 
 def filter_duplicate_boxes(keys, values):
@@ -80,7 +71,7 @@ def show_results(result, labels):
     mid2label = joblib.load(os.path.join('data','mid2label.joblib'))
     for k in range(len(result)):
         print(result[k][0])
-        print(sorted([(mid2label[labels[matched_indices]], mid2label[label], scores) for scores, matched_indices, label in zip(result[k][5], result[k][1], result[k][4])], key=lambda x: -x[2]))
+        print(sorted([(mid2label[labels[matched_index]], mid2label[label], score) for score, matched_index, label in zip(result[k][5], result[k][1], result[k][4])], key=lambda x: -x[2]))
         print([mid2label[label] for label in filter_duplicate_boxes(result[k][3], result[k][4])])
         print(result[k][6])
         image = get_image_from_s3(result[k][0])
@@ -89,8 +80,8 @@ def show_results(result, labels):
 if __name__ == "__main__":
     boxes = [np.array([0.14549501, 0.19731247, 0.9917954 , 0.5369047 ]), np.array([0.12854484, 0.34575117, 0.6136902 , 0.7101171 ]), np.array([0.36136216, 0.1527743 , 0.9645944 , 0.37813774]), np.array([0.15144451, 0.2801198 , 0.50323135, 0.48136523]), np.array([0.37257037, 0.18959951, 0.984572  , 0.5182298 ])]
     labels = ['/m/01g317', '/m/06c54', '/m/01940j', '/m/0zvk5', '/m/09j2d']
-    source_confidences = [1,1,1,1,1]
+    source_confidences = None
     top_k = 5
-    result = find_similar(boxes, labels, source_confidences=source_confidences, top_k=top_k, hierarchy_factor=0.5)
-
+    polypedo_discount = 1
+    result = find_similar(boxes, labels, source_confidences=source_confidences, top_k=top_k, hierarchy_factor=0.5, polypedo_discount=polypedo_discount)
     show_results(result, labels)
