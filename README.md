@@ -6,7 +6,7 @@ ARC is a "camera" that finds and shows similar images with a possible semantic b
 
 Image matching is based on spatial object layout, allowing for leeway in the number of instances, bounding box location and size, detection confidence, and categorical semantic hierarchy (parent expansion, number of children).
 
-An example of the top 5 matches from Open Images v4 dataset (without adding a bias):
+An example of the top 5 matches from Open Images v5 dataset (without adding a bias):
 
 Source:
 ![Source](https://github.com/eyaler/alt-reality-cam/raw/master/demo/1/input_overlay.jpg "Source")

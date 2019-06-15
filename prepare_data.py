@@ -27,6 +27,9 @@ df2 = pd.read_csv(os.path.join('open_images', 'validation-annotations-bbox.csv')
 df3 = pd.read_csv(os.path.join('open_images', 'test-annotations-bbox.csv'))
 data = pd.concat([df1,df2,df3])
 
+id2mids = data.groupby('ImageID').LabelName.agg(list).to_dict()
+joblib.dump(id2mids,os.path.join('data','id2mids.joblib'))
+
 df1 = pd.read_csv(os.path.join('open_images', 'train-images-boxable-with-rotation.csv'))
 df2 = pd.read_csv(os.path.join('open_images', 'validation-images-with-rotation.csv'))
 df3 = pd.read_csv(os.path.join('open_images', 'test-images-with-rotation.csv'))
@@ -39,8 +42,9 @@ meta = meta[meta.index.isin(all_ids)]
 cats = data.index.unique()
 objects = {}
 mid2freq = {}
+
 for cat in cats:
-    rows = data.loc[[cat]]
+    rows = data.loc[cat]
     ids = rows.loc[:,'ImageID'].values
     rot = meta.loc[ids, 'Rotation'].values
     box = rows.loc[:,'XMin':'YMax'].values #xmin, xmax, ymin, ymax
@@ -90,14 +94,14 @@ def find_parents(tree, mid, parent=None, ptype=None, level=-1):
 mid2parents = {mid: find_parents(hierarchy, mid) for mid in mid2label}
 joblib.dump(mid2parents,os.path.join('data','mid2parents.joblib'))
 
-def find_all_children(mid2parents):
+def find_children(mid2parents):
     children = defaultdict(list)
     for child, parents in mid2parents.items():
         for parent in parents:
             children[parent[0]].append((child, parent[1], parent[2]+1))
     return dict(children)
 
-mid2children = find_all_children(mid2parents)
+mid2children = find_children(mid2parents)
 joblib.dump(mid2children,os.path.join('data','mid2children.joblib'))
 
 def count_subs(mid):
@@ -129,6 +133,9 @@ for mid in mid2label:
     assert count_subs_final(mid) == len(find_subs_final(mid))
     assert count_subs_multi(mid) == len(find_subs_multi(mid))
 
+mid2allsubs = {mid: find_subs_multi(mid) for mid in mid2children}
+joblib.dump(mid2allsubs,os.path.join('data','mid2allsubs.joblib'))
+
 mid2subcnt = {mid:len(set(find_subs_final(mid))) for mid in mid2label}
 joblib.dump(mid2subcnt,os.path.join('data','mid2subcnt.joblib'))
 
@@ -137,6 +144,8 @@ def find_subs_multi_inst(mid):
         return []
     return [item for sublist in [(find_subs_multi_inst(child[0]) if child[0] in mid2children else [])+[(child[0],mid2freq[child[0]] if child[0] in mid2freq else 0)] for child in mid2children[mid] if child[1] == 'Subcategory'] for item in sublist]
 
+for mid in mid2freq:
+    assert len(set(find_subs_multi_inst(mid)))==len(set(x[0] for x in find_subs_multi_inst(mid)))
 mid2hfreq = {mid:mid2freq[mid]+sum(x[1] for x in set(find_subs_multi_inst(mid))) for mid in mid2freq}
 
 norm = sum(mid2freq.values())

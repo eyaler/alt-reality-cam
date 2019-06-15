@@ -4,62 +4,67 @@ import pandas as pd
 from collections import defaultdict, OrderedDict
 import os
 from time import time
+from numba import jit
 
 objects = joblib.load(os.path.join('data','data.joblib'))
 mid2parents = joblib.load(os.path.join('data','mid2parents.joblib'))
-mid2children = joblib.load(os.path.join('data','mid2children.joblib'))
+mid2allsubs = joblib.load(os.path.join('data','mid2allsubs.joblib'))
 mid2subcnt = joblib.load(os.path.join('data','mid2subcnt.joblib'))
 
+@jit(nopython=True)
 def varlen_similarity(distances, matched_indices, n, norm_factors):
     similarity_scores = -np.asarray(distances)/np.asarray(norm_factors)
     return similarity_scores, (len(similarity_scores), np.mean(similarity_scores))
 
+@jit(nopython=True)
 def exp_similarity(distances, matched_indices, n, norm_factors, factor=1):
     similarity_scores = np.zeros(n)
+    matched_indices = np.asarray(matched_indices)
     similarity_scores[matched_indices] = np.exp(-factor*np.asarray(distances)/np.asarray(norm_factors))
     return similarity_scores[matched_indices], (np.mean(similarity_scores),)
 
 similarity_func = exp_similarity
-def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_factor=0, polypedo_discount=1, allowed_ids = None):
+
+def box_area(box): #ymin, xmin, ymax, xmax
+    return (box[...,3]-box[...,1])*(box[...,2]-box[...,0])
+
+def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_factor=0, polypedo_discount=1, min_area=0, allowed_ids = None):
     start = time()
     if allowed_ids is not None and not type(allowed_ids) in [list, tuple]:
             allowed_ids = [allowed_ids]
-    id2scores = defaultdict(lambda:[[], [], [], [], [], []])
+    id2scores = defaultdict(list)
     for i, (box, real_label) in enumerate(zip(boxes, labels)):
         family = [real_label]
         if hierarchy_factor:
+            if real_label in mid2allsubs:
+                family.extend(mid2allsubs[real_label])
             family.extend({parent[0] for parent in mid2parents[real_label] if parent[0] in objects and parent[1]=='Subcategory'})
-            if real_label in mid2children:
-                family.extend({child[0] for child in mid2children[real_label] if child[1]=='Subcategory'})
-        family_df = None
+        dfs = []
         for hindex, label in enumerate(family):
-            d = objects[label][0] - box #dymin, dxmin, dymax, dxmax
-            #h = (objects[label][0][:, 2] - objects[label][0][:, 0] + box[2] - box[0]) / 2
-            #w = (objects[label][0][:, 3] - objects[label][0][:, 1] + box[3] - box[1]) / 2
-            nymin = d[:, 0] #/ h
-            nxmin = d[:, 1] #/ w
-            nymax = d[:, 2] #/ h
-            nxmax = d[:, 3] #/ w
-            d1 = np.sqrt(np.square(nymin)+np.square(nxmin))
-            d2 = np.sqrt(np.square(nymin)+np.square(nxmax))
-            d3 = np.sqrt(np.square(nymax)+np.square(nxmax))
-            d4 = np.sqrt(np.square(nymax)+np.square(nxmin))
-            all_distances = (d1+d2+d3+d4)/4
-            length = len(objects[label][0])
-            df = pd.DataFrame(np.column_stack((objects[label][1], all_distances, objects[label][0], range(length), [label]*length, [hindex]*length)))
-            if family_df is None:
-                family_df = df
-            else:
-                family_df = pd.concat([family_df, df])
-        family_df = family_df.sort_values(1).drop_duplicates(0).values
-        for k,distance,*b, uid, label, hindex in family_df:
-            id2scores[k][0].append(distance)
-            id2scores[k][1].append(i) #label index
-            id2scores[k][2].append(np.asarray(b)) #box
-            id2scores[k][3].append(uid) #box index - for duplicate matches
-            id2scores[k][4].append((1 if source_confidences is None else source_confidences[i])*(1 if hindex==0 else hierarchy_factor)*polypedo_discount**max(mid2subcnt[label], mid2subcnt[real_label]))
-            id2scores[k][5].append(label)
-    result = [(k, matched_indices, box, uid, labels, *similarity_func(distances, matched_indices, len(boxes), norm_factors)) for k, (distances, matched_indices, box, uid, norm_factors, labels) in id2scores.items() if allowed_ids is None or k in allowed_ids]
+            filtered_idx = box_area(objects[label][0])>min_area
+            filtered_boxes = objects[label][0][filtered_idx]
+            filtered_ids = objects[label][1][filtered_idx]
+            #d = filtered_boxes - box # dymin, dxmin, dymax, dxmax
+            # h = (filtered_boxes[:, 2] - filtered_boxes[:, 0] + box[2] - box[0]) / 2
+            # w = (filtered_boxes[:, 3] - filtered_boxes[:, 1] + box[3] - box[1]) / 2
+            #ymin2 = np.square(d[:, 0])  # / h
+            #xmin2 = np.square(d[:, 1])  # / w
+            #ymax2 = np.square(d[:, 2])  # / h
+            #xmax2 = np.square(d[:, 3])  # / w
+
+            all_distances = np.sqrt(np.mean(np.square(filtered_boxes - box), axis=1))
+            norm_factor = (1 if source_confidences is None else source_confidences[i]) * (hierarchy_factor if hindex>0 else 1) * polypedo_discount ** max(mid2subcnt[label], mid2subcnt[real_label])
+            dfs.append(pd.DataFrame({'image_id':filtered_ids, 'distance':all_distances, 'label_index':i, 'ymin':filtered_boxes[:,0], 'xmin':filtered_boxes[:,1], 'ymax':filtered_boxes[:,2], 'xmax':filtered_boxes[:,3], 'box_id':range(len(filtered_boxes)), 'label':label, 'norm_factor':norm_factor}, columns=['image_id','distance','label_index','ymin','xmin','ymax','xmax','box_id', 'label', 'norm_factor']))
+
+        family_df = pd.concat(df for df in dfs)
+        family_df = family_df.sort_values('distance').drop_duplicates('image_id')
+
+        for image_id, *row in family_df.values:
+           id2scores[image_id].append(row)
+
+    id2scores = zip(id2scores.keys(), [zip(*rows) for rows in id2scores.values()])
+    result = [(image_id, matched_indices, np.asarray(list(zip(ymin,xmin,ymax,xmax))), box_id, labels, *similarity_func(distances, matched_indices, len(boxes), norm_factors)) for image_id, (distances, matched_indices, ymin,xmin,ymax,xmax, box_id, labels, norm_factors) in id2scores if allowed_ids is None or image_id in allowed_ids]
+
     print('matching took %d sec' % (time() - start))
     return sorted(result, key=lambda x: x[-1], reverse=True)[:top_k]
 
@@ -83,5 +88,6 @@ if __name__ == "__main__":
     source_confidences = None
     top_k = 5
     polypedo_discount = 1
-    result = find_similar(boxes, labels, source_confidences=source_confidences, top_k=top_k, hierarchy_factor=0.5, polypedo_discount=polypedo_discount)
+    hierarchy_factor = 0.5
+    result = find_similar(boxes, labels, source_confidences=source_confidences, top_k=top_k, hierarchy_factor=hierarchy_factor, polypedo_discount=polypedo_discount)
     show_results(result, labels)
