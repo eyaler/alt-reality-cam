@@ -38,9 +38,11 @@ def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_f
         if hierarchy_factor:
             if real_label in mid2allsubs:
                 family.extend(mid2allsubs[real_label])
-            family.extend({parent[0] for parent in mid2parents[real_label] if parent[0] in objects and parent[1]=='Subcategory'})
+            family.extend({parent[0] for parent in mid2parents[real_label] if parent[1]=='Subcategory'})
         dfs = []
         for hindex, label in enumerate(family):
+            if label not in objects:
+                continue
             filtered_idx = box_area(objects[label][0])>min_area
             filtered_boxes = objects[label][0][filtered_idx]
             filtered_ids = objects[label][1][filtered_idx]
