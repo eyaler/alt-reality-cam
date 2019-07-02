@@ -11,9 +11,9 @@ from urllib.error import URLError
 from socket import gaierror
 import shutil
 
-supression_threshold = 0.3
-supression_topk = 5
-min_area = 0.003
+suppression_threshold = 0.3
+suppression_topk = 5
+min_area = 0.009
 images_topk = 5
 hierarchy_factor = 0.5
 polypedo_discount = 1
@@ -25,6 +25,8 @@ show_overlay = False
 save_output_overlay = True
 test_mode = False
 wait = 5
+show_size = True
+suppress_duplicates = True
 
 mid2label=joblib.load(os.path.join('data','mid2label.joblib'))
 label2mid=joblib.load(os.path.join('data','label2mid.joblib'))
@@ -32,8 +34,9 @@ mid2subcnt = joblib.load(os.path.join('data','mid2subcnt.joblib'))
 id2mids=joblib.load(os.path.join('data','id2mids.joblib'))
 bias_map = pd.read_csv('biases.csv', index_col='zero')
 
-biases = ['zero', 'gender', 'military', 'money', 'love']
-input_loc = 'image_urls.txt'
+biases = ['zero', 'gender', 'military', 'money', 'love', 'fear']
+#input_loc = 'image_urls.txt'
+input_loc = 'nohar'
 
 assert {label for sublist in bias_map.values for label in sublist} <= set(label2mid)
 def get_bias(label, bias):
@@ -63,12 +66,12 @@ else:
 
 if type(input_loc) == str:
     if os.path.isdir(input_loc):
-        input_loc = [os.path.join(input_loc,f) for f in os.listdir(input_loc)]
+        input_loc = ['file:///'+os.path.abspath(os.path.join(input_loc,f)) for f in os.listdir(input_loc)]
     elif input_loc.endswith('.txt'):
         with open(input_loc) as fin:
             input_loc = fin.read().splitlines()
     else:
-        input_loc = [input_loc]
+        input_loc = ['file:///'+os.path.abspath(input_loc)]
 
 for image_url in input_loc:
     start = time()
@@ -81,11 +84,13 @@ for image_url in input_loc:
         try:
             start = time()
             image, result = process_image(image_url, res_x=res_x, res_y=res_y, save_path=os.path.join(folder, 'input.jpg'), show=show_image)
-        except (URLError, gaierror) as err:
+        except (URLError, gaierror) as e:
+            print(e)
             print('Error retrieving URL - will retry in %d sec'%wait)
             sleep(wait)
             continue
-        except:
+        except Exception as e:
+            print(e)
             print('Error processing file - skipping')
             break
     if result is None:
@@ -94,14 +99,15 @@ for image_url in input_loc:
 
     detection_cnt_subs = [mid2subcnt[mid] for mid in result["detection_class_names"]]
 
-    results = list(zip(*[x for x in sorted(zip(detection_cnt_subs, result["detection_scores"], result["detection_boxes"], result["detection_class_names"]), key=lambda x: (x[0], -x[1], x[2], x[3])) if x[1] > supression_threshold and box_area(x[2])>=min_area][:supression_topk]))
+    results = list(zip(*[x for x in sorted(zip(detection_cnt_subs, result["detection_scores"], result["detection_boxes"], result["detection_class_names"]), key=lambda x: (x[0], -x[1], x[2], x[3])) if x[1] > suppression_threshold and box_area(x[2])>=min_area][:suppression_topk]))
     if len(results)==0:
         shutil.rmtree(folder)
+        print('no detected objects found above thresholds - skipping')
         continue
     _, result["detection_scores"], result["detection_boxes"], result["detection_class_names"] = results
     image_with_boxes = draw_boxes(image, result["detection_boxes"], result["detection_class_names"],
                                   scores=result["detection_scores"], style='new',
-                                  save_path=os.path.join(folder, 'input_overlay.jpg'), show=show_overlay)
+                                  save_path=os.path.join(folder, 'input_overlay.jpg'), show=show_overlay, show_size=show_size)
     timestamp = datetime.now().isoformat(' ')
     height, width = image.shape[:2]
     input_list = [{'bbox': [int(box[1] * width), int(box[0] * height), int(box[3] * width), int(box[2] * height)],
@@ -110,28 +116,43 @@ for image_url in input_loc:
     output_list = []
 
     i = 0
-    have = False
+    seen_images = set()
     for bias in biases:
         biased_class_names = get_biases(result["detection_class_names"], bias)
         if bias!='zero' and biased_class_names == list(result["detection_class_names"]):
+            print('no bias shift found - skipping')
             continue
 
         sim = find_similar(result["detection_boxes"], biased_class_names, top_k=images_topk, hierarchy_factor=hierarchy_factor, polypedo_discount=polypedo_discount, min_area=min_area)
         if len(sim)==0:
+            print('no matches found')
             continue
 
-        if not have:
+        if not seen_images:
             print('folder=%d' % counter)
-        have = True
+
         scores = []
         found = []
         other = []
         for k, s in enumerate(sim):
-            img = get_image_from_s3(s[0], save_path=os.path.join(folder, 'bias%d_img%d.jpg' % (i,k+1)), show=show_image)
+            if suppress_duplicates and s[0] in seen_images:
+                print('duplicate image - skipping')
+                continue
+            seen_images.add(s[0])
+            have_s3 = None
+            while have_s3 is None:
+                try:
+                    img = get_image_from_s3(s[0], save_path=os.path.join(folder, 'bias%d_img%d.jpg' % (i,k+1)), show=show_image)
+                    have_s3 = True
+                except (URLError, gaierror) as e:
+                    print(e)
+                    print('Error retrieving from S3 - will retry in %d sec' % wait)
+                    sleep(wait)
+                    continue
             scores.append(s[6])
 
             if save_output_overlay or show_overlay:
-                draw_boxes(img, s[2], s[4], uid=s[3], save_path=os.path.join(folder, 'bias%d_img%d_overlay.jpg' % (i,k+1)) if save_output_overlay else None, show=show_overlay)
+                draw_boxes(img, s[2], s[4], uid=s[3], save_path=os.path.join(folder, 'bias%d_img%d_overlay.jpg' % (i,k+1)) if save_output_overlay else None, show=show_overlay, show_size=show_size)
 
             bias_found = filter_duplicate_boxes(s[3], s[4])
             bias_other = id2mids[s[0]].copy()

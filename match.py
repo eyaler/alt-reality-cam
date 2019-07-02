@@ -73,7 +73,7 @@ def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_f
 def filter_duplicate_boxes(keys, values):
     return list(OrderedDict(zip(keys, values)).values())
 
-def show_results(result, labels):
+def show_results(result, labels, scores=None, show_size=False):
     from util import draw_boxes, get_image_from_s3
     mid2label = joblib.load(os.path.join('data','mid2label.joblib'))
     for k in range(len(result)):
@@ -82,7 +82,7 @@ def show_results(result, labels):
         print([mid2label[label] for label in filter_duplicate_boxes(result[k][3], result[k][4])])
         print(result[k][6])
         image = get_image_from_s3(result[k][0])
-        draw_boxes(image, result[k][2], result[k][4], uid=result[k][3], show=True)
+        draw_boxes(image, result[k][2], result[k][4], scores=scores, uid=result[k][3], show=True, show_size=show_size)
 
 if __name__ == "__main__":
     boxes = [np.array([0.14549501, 0.19731247, 0.9917954 , 0.5369047 ]), np.array([0.12854484, 0.34575117, 0.6136902 , 0.7101171 ]), np.array([0.36136216, 0.1527743 , 0.9645944 , 0.37813774]), np.array([0.15144451, 0.2801198 , 0.50323135, 0.48136523]), np.array([0.37257037, 0.18959951, 0.984572  , 0.5182298 ])]
@@ -92,4 +92,4 @@ if __name__ == "__main__":
     polypedo_discount = 1
     hierarchy_factor = 0.5
     result = find_similar(boxes, labels, source_confidences=source_confidences, top_k=top_k, hierarchy_factor=hierarchy_factor, polypedo_discount=polypedo_discount)
-    show_results(result, labels)
+    show_results(result, labels, scores=source_confidences, show_size=True)

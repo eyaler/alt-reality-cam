@@ -111,7 +111,7 @@ def get_image_boxes(objects, index):
     return result
 
 
-def draw_boxes(image, boxes, class_names, scores=None, max_boxes=None, min_score=None, uid=None, style='new', save_path=None, show=False):
+def draw_boxes(image, boxes, class_names, scores=None, max_boxes=None, min_score=None, uid=None, style='new', save_path=None, show=False, show_size=False):
     """Overlay labeled boxes on an image with formatted scores and label names."""
     used_classes = set()
     used_uid = set()
@@ -139,6 +139,8 @@ def draw_boxes(image, boxes, class_names, scores=None, max_boxes=None, min_score
         display_str = mid2label[class_name]
         if scores is not None:
             display_str = "{}: {}%".format(display_str, int(100 * scores[i]))
+        if show_size:
+            display_str = "{} ({:.4f})".format(display_str, (xmax-xmin)*(ymax-ymin))
         if style=='new':
             im_height, im_width = image.shape[:2]
             region = Region(xmin*im_width,xmax*im_width,ymin*im_height,ymax*im_height)
