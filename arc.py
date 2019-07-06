@@ -4,12 +4,14 @@ import os
 import json
 import joblib
 from datetime import datetime
-from match import find_similar, filter_duplicate_boxes, box_area
+from match import find_similar, box_area
 import pandas as pd
 from time import time, sleep
 from urllib.error import URLError
 from socket import gaierror
 import shutil
+from build_biases import get_manual_bias_labels
+from itertools import islice
 
 suppression_threshold = 0.3
 suppression_topk = 5
@@ -26,7 +28,8 @@ save_output_overlay = True
 test_mode = False
 wait = 5
 show_size = True
-suppress_duplicates = True
+suppress_duplicate_matches = True
+required_bias_objects = 1
 
 mid2label=joblib.load(os.path.join('data','mid2label.joblib'))
 label2mid=joblib.load(os.path.join('data','label2mid.joblib'))
@@ -35,8 +38,8 @@ id2mids=joblib.load(os.path.join('data','id2mids.joblib'))
 bias_map = pd.read_csv('biases.csv', index_col='zero')
 
 biases = ['zero', 'gender', 'military', 'money', 'love', 'fear']
-#input_loc = 'image_urls.txt'
-input_loc = 'nohar'
+input_loc = 'image_urls.txt'
+#input_loc = 'nohar'
 
 assert {label for sublist in bias_map.values for label in sublist} <= set(label2mid)
 def get_bias(label, bias):
@@ -45,8 +48,12 @@ def get_bias(label, bias):
     result = bias_map.loc[label,bias]
     return result if len(result)>0 else label
 
-def get_biases(lst_classes, bias):
-    return [label2mid[get_bias(mid2label[l], bias)] for l in lst_classes]
+def get_biases(labels, bias):
+    return [label2mid[get_bias(mid2label[l], bias)] for l in labels]
+
+bias_labels = get_manual_bias_labels()
+def bias_objects(labels, bias):
+    return sum(mid2label[label] in bias_labels[bias] for label in labels)
 
 counter = 0
 if not test_mode:
@@ -117,28 +124,30 @@ for image_url in input_loc:
 
     i = 0
     seen_images = set()
+    have_result = False
     for bias in biases:
         biased_class_names = get_biases(result["detection_class_names"], bias)
-        if bias!='zero' and biased_class_names == list(result["detection_class_names"]):
-            print('no bias shift found - skipping')
-            continue
+        #if bias!='zero' and biased_class_names == list(result["detection_class_names"]):
+        #    print('%s: no bias shift found - skipping'%bias)
+        #    continue
 
-        sim = find_similar(result["detection_boxes"], biased_class_names, top_k=images_topk, hierarchy_factor=hierarchy_factor, polypedo_discount=polypedo_discount, min_area=min_area)
+        sim = find_similar(result["detection_boxes"], biased_class_names, hierarchy_factor=hierarchy_factor, polypedo_discount=polypedo_discount, min_area=min_area)
+        sim = (s for s in sim if (not suppress_duplicate_matches or s[0] not in seen_images) and (not required_bias_objects or bias == 'zero' or bias_objects(s[5],bias)>=required_bias_objects))
+        sim = list(islice(sim, images_topk))
         if len(sim)==0:
-            print('no matches found')
+            print('%s: no matches found'%bias)
             continue
 
-        if not seen_images:
+        if not have_result:
+            have_result = True
             print('folder=%d' % counter)
 
         scores = []
         found = []
         other = []
         for k, s in enumerate(sim):
-            if suppress_duplicates and s[0] in seen_images:
-                print('duplicate image - skipping')
-                continue
-            seen_images.add(s[0])
+            if bias!='zero':
+                seen_images.add(s[0])
             have_s3 = None
             while have_s3 is None:
                 try:
@@ -149,16 +158,15 @@ for image_url in input_loc:
                     print('Error retrieving from S3 - will retry in %d sec' % wait)
                     sleep(wait)
                     continue
-            scores.append(s[6])
+            scores.append(s[7])
 
             if save_output_overlay or show_overlay:
                 draw_boxes(img, s[2], s[4], uid=s[3], save_path=os.path.join(folder, 'bias%d_img%d_overlay.jpg' % (i,k+1)) if save_output_overlay else None, show=show_overlay, show_size=show_size)
 
-            bias_found = filter_duplicate_boxes(s[3], s[4])
             bias_other = id2mids[s[0]].copy()
-            for label in bias_found:
+            for label in s[5]:
                 bias_other.remove(label)
-            found.append([mid2label[l] for l in bias_found])
+            found.append([mid2label[l] for l in s[5]])
             other.append([mid2label[l] for l in bias_other])
 
         query = [mid2label[label] for label in biased_class_names]

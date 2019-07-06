@@ -28,7 +28,7 @@ similarity_func = exp_similarity
 def box_area(box): #ymin, xmin, ymax, xmax
     return (box[...,3]-box[...,1])*(box[...,2]-box[...,0])
 
-def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_factor=0, polypedo_discount=1, min_area=0, allowed_ids = None):
+def find_similar(boxes, labels, source_confidences=None, hierarchy_factor=0, polypedo_discount=1, min_area=0, allowed_ids = None):
     start = time()
     if allowed_ids is not None and not type(allowed_ids) in [list, tuple]:
             allowed_ids = [allowed_ids]
@@ -65,10 +65,10 @@ def find_similar(boxes, labels, source_confidences=None, top_k=None, hierarchy_f
            id2scores[image_id].append(row)
 
     id2scores = zip(id2scores.keys(), [zip(*rows) for rows in id2scores.values()])
-    result = [(image_id, matched_indices, np.asarray(list(zip(ymin,xmin,ymax,xmax))), box_id, labels, *similarity_func(distances, matched_indices, len(boxes), norm_factors)) for image_id, (distances, matched_indices, ymin,xmin,ymax,xmax, box_id, labels, norm_factors) in id2scores if allowed_ids is None or image_id in allowed_ids]
+    result = [(image_id, matched_indices, np.asarray(list(zip(ymin,xmin,ymax,xmax))), box_id, labels, filter_duplicate_boxes(box_id, labels), *similarity_func(distances, matched_indices, len(boxes), norm_factors)) for image_id, (distances, matched_indices, ymin,xmin,ymax,xmax, box_id, labels, norm_factors) in id2scores if allowed_ids is None or image_id in allowed_ids]
 
     print('matching took %d sec' % (time() - start))
-    return sorted(result, key=lambda x: x[-1], reverse=True)[:top_k]
+    return sorted(result, key=lambda x: x[-1], reverse=True)
 
 def filter_duplicate_boxes(keys, values):
     return list(OrderedDict(zip(keys, values)).values())
@@ -78,9 +78,9 @@ def show_results(result, labels, scores=None, show_size=False):
     mid2label = joblib.load(os.path.join('data','mid2label.joblib'))
     for k in range(len(result)):
         print(result[k][0])
-        print(sorted([(mid2label[labels[matched_index]], mid2label[label], score) for score, matched_index, label in zip(result[k][5], result[k][1], result[k][4])], key=lambda x: -x[2]))
-        print([mid2label[label] for label in filter_duplicate_boxes(result[k][3], result[k][4])])
-        print(result[k][6])
+        print(sorted([(mid2label[labels[matched_index]], mid2label[label], score) for score, matched_index, label in zip(result[k][6], result[k][1], result[k][4])], key=lambda x: -x[2]))
+        print([mid2label[label] for label in result[k][5]])
+        print(result[k][7])
         image = get_image_from_s3(result[k][0])
         draw_boxes(image, result[k][2], result[k][4], scores=scores, uid=result[k][3], show=True, show_size=show_size)
 
@@ -91,5 +91,5 @@ if __name__ == "__main__":
     top_k = 5
     polypedo_discount = 1
     hierarchy_factor = 0.5
-    result = find_similar(boxes, labels, source_confidences=source_confidences, top_k=top_k, hierarchy_factor=hierarchy_factor, polypedo_discount=polypedo_discount)
+    result = find_similar(boxes, labels, source_confidences=source_confidences, hierarchy_factor=hierarchy_factor, polypedo_discount=polypedo_discount)[:top_k]
     show_results(result, labels, scores=source_confidences, show_size=True)
