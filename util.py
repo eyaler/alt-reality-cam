@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from PIL import Image, ImageDraw, ImageColor, ImageFont
+from PIL import Image, ImageDraw, ImageColor, ImageFont, ImageFile
 from urllib.request import urlopen, Request
 from io import BytesIO
 import joblib
@@ -8,11 +8,17 @@ from open_images_starter import text, visual
 from open_images_starter.region import Region
 import os
 
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 id2rot = joblib.load(os.path.join('data','id2rot.joblib'))
 id2set = joblib.load(os.path.join('data','id2set.joblib'))
 mid2label = joblib.load(os.path.join('data','mid2label.joblib'))
+
+def id2url(index):
+    return 'https://s3.amazonaws.com/open-images-dataset/' + id2set[index] + '/' + index + '.jpg'
+
 def get_image_from_s3(index, save_path=None, show=False):
-    image = get_image('https://s3.amazonaws.com/open-images-dataset/' + id2set[index] + '/' + index + '.jpg', rotate=id2rot[index])
+    image = get_image(id2url(index), rotate=id2rot[index])
 
     if save_path:
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
@@ -26,12 +32,13 @@ def get_image_from_s3(index, save_path=None, show=False):
 
 def get_image(url, rotate='auto'):
     request = Request(url, headers={'User-Agent': "Magic Browser"})
-    response = urlopen(request)
+    response = urlopen(request, timeout=30)
     image_data = response.read()
     image_data = BytesIO(image_data)
     pil_image = Image.open(image_data)
 
     if rotate=='auto':
+        rotate = None
         try:
             exif = pil_image._getexif()
             if exif[274] == 3:
@@ -41,9 +48,10 @@ def get_image(url, rotate='auto'):
             elif exif[274] == 8:
                 rotate = 90
         except:
-            rotate = None
+            pass
 
-    if not np.isnan(rotate) and rotate:
+    rotate = np.nan_to_num(rotate)
+    if rotate:
         pil_image = pil_image.rotate(rotate, expand=True)
 
     return pil_image.convert('RGBA').convert('RGB')
