@@ -8,7 +8,7 @@ import joblib
 from datetime import datetime
 from match import find_similar, box_area
 import pandas as pd
-from time import time, sleep
+from time import time, sleep, strptime
 from urllib.error import URLError
 from socket import gaierror, error, timeout
 import shutil
@@ -90,22 +90,20 @@ while once or get_twitter:
         with open('twitter_key.txt') as fin:
             lines = fin.read().splitlines()
         api = twitter.Api(*lines)
-        last_id = 0
+        last_id = None
         if os.path.exists('twitter_id.txt'):
             with open('twitter_id.txt') as fin:
                 last_id = int(fin.read())
-        for mention in api.GetMentions(since_id=last_id):
+        for mention in reversed(api.GetMentions(since_id=last_id)):
             media = mention.media
             if media:
                 input_loc.append(media[0].media_url)
-                timestamps.append(datetime.datetime.utcfromtimestamp(time.strptime(mention.created_at, '%a %b %d %H:%M:%S +0000 %Y')).isoformat())
+                timestamps.append(datetime.fromtimestamp(mention.created_at_in_seconds).isoformat(' '))
                 twitter_bias.append(re.findall(r'#(\w+)', mention.text))
                 status_id.append(mention.id)
         if not input_loc:
             sleep(twitter_wait)
             continue
-        with open('twitter_id.txt', 'w') as fout:
-            fout.write(status_id[-1])
     elif type(input_loc) == str:
         once = False
         if os.path.isdir(input_loc):
@@ -154,7 +152,7 @@ while once or get_twitter:
         if get_twitter:
             timestamp = timestamps[cnt]
         else:
-            timestamp = datetime.now().isoformat(' ')
+            timestamp = datetime.utcnow().isoformat(' ')
         height, width = image.shape[:2]
         input_list = [{'bbox': [int(box[1] * width), int(box[0] * height), int(box[3] * width), int(box[2] * height)],
                        'label': mid2label[label], 'score': score.item()} for box, label, score in
@@ -210,7 +208,7 @@ while once or get_twitter:
                 other.append([mid2label[label] for label in bias_other])
                 anchor.append([mid2label[label] for label in s[7]])
                 transform.append([(input_query[matched_ind],mid2label[label]) for matched_ind,label in zip(s[1],s[4])])
-                imgs.append(id2url[s[0]])
+                imgs.append(id2url(s[0]))
 
             output_list.append({'type':bias, 'query':query_names, 'found':found, 'other':other, 'anchor':anchor, 'transform':transform, 'scores':scores, 'count':len(sim), 'url':imgs})
             i += 1
@@ -224,15 +222,18 @@ while once or get_twitter:
             with open(os.path.join(json_folder, 'labels.json'), 'w') as fout:
                 json.dump(json_dict, fout, indent='\t')
 
-        if ret_twitter:
-            have_biases = {output['type']: ind for ind,output in enumerate(output_list)}
-            if twitter_bias[cnt] and twitter_bias[cnt][0].lower() in have_biases:
-                ret_bias = twitter_bias[cnt][0].lower()
-            else:
-                ret_bias = np.random.choice(list(have_biases))
-            output = output_list[have_biases[ret_bias]]['output']
-            ret_img = output['url'][np.randint(['count'])]
-            api.PostUpdate('#'+ret_bias+' '+ret_img, in_reply_to_status_id=status_id[cnt])
+        if get_twitter:
+            if ret_twitter:
+                have_biases = {output['type']: ind for ind,output in enumerate(output_list)}
+                if twitter_bias[cnt] and twitter_bias[cnt][0].lower() in have_biases:
+                    ret_bias = twitter_bias[cnt][0].lower()
+                else:
+                    ret_bias = np.random.choice(list(have_biases))
+                output = output_list[have_biases[ret_bias]]
+                ret_img = output['url'][np.random.randint(output['count'])]
+                api.PostUpdate('#'+ret_bias+' '+ret_img, in_reply_to_status_id=status_id[cnt])
+            with open('twitter_id.txt', 'w') as fout:
+                fout.write(str(status_id[cnt]))
 
         counter += 1
         print('total: %.1f min'%((time()-start)/60))
