@@ -48,9 +48,7 @@ id2mids=joblib.load(os.path.join('data','id2mids.joblib'))
 bias_map = pd.read_csv('biases.csv', index_col='zero')
 
 biases = ['zero', 'gender', 'war', 'money', 'love', 'fear']
-#input_loc = 'image_urls.txt'
-#input_loc = 'nohar'
-input_loc = r'C:\Users\eyaler\Google Drive\arc\arc_inputs'
+input_loc = 'image_urls.txt'
 get_twitter = True
 ret_twitter = True
 
@@ -84,7 +82,6 @@ else:
 once = True
 while once or get_twitter:
     if get_twitter:
-        print('twitter server mode')
         input_loc = []
         timestamps = []
         twitter_user = []
@@ -109,6 +106,7 @@ while once or get_twitter:
         if not input_loc:
             sleep(twitter_wait)
             continue
+        print('twitter server mode')
     elif type(input_loc) == str:
         once = False
         if os.path.isdir(input_loc):
