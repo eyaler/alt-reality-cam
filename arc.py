@@ -37,6 +37,9 @@ suppress_duplicate_matches = True
 required_bias_objects_types = 1
 ignore_bias_objects_types = ['Human face','Man','Clothing','Person']
 
+if os.path.exists('serve_path.txt'):
+    with open('serve_path.txt') as f:
+        serve_path = f.read()
 
 mid2label=joblib.load(os.path.join('data','mid2label.joblib'))
 label2mid=joblib.load(os.path.join('data','label2mid.joblib'))
@@ -84,6 +87,7 @@ while once or get_twitter:
         print('twitter server mode')
         input_loc = []
         timestamps = []
+        twitter_user = []
         twitter_bias = []
         status_id = []
         import twitter
@@ -99,6 +103,7 @@ while once or get_twitter:
             if media:
                 input_loc.append(media[0].media_url)
                 timestamps.append(datetime.fromtimestamp(mention.created_at_in_seconds).isoformat(' '))
+                twitter_user.append(mention.user.screen_name)
                 twitter_bias.append(re.findall(r'#(\w+)', mention.text))
                 status_id.append(mention.id)
         if not input_loc:
@@ -231,7 +236,7 @@ while once or get_twitter:
                     ret_bias = np.random.choice(list(have_biases))
                 output = output_list[have_biases[ret_bias]]
                 ret_img = output['url'][np.random.randint(output['count'])]
-                api.PostUpdate('#'+ret_bias+' '+ret_img, in_reply_to_status_id=status_id[cnt])
+                api.PostUpdate('@'+twitter_user[cnt]+' #'+ret_bias, in_reply_to_status_id=status_id[cnt], media=ret_img)
             with open('twitter_id.txt', 'w') as fout:
                 fout.write(str(status_id[cnt]))
 
