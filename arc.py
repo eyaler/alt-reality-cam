@@ -31,7 +31,8 @@ show_overlay = False
 save_output_overlay = True
 test_mode = False
 wait = 20
-twitter_wait = 20
+twitter_poll_wait = 20
+twitter_error_wait = 1000
 show_size = True
 suppress_duplicate_matches = True
 required_bias_objects_types = 1
@@ -99,7 +100,14 @@ while once or get_twitter:
         if os.path.exists('twitter_id.txt'):
             with open('twitter_id.txt') as fin:
                 last_id = int(fin.read())
-        for mention in reversed(api.GetMentions(since_id=last_id)):
+        try:
+            mentions = api.GetMentions(since_id=last_id)
+        except Exception as e:
+            print(e)
+            print('Error getting tweets')
+            sleep(twitter_error_wait)
+            continue
+        for mention in reversed(mentions):
             media = mention.media
             if media:
                 input_loc.append(media[0].media_url)
@@ -108,12 +116,12 @@ while once or get_twitter:
                 twitter_bias.append(re.findall(r'#(\w+)', mention.text))
                 status_id.append(mention.id)
         if not input_loc:
-            sleep(twitter_wait)
+            sleep(twitter_poll_wait)
             continue
     elif type(input_loc) == str:
         once = False
         if os.path.isdir(input_loc):
-            input_loc = ['file:///'+f for f in glob.iglob(os.path.join(os.path.abspath(input_loc),'**','*'), recursive=True) if os.path.isfile(f) and os.path.splitext(f)[1]!='.ini']
+            input_loc = sorted('file:///'+f for f in glob.iglob(os.path.join(os.path.abspath(input_loc),'**','*'), recursive=True) if os.path.isfile(f) and os.path.splitext(f)[1]!='.ini')
         elif os.path.splitext(input_loc)[1] == '.txt':
             with open(input_loc) as fin:
                 input_loc = fin.read().splitlines()
@@ -237,7 +245,11 @@ while once or get_twitter:
                     ret_bias = np.random.choice(list(have_biases))
                 output = output_list[have_biases[ret_bias]]
                 ret_img = output['url'][np.random.randint(output['count'])]
-                api.PostUpdate('@'+twitter_user[cnt]+' #'+ret_bias, in_reply_to_status_id=status_id[cnt], media=ret_img)
+                try:
+                    api.PostUpdate('@'+twitter_user[cnt]+' #'+ret_bias, in_reply_to_status_id=status_id[cnt], media=ret_img)
+                except Exception as e:
+                    print(e)
+                    print('Error posting twitter reply')
             with open('twitter_id.txt', 'w') as fout:
                 fout.write(str(status_id[cnt]))
 
