@@ -80,8 +80,12 @@ else:
     print('test mode will save to serve folder 0')
 
 once = True
+wait_notice = False
 while once or get_twitter:
     if get_twitter:
+        if not wait_notice:
+            print('twitter server mode')
+            wait_notice = True
         input_loc = []
         timestamps = []
         twitter_user = []
@@ -106,7 +110,6 @@ while once or get_twitter:
         if not input_loc:
             sleep(twitter_wait)
             continue
-        print('twitter server mode')
     elif type(input_loc) == str:
         once = False
         if os.path.isdir(input_loc):
@@ -239,6 +242,7 @@ while once or get_twitter:
                 fout.write(str(status_id[cnt]))
 
         counter += 1
+        wait_notice = True
         print('total: %.1f min'%((time()-start)/60))
         if test_mode:
             break
