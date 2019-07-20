@@ -43,7 +43,7 @@ def process_image(image_url, res_x=512, res_y=512, save_path=None, show=False):
     downloaded_image_path = download_and_resize_image(image_url, new_width=res_x, new_height=res_y, save_path=save_path, show=show)
 
     # Load the downloaded and resized image and feed into the graph.
-    with tf.io.gfile.Open(downloaded_image_path, "rb") as binfile:
+    with tf.io.gfile.GFile(downloaded_image_path, "rb") as binfile:
         image_string = binfile.read()
 
     start = time()
