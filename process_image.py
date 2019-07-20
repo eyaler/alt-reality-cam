@@ -36,7 +36,9 @@ with tf.Graph().as_default():
     module_input = tf.expand_dims(decoded_image_float, 0)
     result = detector(module_input, as_dict=True)
     init_ops = [tf.compat.v1.global_variables_initializer(), tf.compat.v1.tables_initializer()]
-    session = tf.compat.v1.Session()
+    config = tf.compat.v1.ConfigProto()
+    config.graph_options.optimizer_options.global_jit_level = tf.compat.v1.OptimizerOptions.ON_1  # i don't think this actually helps of i run the optimized graph
+    session = tf.compat.v1.Session(config=config)
     session.run(init_ops)
 
 def process_image(image_url, res_x=512, res_y=512, save_path=None, show=False):

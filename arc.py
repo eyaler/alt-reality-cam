@@ -126,7 +126,7 @@ while once or get_twitter:
                 continue
             counter = max(counter, folder)
         counter += 1
-        print('starting serve folders at %d' % counter)
+        print('will start serve folders at %d' % counter)
     else:
         print('test mode will save to serve folder 0')
 
@@ -244,7 +244,7 @@ while once or get_twitter:
                 if twitter_bias[cnt] and twitter_bias[cnt][0].lower() in have_biases:
                     ret_bias = twitter_bias[cnt][0].lower()
                 else:
-                    ret_bias = np.random.choice(list(have_biases))
+                    ret_bias = np.random.choice([b for b in have_biases if b!='zero'])
                 output = output_list[have_biases[ret_bias]]
                 ret_img = output['url'][np.random.randint(output['count'])]
                 try:
