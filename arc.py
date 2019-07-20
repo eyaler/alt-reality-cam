@@ -98,8 +98,8 @@ while once or get_twitter:
             lines = fin.read().splitlines()
         api = twitter.Api(*lines)
         last_id = None
-        if os.path.exists('twitter_id.txt'):
-            with open('twitter_id.txt') as fin:
+        if os.path.exists(os.path.join(serve_path,'twitter_id.txt')):
+            with open(os.path.join(serve_path,'twitter_id.txt')) as fin:
                 last_id = int(fin.read())
         try:
             mentions = api.GetMentions(since_id=last_id)
@@ -251,7 +251,7 @@ while once or get_twitter:
                 except Exception as e:
                     print(e)
                     print('Error posting twitter reply')
-            with open('twitter_id.txt', 'w') as fout:
+            with open(os.path.join(serve_path,'twitter_id.txt'), 'w') as fout:
                 fout.write(str(status_id[cnt]))
 
         counter += 1
