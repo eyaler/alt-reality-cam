@@ -27,7 +27,7 @@ module_handle = "https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_re
 with tf.Graph().as_default():
     detector = hub.Module(module_handle)
 
-    image_string_placeholder = tf.placeholder(tf.string)
+    image_string_placeholder = tf.compat.v1.placeholder(tf.string)
     decoded_image = tf.image.decode_jpeg(image_string_placeholder)
     # Module accepts as input tensors of shape [1, height, width, 3], i.e. batch
     # of size 1 and type tf.float32.
@@ -35,15 +35,15 @@ with tf.Graph().as_default():
         image=decoded_image, dtype=tf.float32)
     module_input = tf.expand_dims(decoded_image_float, 0)
     result = detector(module_input, as_dict=True)
-    init_ops = [tf.global_variables_initializer(), tf.tables_initializer()]
-    session = tf.Session()
+    init_ops = [tf.compat.v1.global_variables_initializer(), tf.compat.v1.tables_initializer()]
+    session = tf.compat.v1.Session()
     session.run(init_ops)
 
 def process_image(image_url, res_x=512, res_y=512, save_path=None, show=False):
     downloaded_image_path = download_and_resize_image(image_url, new_width=res_x, new_height=res_y, save_path=save_path, show=show)
 
     # Load the downloaded and resized image and feed into the graph.
-    with tf.gfile.Open(downloaded_image_path, "rb") as binfile:
+    with tf.io.gfile.Open(downloaded_image_path, "rb") as binfile:
         image_string = binfile.read()
 
     start = time()

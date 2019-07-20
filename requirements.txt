@@ -1,0 +1,10 @@
+tensorflow
+tensorflow-hub
+pillow
+matplotlib
+joblib
+opencv-python
+pandas
+colorama>=0.3.9
+numba
+python-twitter
