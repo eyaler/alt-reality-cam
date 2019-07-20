@@ -52,3 +52,7 @@ def process_image(image_url, res_x=512, res_y=512, save_path=None, show=False):
     result_out["detection_class_names"] = [name.decode('ascii') for name in result_out["detection_class_names"]]
 
     return image_out, result_out
+
+if __name__ == '__main__':
+    image, result = process_image('https://images.homedepot-static.com/productImages/612ae505-9daf-45c3-ac16-67f97dcb251d/svn/globalrose-flower-bouquets-prime-100-red-roses-64_1000.jpg')
+    print(result)

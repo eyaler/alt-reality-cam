@@ -52,6 +52,7 @@ biases = ['zero', 'gender', 'war', 'money', 'love', 'fear']
 input_loc = 'image_urls.txt'
 get_twitter = True
 ret_twitter = True
+pt_msg = 'see more at the Deep Feeling exhibition @PT_Museum http://www.petachtikvamuseum.com/he/Exhibitions.aspx?eid=4987'
 
 assert {label for sublist in bias_map.values for labels in sublist for label in labels.split('/')} <= set(label2mid)
 def get_biases(label, bias):
@@ -246,7 +247,7 @@ while once or get_twitter:
                 output = output_list[have_biases[ret_bias]]
                 ret_img = output['url'][np.random.randint(output['count'])]
                 try:
-                    api.PostUpdate('@'+twitter_user[cnt]+' #'+ret_bias, in_reply_to_status_id=status_id[cnt], media=ret_img)
+                    api.PostUpdate('@'+twitter_user[cnt]+' #'+ret_bias+' '+pt_msg, in_reply_to_status_id=status_id[cnt], media=ret_img)
                 except Exception as e:
                     print(e)
                     print('Error posting twitter reply')
