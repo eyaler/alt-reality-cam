@@ -65,21 +65,6 @@ bias_labels = get_manual_bias_labels(biases)
 def bias_objects_types(labels, bias):
     return sum(mid2label[label] in bias_labels[bias] for label in set(labels) if mid2label[label] not in ignore_bias_objects_types)
 
-counter = 0
-if not test_mode:
-    os.makedirs(serve_path, exist_ok=True)
-    for folder in os.listdir(serve_path):
-        if not os.path.isdir(os.path.join(serve_path, folder)):
-            continue
-        try:
-            folder = int(folder)
-        except:
-            continue
-        counter = max(counter, folder)
-    counter += 1
-    print('starting serve folders at %d'%counter)
-else:
-    print('test mode will save to serve folder 0')
 
 once = True
 wait_notice = False
@@ -128,6 +113,22 @@ while once or get_twitter:
                 input_loc = fin.read().splitlines()
         else:
             input_loc = ['file:///'+os.path.abspath(input_loc)]
+
+    counter = 0
+    if not test_mode:
+        os.makedirs(serve_path, exist_ok=True)
+        for folder in os.listdir(serve_path):
+            if not os.path.isdir(os.path.join(serve_path, folder)):
+                continue
+            try:
+                folder = int(folder)
+            except:
+                continue
+            counter = max(counter, folder)
+        counter += 1
+        print('starting serve folders at %d' % counter)
+    else:
+        print('test mode will save to serve folder 0')
 
     for cnt, image_url in enumerate(input_loc):
         print('\nProcessing: '+image_url.strip())

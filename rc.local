@@ -10,6 +10,6 @@
 # bits.
 #
 
-su - ubuntu -c "tmux new -d -c ~/alt-reality-cam python3 arc.py"
+su - ubuntu -c "tmux new -d -c ~/alt-reality-cam 'python3 arc.py;bash -i'"
 exit 0
 
