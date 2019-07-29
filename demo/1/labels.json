@@ -1,0 +1,302 @@
+{
+	"index": 1,
+	"time": "2019-07-14 13:09:05.799978",
+	"input": [
+		{
+			"bbox": [
+				364,
+				141,
+				1033,
+				1076
+			],
+			"label": "Person",
+			"score": 0.8706353306770325
+		},
+		{
+			"bbox": [
+				665,
+				141,
+				1367,
+				650
+			],
+			"label": "Rifle",
+			"score": 0.8540255427360535
+		},
+		{
+			"bbox": [
+				278,
+				367,
+				678,
+				1030
+			],
+			"label": "Backpack",
+			"score": 0.7435315847396851
+		},
+		{
+			"bbox": [
+				539,
+				158,
+				927,
+				547
+			],
+			"label": "Helmet",
+			"score": 0.6878501772880554
+		},
+		{
+			"bbox": [
+				347,
+				417,
+				1011,
+				1069
+			],
+			"label": "Clothing",
+			"score": 0.4432838559150696
+		}
+	],
+	"query": [
+		"Person",
+		"Rifle",
+		"Backpack",
+		"Helmet",
+		"Clothing"
+	],
+	"output": [
+		{
+			"type": "zero",
+			"query": [
+				[
+					"Person"
+				],
+				[
+					"Rifle"
+				],
+				[
+					"Backpack"
+				],
+				[
+					"Helmet"
+				],
+				[
+					"Clothing"
+				]
+			],
+			"found": [
+				[
+					"Person",
+					"Rifle",
+					"Clothing",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Helmet",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Sports equipment",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Clothing",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Clothing",
+					"Clothing"
+				]
+			],
+			"other": [
+				[],
+				[
+					"Clothing",
+					"Human head",
+					"Human head",
+					"Human head",
+					"Sports equipment",
+					"Human arm",
+					"Human arm"
+				],
+				[
+					"Mammal",
+					"Sports equipment",
+					"Sports equipment",
+					"Shotgun"
+				],
+				[
+					"Rifle",
+					"Rifle",
+					"Rifle",
+					"Clothing",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Mammal",
+					"Mammal",
+					"Rifle",
+					"Shotgun",
+					"Human arm",
+					"Human arm",
+					"Human arm",
+					"Human arm"
+				]
+			],
+			"anchor": [
+				[
+					"Person",
+					"Rifle",
+					"Helmet",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Helmet",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Helmet",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Helmet",
+					"Clothing"
+				],
+				[
+					"Person",
+					"Rifle",
+					"Helmet",
+					"Clothing"
+				]
+			],
+			"transform": [
+				[
+					[
+						"Person",
+						"Person"
+					],
+					[
+						"Rifle",
+						"Rifle"
+					],
+					[
+						"Helmet",
+						"Clothing"
+					],
+					[
+						"Clothing",
+						"Clothing"
+					]
+				],
+				[
+					[
+						"Person",
+						"Person"
+					],
+					[
+						"Rifle",
+						"Rifle"
+					],
+					[
+						"Helmet",
+						"Helmet"
+					],
+					[
+						"Clothing",
+						"Clothing"
+					]
+				],
+				[
+					[
+						"Person",
+						"Person"
+					],
+					[
+						"Rifle",
+						"Rifle"
+					],
+					[
+						"Helmet",
+						"Sports equipment"
+					],
+					[
+						"Clothing",
+						"Clothing"
+					]
+				],
+				[
+					[
+						"Person",
+						"Person"
+					],
+					[
+						"Rifle",
+						"Rifle"
+					],
+					[
+						"Helmet",
+						"Clothing"
+					],
+					[
+						"Clothing",
+						"Clothing"
+					]
+				],
+				[
+					[
+						"Person",
+						"Person"
+					],
+					[
+						"Rifle",
+						"Rifle"
+					],
+					[
+						"Helmet",
+						"Clothing"
+					],
+					[
+						"Clothing",
+						"Clothing"
+					]
+				]
+			],
+			"scores": [
+				[
+					0.7148406137726984
+				],
+				[
+					0.7130371285529391
+				],
+				[
+					0.707998571379847
+				],
+				[
+					0.707132658858647
+				],
+				[
+					0.7049189365130555
+				]
+			],
+			"count": 5,
+			"url": [
+				"https://s3.amazonaws.com/open-images-dataset/train/27857e63a9b3782c.jpg",
+				"https://s3.amazonaws.com/open-images-dataset/test/3a9984dfabe30b9f.jpg",
+				"https://s3.amazonaws.com/open-images-dataset/test/e6fe1b12ea1c02bb.jpg",
+				"https://s3.amazonaws.com/open-images-dataset/train/8f8d4a1aeff92c10.jpg",
+				"https://s3.amazonaws.com/open-images-dataset/test/32ee1f7223150807.jpg"
+			]
+		}
+	]
+}
