@@ -8,7 +8,7 @@ import joblib
 from datetime import datetime
 from match import find_similar, box_area
 import pandas as pd
-from time import time, sleep, strptime
+from time import time, sleep
 from urllib.error import URLError
 from socket import gaierror, error, timeout
 import shutil
@@ -50,7 +50,7 @@ bias_map = pd.read_csv('biases.csv', index_col='zero')
 
 biases = ['zero', 'gender', 'war', 'money', 'love', 'fear']
 input_loc = 'image_urls.txt'
-get_twitter = True
+get_twitter = False
 ret_twitter = True
 pt_msg = 'see more at the Deep Feeling exhibition @PT_Museum http://www.petachtikvamuseum.com/he/Exhibitions.aspx?eid=4987'
 
@@ -110,7 +110,7 @@ while once or get_twitter:
             input_loc = sorted('file:///'+f for f in glob.iglob(os.path.join(os.path.abspath(input_loc),'**','*'), recursive=True) if os.path.isfile(f) and os.path.splitext(f)[1]!='.ini')
         elif os.path.splitext(input_loc)[1] == '.txt':
             with open(input_loc) as fin:
-                input_loc = fin.read().splitlines()
+                input_loc = [line for line in fin.read().splitlines() if line.strip()]
         else:
             input_loc = ['file:///'+os.path.abspath(input_loc)]
 
@@ -131,12 +131,13 @@ while once or get_twitter:
         print('test mode will save to serve folder 0')
 
     for cnt, image_url in enumerate(input_loc):
-        print('\nProcessing: '+image_url.strip())
+        image_url = image_url.strip()
+        print('\nProcessing: '+image_url)
 
         folder = os.path.join(serve_path, str(counter))
-        os.makedirs(folder, exist_ok=True)
         result = None
         while result is None:
+            os.makedirs(folder)
             try:
                 start = time()
                 image, result = process_image(image_url, res_x=res_x, res_y=res_y, save_path=os.path.join(folder, 'input.jpg'), show=show_image)
@@ -146,6 +147,7 @@ while once or get_twitter:
                     print('Error processing file - skipping')
                     break
                 print('Error retrieving URL - will retry in %d sec'%wait)
+                os.rmdir(folder)
                 sleep(wait)
                 continue
             except Exception as e:
@@ -233,7 +235,7 @@ while once or get_twitter:
             shutil.rmtree(folder)
             continue
 
-        json_dict = {'index': counter, 'time':timestamp, 'input':input_list, 'query':input_query, 'output':output_list}
+        json_dict = {'index': counter, 'time':timestamp, 'input_url':image_url, 'input':input_list, 'query':input_query, 'output':output_list}
         for json_folder in [serve_path, folder]:
             with open(os.path.join(json_folder, 'labels.json'), 'w') as fout:
                 json.dump(json_dict, fout, indent='\t')
@@ -261,4 +263,4 @@ while once or get_twitter:
         if test_mode:
             break
 
-    print('\nDone.')
+    print('\nDone.\n')
