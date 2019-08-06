@@ -37,6 +37,7 @@ show_size = True
 suppress_duplicate_matches = True
 required_bias_objects_types = 1
 ignore_bias_objects_types = ['Human face','Man','Clothing','Person']
+override_start_folder = None
 
 if os.path.exists('serve_path.txt'):
     with open('serve_path.txt') as f:
@@ -115,7 +116,12 @@ while once or get_twitter:
             input_loc = ['file:///'+os.path.abspath(input_loc)]
 
     counter = 0
-    if not test_mode:
+    if test_mode:
+        print('test mode will save to serve folder 0')
+    elif override_start_folder is not None:
+        counter = override_start_folder
+        print('will start serve folders at %d (override)' % counter)
+    else:
         os.makedirs(serve_path, exist_ok=True)
         for folder in os.listdir(serve_path):
             if not os.path.isdir(os.path.join(serve_path, folder)):
@@ -127,13 +133,11 @@ while once or get_twitter:
             counter = max(counter, folder)
         counter += 1
         print('will start serve folders at %d' % counter)
-    else:
-        print('test mode will save to serve folder 0')
 
     for cnt, image_url in enumerate(input_loc):
         image_url = image_url.strip()
-        print('\nProcessing: '+image_url)
-
+        print('\nProcessing: %s'%image_url)
+        print('\n(additional images pending: %d)' % len(input_loc)-cnt-1)
         folder = os.path.join(serve_path, str(counter))
         result = None
         while result is None:

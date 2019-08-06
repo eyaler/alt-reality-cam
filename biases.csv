@@ -1,12 +1,12 @@
 zero,gender,war,money,love,fear
 Tortoise,Slow cooker/Necklace,Man/Skull/Bow and arrow,Jaguar (Animal)/Golf ball/Bronze sculpture,Red panda/Swan/Butterfly,Hedgehog/Snake/Lizard
-Container,Serving tray/Blender/Mixing bowl,Punching bag/Tank/Screwdriver,Suitcase/Briefcase/Cocktail shaker,Picnic basket/Spoon/Envelope,Syringe/Stretcher
+Container,Serving tray/Blender/Mixing bowl,Punching bag/Tank/Backpack,Suitcase/Briefcase/Cocktail shaker,Picnic basket/Spoon/Envelope,Syringe/Stretcher
 Magpie,Girl/Sewing machine,Kite/Baseball bat/Bow and arrow,Golf ball,Swan/Butterfly/Teddy bear,Porcupine/Hedgehog/Raven
 Sea turtle,Slow cooker/Mixing bowl/Necklace,Bow and arrow/Submarine/Kite,Lobster/Golf cart/Golf ball,Tree house/Swimming pool/Coconut,Crocodile/Polar bear/Snake
-Football,Mixing bowl/Salt and pepper shakers/Girl,Man/Flag/Helmet,Tennis ball/Golf ball/Ceiling fan,Swimming pool/Beer/Office building,Drill (Tool)
-Ambulance,Ambulance,Aircraft/Rocket/Tank,Limousine/Boat/Golf cart,Office building/Bed/Infant bed,Ambulance/Stretcher/Medical equipment
+Football,Mixing bowl/Salt and pepper shakers/Girl,Man/Flag/Helmet,Tennis ball/Golf ball/Ceiling fan,Swimming pool/Beer,Drill (Tool)
+Ambulance,Ambulance,Aircraft/Rocket/Tank,Limousine/Boat/Golf cart,Bed/Infant bed/Human body,Ambulance/Stretcher/Medical equipment
 Ladder,Sink/Mixing bowl,Rocket/Torch/Man,Tower/Boat/Wine rack,Christmas tree/Rose/Curtain,Stretcher/Rocket/Scale
-Toothbrush,Hair dryer/Kitchen utensil/Lipstick,Backpack/Screwdriver/Knife,Briefcase/Suitcase/Stethoscope,Diaper/Towel/Clothing,Knife/Stethoscope/Syringe
+Toothbrush,Hair dryer/Kitchen utensil/Lipstick,Backpack/Knife/Clothing,Briefcase/Suitcase/Stethoscope,Diaper/Towel/Clothing,Knife/Stethoscope/Syringe
 Syringe,Kitchen knife/Kitchen utensil/Hair spray,Knife/Punching bag/Handgun,Stethoscope/Suitcase/Briefcase,Spoon/Cocktail/Bathtub,Syringe/Knife/Stethoscope
 Sink,Sink/Serving tray/Mixing bowl,Submarine/Tank/Hammer,Boat/Watch/Wine rack,Bathtub/Shower/Swimming pool,Submarine/Scale/Shark
 Toy,Doll/Sewing machine/Kitchenware,Kite/Weapon/Rocket,Golf ball/Tennis ball/Surfboard,Teddy bear/Candy/Ice cream,Rocket/Hedgehog/Chainsaw
@@ -19,17 +19,17 @@ Paddle,Sink/Kitchen knife/Cutting board,Kite/Knife/Bow and arrow,Boat/Surfboard/
 Snowman,Doll/Roller skates/Girl,Bow and arrow/Man/Kite,Snowboard/Ski/Bronze sculpture,Snowman/Teddy bear/Ice cream,Polar bear
 Beer,Mixing bowl/Perfume/Kitchenware,Punching bag/Man/Rifle,Coffeemaker/Lobster/Convenience store,Beer/Drink/Wine,Skunk/Rifle
 Chopsticks,Kitchen utensil/Kitchen knife/Roller skates,Knife/Bow and arrow/Sword,Chopsticks,Spoon/Cake/Flute,Knife/Sword
-Human beard,Bust,Human beard/Cowboy hat/Man,Human beard,Human face/Teddy bear/Human nose,Bear/Brown bear/Polar bear
+Human beard,Human beard,Human beard/Cowboy hat/Man,Human beard,Human face/Teddy bear/Human nose,Bear/Brown bear/Polar bear
 Bird,Girl/Woman/Sewing machine,Kite/Baseball bat/Aircraft,Aircraft/Airplane/Tower,Swan/Butterfly/Flower,Snake/Raven/Bee
 Parking meter,Parking meter,Parking meter,Parking meter/Tower/Wall clock,Parking meter,Scale/Drill (Tool)
-Traffic light,Roller skates/Skirt/Slow cooker,Flag/Bow and arrow,Golf cart/Wall clock/Tennis ball,Office building/Wine glass/Tree house,Medical equipment/Scale
+Traffic light,Roller skates/Skirt/Slow cooker,Flag/Bow and arrow,Golf cart/Wall clock/Tennis ball,Wine glass/Tree house/Cocktail,Medical equipment/Scale
 Croissant,Slow cooker/Mixing bowl/Sewing machine,Punching bag,Coffeemaker/Wall clock,Croissant/Dessert/Pancake,Croissant
 Cucumber,Frying pan/Kitchen knife/Hair dryer,Knife,Lobster/Tennis ball,Strawberry/Pineapple/Fruit,Worm/Skunk/Hedgehog
 Radish,Slow cooker/Kitchen knife/Frying pan,Knife/Bow and arrow/Sword,Lobster/Tennis ball,Strawberry/Pomegranate/Fruit,Knife/Polar bear/Skunk
 Towel,Diaper/Hair dryer/Serving tray,Punching bag/Cowboy hat/Knife,Briefcase/Suitcase/Surfboard,Towel/Diaper/Bathtub,Knife/Syringe/Stretcher
 Doll,Doll/Girl/Sewing machine,Kite/Skull/Punching bag,Surfboard/Suitcase/Tennis ball,Teddy bear/Snowman/Balloon,Beehive/Rocket
 Skull,Necklace/Kitchen knife/Doll,Skull/Helmet/Baseball bat,Crown/Bronze sculpture/Jaguar (Animal),Human nose/Human body/Teddy bear,Lizard/Crocodile/Bull
-Washing machine,Sewing machine/Mixing bowl/Hair dryer,Bow and arrow/Punching bag/Screwdriver,Coffeemaker/Tennis ball/Golf cart,Sofa bed/Office building/Swimming pool,Medical equipment/Chainsaw/Stethoscope
+Washing machine,Sewing machine/Mixing bowl/Hair dryer,Bow and arrow/Punching bag/Man,Coffeemaker/Tennis ball/Golf cart,Sofa bed/Swimming pool/Teddy bear,Medical equipment/Chainsaw/Stethoscope
 Glove,Kitchen knife/Lipstick/Necklace,Helmet/Punching bag/Cowboy hat,Briefcase/Stethoscope/Suitcase,Towel/Human nose/Clothing,Knife/Sword/Syringe
 Tick,Tick,Tick,Watch,Butterfly,Tick
 Belt,Skirt/Necklace/Kitchen knife,Punching bag/Backpack/Helmet,Briefcase/Crown/Suitcase,Clothing,Sword/Knife/Shotgun
@@ -38,22 +38,22 @@ Banjo,Sewing machine,Bow and arrow/Shotgun/Kite,Golf cart/Golf ball,Harmonica/Vi
 Cart,Serving tray/Grinder/Doll,Punching bag/Backpack/Tank,Golf cart/Wine rack/Boat,Picnic basket/Baked goods/Drinking straw,Ambulance/Stretcher/Bull
 Ball,Face powder/Doll/Roller skates,Baseball bat/Cannon/Punching bag,Tennis ball/Golf ball/Golf cart,Picnic basket/Balloon/Cake,Drill (Tool)/Sword/Rocket
 Backpack,Diaper/Necklace/Wardrobe,Backpack/Punching bag/Clothing,Suitcase/Briefcase/Surfboard,Clothing/Teddy bear/Nightstand,Rocket/Rifle/Torch
-Bicycle,Roller skates/Sewing machine/Fashion accessory,Backpack/Helmet/Kite,Golf cart/Segway/Wine rack,Ice cream/Office building/Clothing,Medical equipment/Ambulance/Rocket
-Home appliance,Kitchen appliance/Kitchenware/Fashion accessory,Screwdriver/Person/Clothing,Coffeemaker/Person/Wine rack,Fireplace/Office building/Person,Medical equipment
+Bicycle,Roller skates/Sewing machine/Fashion accessory,Backpack/Helmet/Kite,Golf cart/Segway/Wine rack,Ice cream/Clothing/Gondola,Medical equipment/Ambulance/Rocket
+Home appliance,Kitchen appliance/Kitchenware/Fashion accessory,Person/Clothing,Coffeemaker/Person/Wine rack,Fireplace/Person/Clothing,Medical equipment
 Centipede,Centipede,Bomb/Skull,Lobster,Butterfly/Flower/Christmas tree,Snake/Lizard/Worm
 Boat,Sink/Cutting board/Sewing machine,Submarine/Kite/Aircraft,Boat/Jet ski/Surfboard,Swimming pool/Gondola/Bathtub,Submarine/Rocket/Shark
 Surfboard,Swimwear/Roller skates/Cutting board,Backpack/Kite/Punching bag,Surfboard/Jet ski/Snowboard,Human body/Bathtub/Coconut,Shark/Chainsaw/Stretcher
-Boot,Roller skates/High heels/Skirt,Punching bag/Backpack/Screwdriver,Wine rack/Ski/Snowboard,Bust/Cake stand/Teddy bear,Knife/Drill (Tool)/Chainsaw
+Boot,Roller skates/High heels/Skirt,Punching bag/Backpack/Knife,Wine rack/Ski/Snowboard,Bust/Cake stand/Teddy bear,Knife/Drill (Tool)/Chainsaw
 Headphones,Hair dryer/High heels/Roller skates,Helmet/Backpack/Binoculars,Ipod/Stethoscope/Suitcase,Clothing/Piano/Loveseat,Stethoscope
 Hot dog,Slow cooker/Sewing machine/Roller skates,Bow and arrow/Man/Punching bag,Convenience store/Tennis ball/Golf ball,Pancake/Ice cream/Teddy bear,Medical equipment/Polar bear/Bull
 Shorts,High heels/Roller skates/Earrings,Clothing/Cowboy hat/Human beard,Luggage and bags,Clothing/Teddy bear,Shorts
-Fast food,Slow cooker/Kitchenware/Pressure cooker,Bow and arrow,Convenience store/Golf cart/Billboard,Ice cream/Office building/Coffee,Medical equipment/Polar bear
+Fast food,Slow cooker/Kitchenware/Pressure cooker,Bow and arrow,Convenience store/Golf cart/Billboard,Ice cream/Coffee/Croissant,Medical equipment/Polar bear
 Bus,Cutting board/Roller skates/Girl,Rocket/Bomb/Backpack,Limousine/Boat/Golf cart,Gondola/Bed/Infant bed,Ambulance/Rocket/Stretcher
 Boy,Girl/Woman/Doll,Man/Person/Kite,Person/Boat/Tennis ball,Woman/Person/Teddy bear,Bull/Snake/Porcupine
-Screwdriver,Kitchen knife/Grinder/Kitchenware,Screwdriver/Knife/Hammer,Golf ball/Stethoscope/Suitcase,Spoon/Nightstand,Knife/Chainsaw/Syringe
-Bicycle wheel,Grinder/Sewing machine/Roller skates,Screwdriver/Hammer/Weapon,Golf cart/Wine rack/Treadmill,Mirror/Spoon/Bed,Scale/Knife/Torch
+Screwdriver,Kitchen knife/Grinder/Kitchenware,Knife/Hammer/Weapon,Golf ball/Stethoscope/Suitcase,Spoon/Nightstand,Knife/Chainsaw/Syringe
+Bicycle wheel,Grinder/Sewing machine/Roller skates,Hammer/Weapon/Helmet,Golf cart/Wine rack/Treadmill,Mirror/Spoon/Bed,Scale/Knife/Torch
 Barge,Sink/Cutting board/Mixing bowl,Tank/Submarine/Rocket,Boat/Jet ski/Tower,Gondola/Swan/Bed,Submarine/Rocket/Drill (Tool)
-Laptop,Kitchen appliance/Fashion accessory/Slow cooker,Backpack/Punching bag/Screwdriver,Suitcase/Briefcase/Ipod,Nightstand/Sofa bed/Piano,Medical equipment/Stethoscope
+Laptop,Kitchen appliance/Fashion accessory/Slow cooker,Backpack/Punching bag/Handgun,Suitcase/Briefcase/Ipod,Nightstand/Sofa bed/Piano,Medical equipment/Stethoscope
 Miniskirt,Miniskirt/Skirt/Dress,Cowboy hat/Clothing,Suit/Wardrobe,Bust/Clothing/Woman,Miniskirt
 Drill (Tool),Grinder/Hair spray/Cooking spray,Hammer/Shotgun/Bow and arrow,Golf ball/Ski/Parking meter,Drill (Tool),Drill (Tool)/Shotgun/Chainsaw
 Dress,Dress/Wardrobe/Skirt,Clothing/Cowboy hat/Helmet,Wardrobe/Suit/Tie,Clothing/Perfume/Teddy bear,Polar bear
@@ -65,35 +65,35 @@ Woodpecker,Sewing machine,Kite/Skull,Jaguar (Animal)/Golf ball,Christmas tree/Tr
 Blue jay,Blue jay,Blue jay,Blue jay,Blue jay,Raven
 Pretzel,Brassiere/Roller skates/Grinder,Punching bag/Cowboy hat/Man,Tie/Convenience store/Lobster,Pancake/Waffle/Candy,Snake/Knife
 Bagel,Mixing bowl/Grinder/Hair dryer,Punching bag,Lobster/Coffeemaker/Convenience store,Croissant/Pancake/Coffee,Bagel
-Tower,Cutting board/Salt and pepper shakers/Bust,Bomb/Cannon/Tank,Tower/Skyscraper/Castle,Office building/Fountain/Wine glass,Beehive/Rocket/Missile
+Tower,Cutting board/Salt and pepper shakers/Necklace,Bomb/Cannon/Tank,Tower/Skyscraper/Castle,Fountain/Wine glass/Tree house,Beehive/Rocket/Missile
 Teapot,Tableware/Kitchenware/Doll,Teapot,Coffeemaker/Bronze sculpture,Spoon/Cake/Coffee,Teapot
 Person,Woman/Girl/Salt and pepper shakers,Person/Man/Weapon,Person/Luggage and bags/Boat,Person/Woman/Human body,Bear/Brown bear
 Bow and arrow,Kitchen knife/Sewing machine/Frying pan,Bow and arrow/Weapon/Rifle,Tennis ball/Golf ball/Golf cart,Teddy bear/Harp/Flute,Polar bear/Rifle/Sword
 Swimwear,Swimwear/Dress/Cosmetics,Clothing,Surfboard/Wardrobe/Jet ski,Clothing/Swimming pool/Perfume,Swimwear
-Beehive,Bust/Hair spray/Cooking spray,Bow and arrow/Rocket/Bomb,Tower/Castle/Golf ball,Honeycomb/Teddy bear/Office building,Beehive/Bee/Polar bear
+Beehive,Hair spray/Cooking spray/Sewing machine,Bow and arrow/Rocket/Bomb,Tower/Castle/Golf ball,Honeycomb/Teddy bear/Flower,Beehive/Bee/Polar bear
 Brassiere,Brassiere/Sewing machine/High heels,Clothing/Cowboy hat/Bow and arrow,Coffeemaker/Tennis ball/Convenience store,Teddy bear/Perfume/Clothing,Stethoscope/Knife/Chainsaw
 Bee,Hair spray/Cooking spray/Sewing machine,Kite,Crown,Butterfly/Flower/Honeycomb,Bee/Beehive/Snake
 Bat (Animal),Bottle opener/Mixing bowl,Baseball bat/Hammer/Helmet,Tennis ball/Golf ball,Butterfly/Human eye/Fruit,Snake/Lizard/Armadillo
 Starfish,Necklace/Roller skates,Submarine,Lobster/Golf ball/Surfboard,Butterfly/Pineapple/Coconut,Shark/Snake/Worm
 Popcorn,Frying pan/Face powder/Hair dryer,Punching bag/Bomb,Coffeemaker/Convenience store/Tennis ball,Candy/Ice cream/Coffee,Popcorn
 Burrito,Slow cooker/Kitchen utensil/Mixing bowl,Punching bag/Backpack,Convenience store/Lobster,Pancake/Pasta/Croissant,Armadillo/Lizard
-Chainsaw,Kitchen knife/Grinder/Blender,Knife/Axe/Screwdriver,Surfboard/Snowboard/Ski,Christmas tree/Teddy bear/Wood-burning stove,Chainsaw/Knife/Axe
+Chainsaw,Kitchen knife/Grinder/Blender,Knife/Axe/Sword,Surfboard/Snowboard/Ski,Christmas tree/Teddy bear/Wood-burning stove,Chainsaw/Knife/Axe
 Balloon,Doll/Brassiere/Hair spray,Parachute/Kite/Rocket,Airplane/Aircraft/Golf ball,Balloon/Gondola/Picnic basket,Rocket/Stethoscope/Personal flotation device
-Wrench,Grinder/Kitchen knife/Sewing machine,Hammer/Screwdriver/Knife,Cocktail shaker/Wine rack,Towel/Spoon/Human face,Knife/Axe/Chainsaw
-Tent,Salt and pepper shakers,Punching bag/Backpack/Clothing,Boat/Castle/Tower,Tent/Cake stand/Office building,Beehive/Polar bear/Stretcher
+Wrench,Grinder/Kitchen knife/Sewing machine,Hammer/Knife/Axe,Cocktail shaker/Wine rack,Towel/Spoon/Human face,Knife/Axe/Chainsaw
+Tent,Salt and pepper shakers,Punching bag/Backpack/Clothing,Boat/Castle/Tower,Tent/Cake stand/Teddy bear,Beehive/Polar bear/Stretcher
 Vehicle registration plate,Vehicle registration plate,Vehicle registration plate,Vehicle registration plate,Vehicle registration plate,Vehicle registration plate
 Lantern,Serving tray/Necklace,Torch/Kite/Sword,Tower/Boat/Golf cart,Flower/Christmas tree/Wine glass,Torch/Snake/Polar bear
-Toaster,Frying pan/Blender/Kitchen appliance,Screwdriver/Rocket/Knife,Coffeemaker/Wine rack/Airplane,Pancake/Cake/Croissant,Rocket/Knife/Beehive
+Toaster,Frying pan/Blender/Kitchen appliance,Rocket/Knife/Man,Coffeemaker/Wine rack/Airplane,Pancake/Cake/Croissant,Rocket/Knife/Beehive
 Flashlight,Kitchen knife/Hair dryer/Serving tray,Backpack/Torch/Binoculars,Briefcase/Stethoscope/Suitcase,Nightstand/Mirror/Shower,Torch/Rifle/Knife
-Billboard,Bust,Billboard,Billboard/Skyscraper/Bronze sculpture,Office building/Bust/Mirror,Billboard
+Billboard,Billboard,Billboard,Billboard/Skyscraper/Bronze sculpture,Bust/Mirror/Tree house,Billboard
 Tiara,Necklace/Earrings,Cowboy hat/Sword/Dagger,Crown,Tiara,Sword/Dagger
-Limousine,Lipstick/Wardrobe/Dress,Shotgun,Limousine/Briefcase/Golf cart,Office building/Cocktail/Wine glass,Ambulance/Shotgun
+Limousine,Lipstick/Wardrobe/Dress,Shotgun,Limousine/Briefcase/Golf cart,Cocktail/Wine glass/Tree house,Ambulance/Shotgun
 Necklace,Necklace/Earrings/Dress,Cowboy hat/Skull/Dagger,Crown/Suitcase/Briefcase,Flower/Teddy bear/Clothing,Snake/Dagger/Sword
 Carnivore,Slow cooker,Skull/Person,Jaguar (Animal)/Person/Lobster,Red panda/Person/Tree house,Crocodile/Cheetah/Lizard
-Scissors,Kitchen knife/Roller skates/Sewing machine,Knife/Screwdriver/Axe,Briefcase,Teddy bear/Towel,Knife/Chainsaw/Axe
-Stairs,Roller skates/High heels,Stairs,Tower/Castle/Airplane,Bed/Infant bed/Office building,Stretcher
-Computer keyboard,Sewing machine/Cutting board,Screwdriver,Wall clock,Piano/Violin/Flute,Computer keyboard
-Printer,Sewing machine/Grinder/Mixer,Person,Coffeemaker/Filing cabinet/Person,Person/Office building,Medical equipment
+Scissors,Kitchen knife/Roller skates/Sewing machine,Knife/Axe/Sword,Briefcase,Teddy bear/Towel,Knife/Chainsaw/Axe
+Stairs,Roller skates/High heels,Stairs,Tower/Castle/Airplane,Bed/Infant bed/Bathtub,Stretcher
+Computer keyboard,Sewing machine/Cutting board,Computer keyboard,Wall clock,Piano/Violin/Flute,Computer keyboard
+Printer,Sewing machine/Grinder/Mixer,Person,Coffeemaker/Filing cabinet/Person,Person,Medical equipment
 Traffic sign,Traffic sign,Flag/Hammer,Billboard/Watch,Cake stand/Human face/Flower,Bear/Brown bear
 Chair,Cutting board/Serving tray/Sewing machine,Punching bag,Filing cabinet/Cocktail shaker/Briefcase,Loveseat/Sofa bed/Bed,Chair
 Shirt,Dress/Skirt/Wardrobe,Clothing/Cowboy hat/Punching bag,Tie/Suit/Wardrobe,Clothing/Diaper/Teddy bear,Knife/Rifle
@@ -101,48 +101,48 @@ Poster,Doll/Girl/Cutting board,Person/Flag,Billboard/Person/Bronze sculpture,Ted
 Cheese,Face powder/Mixing bowl/Frying pan,Punching bag/Rocket,Lobster/Coffeemaker/Golf ball,Milk/Wine/Ice cream,Beehive/Rocket
 Sock,Sewing machine/Hair dryer,Punching bag/Cowboy hat/Hammer,Tennis ball/Suitcase,Teddy bear/Drinking straw,Sock
 Fire hydrant,Hair spray/Cooking spray/Kitchen appliance,Tank/Torch,Parking meter/Golf cart/Coffeemaker,Fountain/Christmas tree/Bathtub,Ambulance/Snake/Syringe
-Land vehicle,Kitchen appliance/Fashion accessory/Salt and pepper shakers,Tank/Weapon/Aircraft,Aircraft/Boat/Limousine,Human body/Person/Office building,Rocket/Ambulance/Missile
+Land vehicle,Kitchen appliance/Fashion accessory/Salt and pepper shakers,Tank/Weapon/Aircraft,Aircraft/Boat/Limousine,Human body/Person/Clothing,Rocket/Ambulance/Missile
 Earrings,Earrings/Necklace/High heels,Cowboy hat/Clothing/Helmet,Suitcase,Clothing/Perfume,Earrings
 Tie,Dress/Skirt/Necklace,Cowboy hat/Punching bag/Man,Tie/Suit/Watch,Cake stand/Drinking straw/Human face,Bear/Brown bear
 Watercraft,Watercraft,Aircraft/Submarine/Rocket,Boat/Aircraft/Jet ski,Bathtub/Swimming pool,Submarine/Rocket/Missile
-Cabinetry,Kitchen appliance/Kitchenware/Tableware,Cabinetry,Filing cabinet/Coffeemaker/Convenience store,Fireplace/Office building/Maple,Medical equipment
+Cabinetry,Kitchen appliance/Kitchenware/Tableware,Cabinetry,Filing cabinet/Coffeemaker/Convenience store,Fireplace/Maple/Sofa bed,Medical equipment
 Suitcase,Necklace/Wardrobe/Serving tray,Punching bag/Backpack/Bomb,Suitcase/Briefcase/Airplane,Envelope/Nightstand/Picnic basket,Shotgun/Syringe/Knife
 Muffin,Mixing bowl/Frying pan/Slow cooker,Punching bag,Lobster,Pancake/Croissant/Cake,Muffin
 Bidet,Hair dryer/Diaper/Sewing machine,Bidet,Jacuzzi/Coffeemaker,Bathtub/Jacuzzi/Diaper,Bidet
 Snack,Slow cooker/Serving tray/Mixing bowl,Punching bag/Backpack/Bow and arrow,Convenience store/Coffeemaker/Golf cart,Dessert/Candy/Drink,Crocodile/Snake/Polar bear
 Snowmobile,Roller skates,Aircraft/Rifle/Rocket,Ski/Snowboard/Jet ski,Snowman/Ice cream/Gondola,Chainsaw/Polar bear/Ambulance
-Clock,Slow cooker/Bust/Grinder,Flag/Hammer/Bomb,Wall clock/Tower/Watch,Picnic basket/Bust/Mirror,Clock
-Medical equipment,Sewing machine/Cosmetics/Kitchenware,Clothing/Aircraft/Weapon,Golf cart/Golf ball/Convenience store,Office building/Clothing/Swimming pool,Medical equipment/Ambulance/Stethoscope
+Clock,Slow cooker/Grinder,Flag/Hammer/Bomb,Wall clock/Tower/Watch,Picnic basket/Bust/Mirror,Clock
+Medical equipment,Sewing machine/Cosmetics/Kitchenware,Clothing/Aircraft/Weapon,Golf cart/Golf ball/Convenience store,Clothing/Swimming pool/Tree house,Medical equipment/Ambulance/Stethoscope
 Cattle,Salt and pepper shakers,Clothing,Golf cart/Luggage and bags,Milk/Baked goods/Wine,Bull/Crocodile/Snake
 Cello,Cello,Cello,Bronze sculpture/Tennis ball,Violin/Piano/Flute,Cello
 Jet ski,Roller skates/Swimwear/High heels,Kite/Backpack/Aircraft,Jet ski/Boat/Surfboard,Jacuzzi/Swimming pool/Gondola,Crocodile/Submarine/Shark
 Camel,Woman,Man/Human beard,Camel,Drinking straw/Tent/Human nose,Bull/Crocodile/Cheetah
 Coat,Dress/Skirt/Hair dryer,Cowboy hat/Clothing/Punching bag,Crown/Wardrobe/Wine rack,Clothing/Teddy bear/Diaper,Rifle/Sword/Polar bear
 Suit,Dress/Skirt/Wardrobe,Cowboy hat/Helmet/Clothing,Suit/Tie/Wardrobe,Clothing/Human face/Cake stand,Suit
-Desk,Cutting board/Serving tray/Sewing machine,Desk,Filing cabinet/Wine rack/Coffeemaker,Office building/Nightstand/Sofa bed,Desk
+Desk,Cutting board/Serving tray/Sewing machine,Desk,Filing cabinet/Wine rack/Coffeemaker,Nightstand/Sofa bed/Fireplace,Desk
 Cat,Girl/Doll/Hair dryer,Punching bag/Man/Person,Jaguar (Animal)/Person/Suitcase,Teddy bear/Christmas tree/Person,Snake/Hedgehog/Skunk
-Bronze sculpture,Bust/Necklace/Doll,Skull/Helmet/Sword,Bronze sculpture/Surfboard/Tower,Bust/Fountain/Office building,Snake/Crocodile/Sword
+Bronze sculpture,Necklace/Doll/Roller skates,Skull/Helmet/Sword,Bronze sculpture/Surfboard/Tower,Bust/Fountain/Flower,Snake/Crocodile/Sword
 Juice,Face powder/Mixing bowl/Blender,Punching bag,Lobster,Fruit/Milk/Drink,Syringe/Snake
 Gondola,Gondola,Parachute/Kite/Rocket,Ski/Boat/Jacuzzi,Gondola/Balloon/Jacuzzi,Rocket/Submarine
 Beetle,Hair spray/Cooking spray/Face powder,Kite/Baseball bat/Aircraft,Airplane/Aircraft,Butterfly/Christmas tree/Flower,Snake/Worm/Bee
 Cannon,Face powder/Hair spray/Cooking spray,Cannon/Weapon/Rifle,Castle/Golf ball/Tower,Fountain/Drinking straw/Balloon,Rifle/Shotgun/Sword
 Computer mouse,Doll/Fashion accessory/Sewing machine,Computer mouse,Computer mouse,Teddy bear/Human eye/Human nose,Hedgehog/Lizard/Porcupine
 Cookie,Slow cooker/Mixing bowl/Doll,Punching bag,Cookie,Cookie/Cake/Candy,Cookie
-Office building,Kitchenware/Sewing machine/Mixing bowl,Aircraft/Bow and arrow/Tank,Skyscraper/Golf cart/Convenience store,Office building/Tree house/Sofa bed,Medical equipment/Beehive/Ambulance
+Office building,Kitchenware/Sewing machine/Mixing bowl,Aircraft/Bow and arrow/Tank,Skyscraper/Golf cart/Convenience store,Tree house/Sofa bed/Swimming pool,Medical equipment/Beehive/Ambulance
 Fountain,Serving tray/Hair spray/Cooking spray,Cannon/Torch/Sword,Tower/Bronze sculpture/Castle,Fountain/Shower/Drink,Torch/Sword
-Coin,Serving tray/Bust,Punching bag/Helmet/Hammer,Dice,Spoon/Bust,Coin
+Coin,Serving tray,Punching bag/Helmet/Hammer,Dice,Spoon/Bust,Coin
 Calculator,Kitchen appliance,Calculator,Treadmill,Calculator,Calculator
 Cocktail,Mixing bowl/Perfume/Slow cooker,Weapon/Bomb/Punching bag,Lobster/Cocktail shaker/Golf ball,Cocktail/Drink/Beer,Syringe/Shotgun
 Computer monitor,Cutting board/Salt and pepper shakers,Computer monitor,Watch/Luggage and bags/Stethoscope,Mirror/Human eye/Cake stand,Stethoscope/Lizard/Scale
 Box,Serving tray/Bottle opener/Wardrobe,Punching bag/Cowboy hat/Tank,Suitcase/Briefcase/Filing cabinet,Envelope/Picnic basket/Candy,Beehive
-Stapler,Brassiere/Sewing machine/Kitchen knife,Screwdriver/Punching bag/Knife,Briefcase/Convenience store/Stethoscope,Nightstand/Teddy bear/Envelope,Stethoscope/Chainsaw/Knife
+Stapler,Brassiere/Sewing machine/Kitchen knife,Punching bag/Knife/Hammer,Briefcase/Convenience store/Stethoscope,Nightstand/Teddy bear/Envelope,Stethoscope/Chainsaw/Knife
 Christmas tree,Necklace/Girl,Man/Flag/Kite,Crown/Tower/Bronze sculpture,Christmas tree/Tree house/Flower,Snake/Porcupine/Chainsaw
 Cowboy hat,Dress/Skirt/Necklace,Cowboy hat/Helmet/Punching bag,Tie/Suit/Crown,Clothing/Drinking straw/Curtain,Dagger/Sword/Knife
-Hiking equipment,Salt and pepper shakers/Kitchen appliance/Kitchenware,Clothing/Aircraft/Weapon,Aircraft/Luggage and bags/Airplane,Clothing/Baked goods/Office building,Medical equipment/Rifle/Ambulance
+Hiking equipment,Salt and pepper shakers/Kitchen appliance/Kitchenware,Clothing/Aircraft/Weapon,Aircraft/Luggage and bags/Airplane,Clothing/Baked goods/Human body,Medical equipment/Rifle/Ambulance
 Studio couch,Serving tray/Hair dryer/Sewing machine,Punching bag,Watch/Jacuzzi/Treadmill,Bed/Infant bed/Sofa bed,Stretcher
 Drum,Grinder/Mixing bowl/Mixer,Hammer/Punching bag/Shotgun,Cocktail shaker/Wine rack/Bronze sculpture,Flute/Piano/Violin,Drill (Tool)/Shotgun/Syringe
 Dessert,Serving tray/Slow cooker/Mixing bowl,Dessert,Lobster,Dessert/Cake/Croissant,Dessert
-Wine rack,Serving tray/Grinder/Mixing bowl,Backpack/Punching bag/Tank,Wine rack/Treadmill/Surfboard,Picnic basket/Pancake/Office building,Scale/Rocket/Shotgun
+Wine rack,Serving tray/Grinder/Mixing bowl,Backpack/Punching bag/Tank,Wine rack/Treadmill/Surfboard,Picnic basket/Pancake/Flower,Scale/Rocket/Shotgun
 Drink,Perfume/Mixing bowl/Hair spray,Punching bag/Clothing/Man,Watch/Coffeemaker,Drink/Beer/Wine,Drink
 Zucchini,Frying pan,Zucchini,Zucchini,Pasta/Pomegranate/Strawberry,Zucchini
 Ladle,Serving tray/Mixing bowl/Frying pan,Hammer/Knife/Sword,Cocktail shaker/Wine rack,Spoon/Cake/Picnic basket,Knife/Sword/Axe
@@ -151,17 +151,17 @@ Dairy Product,Kitchen appliance/Fashion accessory/Perfume,Person/Missile/Weapon,
 Dice,Dice,Dice,Dice,Pancake,Dice
 Oven,Frying pan/Serving tray/Kitchen appliance,Oven,Oven,Fireplace/Pasta/Tent,Beehive
 Dinosaur,Slow cooker/Sewing machine,Skull/Bow and arrow/Submarine,Bronze sculpture/Golf ball/Skyscraper,Teddy bear/Red panda/Snowman,Lizard/Crocodile/Armadillo
-Ratchet (Device),Grinder/Kitchen knife,Hammer/Screwdriver/Knife,Wine rack/Cocktail shaker,Harp,Knife
+Ratchet (Device),Grinder/Kitchen knife,Hammer/Knife/Bow and arrow,Wine rack/Cocktail shaker,Harp,Knife
 Couch,Serving tray/Hair dryer/Sewing machine,Punching bag,Watch/Jacuzzi/Treadmill,Bed/Infant bed/Sofa bed,Stretcher
 Cricket ball,Face powder/Doll/Roller skates,Baseball bat/Cannon/Punching bag,Tennis ball/Golf ball/Golf cart,Picnic basket/Balloon/Cake,Drill (Tool)/Sword/Rocket
 Winter melon,Kitchen knife/Mixing bowl/Face powder,Skull/Knife/Hammer,Tennis ball/Golf ball/Lobster,Strawberry/Fruit/Pineapple,Knife/Worm/Skunk
-Spatula,Kitchen knife/Kitchen utensil/Frying pan,Knife/Screwdriver/Sword,Spatula,Spoon/Pancake/Cake,Knife/Syringe/Sword
-Whiteboard,Cutting board,Whiteboard,Surfboard/Wall clock,Office building/Fireplace/Teddy bear,Whiteboard
-Pencil sharpener,Kitchen knife/Grinder/Sewing machine,Knife/Screwdriver/Hammer,Coffeemaker/Surfboard/Stethoscope,Teddy bear/Spoon/Nightstand,Knife/Chainsaw/Sword
-Door,Serving tray/Bottle opener/Cutting board,Punching bag/Hammer/Screwdriver,Suitcase/Wine rack/Briefcase,Envelope/Curtain/Human face,Shotgun/Knife
+Spatula,Kitchen knife/Kitchen utensil/Frying pan,Knife/Sword/Hammer,Spatula,Spoon/Pancake/Cake,Knife/Syringe/Sword
+Whiteboard,Cutting board,Whiteboard,Surfboard/Wall clock,Fireplace/Teddy bear,Whiteboard
+Pencil sharpener,Kitchen knife/Grinder/Sewing machine,Knife/Hammer/Sword,Coffeemaker/Surfboard/Stethoscope,Teddy bear/Spoon/Nightstand,Knife/Chainsaw/Sword
+Door,Serving tray/Bottle opener/Cutting board,Punching bag/Hammer/Shotgun,Suitcase/Wine rack/Briefcase,Envelope/Curtain/Human face,Shotgun/Knife
 Hat,Dress/Skirt/Necklace,Cowboy hat/Helmet/Punching bag,Tie/Suit/Crown,Clothing/Drinking straw/Curtain,Dagger/Sword/Knife
 Shower,Hair spray/Cooking spray/Serving tray,Punching bag/Hammer,Jacuzzi/Luggage and bags/Watch,Shower/Bathtub/Fountain,Bear/Brown bear
-Eraser,Lipstick/Grinder/Serving tray,Screwdriver/Hammer,Surfboard,Cookie,Eraser
+Eraser,Lipstick/Grinder/Serving tray,Hammer,Surfboard,Cookie,Eraser
 Fedora,High heels/Necklace/Brassiere,Cowboy hat/Helmet/Human beard,Suit/Tie/Briefcase,Teddy bear,Fedora
 Guacamole,Slow cooker/Mixing bowl/Frying pan,Punching bag,Lobster/Golf ball,Pasta/Strawberry/Dessert,Guacamole
 Dagger,Kitchen knife/Necklace,Dagger/Sword/Knife,Briefcase,Spoon,Dagger/Sword/Knife
@@ -169,19 +169,19 @@ Scarf,Necklace/Dress/Skirt,Cowboy hat/Punching bag/Clothing,Tie/Suitcase/Wardrob
 Dolphin,Necklace/Doll/Girl,Submarine/Kite,Lobster/Boat/Jaguar (Animal),Swan/Red panda/Swimming pool,Shark/Crocodile/Snake
 Sombrero,Brassiere/Necklace/Miniskirt,Cowboy hat/Bow and arrow/Human beard,Jaguar (Animal)/Crown/Tie,Teddy bear/Pineapple/Croissant,Armadillo/Lizard/Bull
 Tin can,High heels/Sewing machine/Kitchenware,Bow and arrow/Cannon/Punching bag,Convenience store/Golf ball/Tennis ball,Teddy bear/Harp/Wine glass,Polar bear/Chainsaw/Beehive
-Mug,Bust/Serving tray/Mixing bowl,Punching bag/Man/Bow and arrow,Coffeemaker/Tennis ball,Beer/Coffee/Spoon,Shotgun
+Mug,Serving tray/Mixing bowl/Brassiere,Punching bag/Man/Bow and arrow,Coffeemaker/Tennis ball,Beer/Coffee/Spoon,Shotgun
 Tap,Sink/Blender/Hair spray,Hammer/Punching bag/Knife,Parking meter/Watch/Tie,Drink/Fountain/Beer,Drill (Tool)/Syringe/Knife
 Harbor seal,Mixing bowl/Hair spray/Cooking spray,Flag/Punching bag/Hammer,Crown/Tie/Surfboard,Envelope/Teddy bear/Human body,Bear/Brown bear/Polar bear
 Stretcher,Serving tray/Cutting board,Punching bag/Backpack,Surfboard/Wine rack,Picnic basket/Bed/Infant bed,Stretcher/Ambulance
-Can opener,Bottle opener/Roller skates/Sewing machine,Cannon/Punching bag/Screwdriver,Golf ball/Luggage and bags/Wine rack,Teddy bear/Loveseat/Human nose,Medical equipment/Chainsaw/Shotgun
+Can opener,Bottle opener/Roller skates/Sewing machine,Cannon/Punching bag/Weapon,Golf ball/Luggage and bags/Wine rack,Teddy bear/Loveseat/Human nose,Medical equipment/Chainsaw/Shotgun
 Goggles,Roller skates/Earrings/High heels,Binoculars/Helmet/Clothing,Ski,Clothing/Human eye,Goggles
 Human body,Woman/Cutting board/Salt and pepper shakers,Person/Man/Weapon,Person/Surfboard/Luggage and bags,Human body/Person/Human face,Snake/Bear/Brown bear
 Roller skates,Roller skates/High heels/Brassiere,Bow and arrow/Backpack/Cowboy hat,Snowboard/Golf cart/Tennis ball,Teddy bear/Pancake/Swimming pool,Chainsaw/Medical equipment/Armadillo
 Coffee cup,Mixing bowl/Sewing machine/Slow cooker,Punching bag/Bow and arrow/Cowboy hat,Coffeemaker/Tennis ball/Golf ball,Coffee/Wine glass/Pancake,Polar bear/Medical equipment/Crocodile
-Cutting board,Cutting board/Salt and pepper shakers,Person,Boat/Filing cabinet/Surfboard,Human body/Office building/Person,Stretcher/Medical equipment/Drill (Tool)
-Blender,Blender/Mixer/Grinder,Screwdriver,Cocktail shaker/Coffeemaker/Surfboard,Cocktail/Spoon/Coffee,Chainsaw
-Plumbing fixture,Kitchen appliance/Bottle opener/Fashion accessory,Weapon,Wine rack/Filing cabinet/Billboard,Office building/Fireplace/Mirror,Plumbing fixture
-Stop sign,Roller skates/Salt and pepper shakers/Mixing bowl,Bow and arrow/Flag/Weapon,Golf cart/Billboard/Watch,Mirror/Office building/Human face,Polar bear/Bear/Brown bear
+Cutting board,Cutting board/Salt and pepper shakers,Person,Boat/Filing cabinet/Surfboard,Human body/Person/Sofa bed,Stretcher/Medical equipment/Drill (Tool)
+Blender,Blender/Mixer/Grinder,Blender,Cocktail shaker/Coffeemaker/Surfboard,Cocktail/Spoon/Coffee,Chainsaw
+Plumbing fixture,Kitchen appliance/Bottle opener/Fashion accessory,Weapon,Wine rack/Filing cabinet/Billboard,Fireplace/Mirror,Plumbing fixture
+Stop sign,Roller skates/Salt and pepper shakers/Mixing bowl,Bow and arrow/Flag/Weapon,Golf cart/Billboard/Watch,Mirror/Human face/Cake stand,Polar bear/Bear/Brown bear
 Office supplies,Salt and pepper shakers/Kitchenware/Tableware,Clothing/Aircraft/Weapon,Luggage and bags/Aircraft,Baked goods/Clothing/Milk,Medical equipment
 Volleyball (Ball),Swimwear/Roller skates/Mixing bowl,Volleyball (Ball),Tennis ball/Golf ball/Golf cart,Swimming pool/Violin/Picnic basket,Medical equipment
 Vase,Necklace/Tableware/Serving tray,Punching bag/Knife,Bronze sculpture/Crown,Flower/Wine glass/Spoon,Knife
@@ -190,30 +190,30 @@ Wardrobe,Wardrobe/Dress/Hair dryer,Clothing/Backpack/Punching bag,Wardrobe/Suitc
 Coffee,Mixing bowl/Sewing machine/Slow cooker,Punching bag,Coffeemaker/Convenience store/Tennis ball,Coffee/Beer/Drink,Coffee
 Whisk,Whisk/Frying pan/Mixing bowl,Punching bag,Jet ski/Airplane,Spoon/Milk/Wine glass,Whisk
 Paper towel,Hair dryer/Mixing bowl/Diaper,Punching bag/Backpack/Cowboy hat,Wall clock/Golf ball/Tennis ball,Towel/Sofa bed/Wine glass,Medical equipment/Stethoscope/Syringe
-Personal care,Kitchenware/Cosmetics/Sewing machine,Person/Clothing/Bow and arrow,Convenience store/Golf cart/Person,Office building/Person/Clothing,Medical equipment/Polar bear/Ambulance
+Personal care,Kitchenware/Cosmetics/Sewing machine,Person/Clothing/Bow and arrow,Convenience store/Golf cart/Person,Person/Clothing/Teddy bear,Medical equipment/Polar bear/Ambulance
 Food,Slow cooker/Cosmetics/Kitchenware,Clothing/Punching bag/Weapon,Lobster/Convenience store/Luggage and bags,Clothing/Drink/Baked goods,Medical equipment/Polar bear/Snake
 Sun hat,Dress/Skirt/Necklace,Cowboy hat/Helmet/Punching bag,Tie/Suit/Crown,Clothing/Drinking straw/Curtain,Dagger/Sword/Knife
-Tree house,Hair dryer/Slow cooker/Wardrobe,Bow and arrow/Backpack,Golf cart/Golf ball/Castle,Tree house/Christmas tree/Office building,Porcupine/Beehive/Medical equipment
-Flying disc,Serving tray,Screwdriver/Helmet,Golf ball/Wine rack/Tennis ball,Violin/Envelope/Piano,Flying disc
+Tree house,Hair dryer/Slow cooker/Wardrobe,Bow and arrow/Backpack,Golf cart/Golf ball/Castle,Tree house/Christmas tree/Sofa bed,Porcupine/Beehive/Medical equipment
+Flying disc,Serving tray,Helmet,Golf ball/Wine rack/Tennis ball,Violin/Envelope/Piano,Flying disc
 Skirt,Skirt/Miniskirt/Dress,Cowboy hat/Clothing/Helmet,Suit/Tie/Wardrobe,Clothing/Human nose/Curtain,Knife
 Gas stove,Frying pan/Kitchenware/Kitchen utensil,Torch/Rifle/Rocket,Coffeemaker/Boat/Wine rack,Fireplace/Wood-burning stove/Bathtub,Torch/Beehive/Rifle
-Salt and pepper shakers,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Office building,Medical equipment/Bear/Brown bear
+Salt and pepper shakers,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Person,Medical equipment/Bear/Brown bear
 Mechanical fan,Girl,Mechanical fan,Ceiling fan,Mechanical fan,Mechanical fan
 Face powder,Face powder/Hair spray/Cooking spray,Weapon/Punching bag/Rifle,Golf ball/Tennis ball,Cream/Perfume/Candy,Rifle/Syringe/Shotgun
 Fax,Fax,Fax,Fax,Fax,Fax
 Fruit,Mixing bowl/Perfume/Hair spray,Punching bag/Baseball bat/Man,Golf ball/Crown/Tennis ball,Fruit/Strawberry/Flower,Bear/Brown bear/Worm
 French fries,Slow cooker/Frying pan,French fries,Lobster,Pancake/Ice cream/Beer,French fries
-Nightstand,Serving tray,Backpack/Punching bag/Screwdriver,Briefcase/Filing cabinet/Coffeemaker,Nightstand/Bed/Infant bed,Stethoscope/Rifle
+Nightstand,Serving tray,Backpack/Punching bag/Rifle,Briefcase/Filing cabinet/Coffeemaker,Nightstand/Bed/Infant bed,Stethoscope/Rifle
 Barrel,Face powder/Frying pan/Kitchen knife,Shotgun/Rifle/Handgun,Wine rack,Picnic basket/Beer/Wine,Shotgun/Rifle/Bull
 Kite,Doll/Sewing machine/Girl,Kite/Parachute/Rocket,Surfboard/Boat/Airplane,Balloon/Swan/Butterfly,Rocket/Bee/Snake
 Tart,Frying pan/Mixing bowl,Tart,Tart,Strawberry/Cake/Fruit,Tart
-Treadmill,Roller skates/Slow cooker/Sewing machine,Treadmill,Treadmill/Wine rack/Golf cart,Office building/Sofa bed/Bed,Stethoscope/Medical equipment
+Treadmill,Roller skates/Slow cooker/Sewing machine,Treadmill,Treadmill/Wine rack/Golf cart,Sofa bed/Bed/Infant bed,Stethoscope/Medical equipment
 Fox,Fox,Baseball bat,Jaguar (Animal),Swan/Red panda/Blue jay,Hedgehog/Raven/Porcupine
 Flag,Skirt,Flag/Torch/Kite,Crown/Tower/Wall clock,Wood-burning stove/Human face/Christmas tree,Torch/Sword
 French horn,Necklace/Grinder,Skull/Helmet/Sword,Tower/Crown/Cocktail shaker,Flute/Harp/Violin,Bull/Snake/Sword
 Window blind,Salt and pepper shakers/Woman/Girl,Man/Person/Bow and arrow,Person/Luggage and bags/Golf cart,Window blind/Human eye/Person,Bull
 Human foot,Skirt/High heels/Roller skates,Bow and arrow/Punching bag/Rifle,Parking meter/Golf cart/Wine rack,Human mouth/Human nose/Cake stand,Drill (Tool)/Rifle/Scale
-Golf cart,Slow cooker/Sewing machine/Roller skates,Bow and arrow/Shotgun/Backpack,Golf cart/Golf ball/Tennis ball,Swimming pool/Office building/Tree house,Medical equipment/Shotgun/Ambulance
+Golf cart,Slow cooker/Sewing machine/Roller skates,Bow and arrow/Shotgun/Backpack,Golf cart/Golf ball/Tennis ball,Swimming pool/Tree house/Wine glass,Medical equipment/Shotgun/Ambulance
 Jacket,Dress/Skirt/Miniskirt,Helmet/Punching bag/Cowboy hat,Briefcase/Suit/Suitcase,Clothing/Teddy bear/Envelope,Rifle/Shotgun/Knife
 Egg (Food),Frying pan/Mixing bowl/Whisk,Punching bag/Rocket,Lobster/Golf ball/Tennis ball,Milk/Picnic basket/Pancake,Hedgehog/Snake/Worm
 Street light,Face powder/Salt and pepper shakers/Frying pan,Torch/Man/Cannon,Tower/Luggage and bags,Mirror/Human eye/Curtain,Torch/Bear/Brown bear
@@ -223,7 +223,7 @@ Human leg,Kitchen knife/Skirt/Roller skates,Skull/Bow and arrow/Punching bag,Win
 Isopod,Isopod,Submarine/Tank,Lobster/Boat,Butterfly,Lizard/Worm/Polar bear
 Grape,Hair spray/Cooking spray/Perfume,Grape,Lobster/Golf ball/Tennis ball,Wine/Strawberry/Fruit,Skunk
 Human ear,Earrings/Bottle opener,Baseball bat/Skull/Man,Stethoscope/Crown,Human eye/Human nose/Human mouth,Bull/Stethoscope/Beehive
-Power plugs and sockets,Hair dryer/Kitchen appliance/Earrings,Screwdriver/Tank,Luggage and bags,Teddy bear/Human nose,Power plugs and sockets
+Power plugs and sockets,Hair dryer/Kitchen appliance/Earrings,Tank,Luggage and bags,Teddy bear/Human nose,Power plugs and sockets
 Panda,Doll,Panda,Jaguar (Animal),Red panda/Teddy bear/Strawberry,Cheetah/Porcupine/Bear
 Giraffe,Girl/Woman/Necklace,Skull/Man,Jaguar (Animal),Teddy bear/Red panda/Swan,Cheetah/Crocodile/Porcupine
 Woman,Woman/Girl/Sewing machine,Man/Person,Person/Luggage and bags,Woman/Person/Human body,Snake
@@ -231,21 +231,21 @@ Door handle,Sewing machine/Skirt/Kitchen knife,Bow and arrow/Knife/Punching bag,
 Rhinoceros,Rhinoceros,Skull,Jaguar (Animal),Red panda/Teddy bear,Porcupine/Crocodile/Armadillo
 Bathtub,Sink/Diaper/Hair dryer,Tank/Punching bag/Submarine,Jacuzzi/Boat/Airplane,Bathtub/Jacuzzi/Bed,Submarine/Syringe/Chainsaw
 Goldfish,Mixing bowl,Tank,Lobster/Golf ball,Swan/Swimming pool/Teddy bear,Shark/Snake/Lizard
-Houseplant,Slow cooker/Kitchenware/Hair dryer,Screwdriver,Coffeemaker/Tennis ball/Golf cart,Flower/Tree house/Christmas tree,Medical equipment/Skunk/Bee
+Houseplant,Slow cooker/Kitchenware/Hair dryer,Houseplant,Coffeemaker/Tennis ball/Golf cart,Flower/Tree house/Christmas tree,Medical equipment/Skunk/Bee
 Goat,Girl/Woman,Man/Shotgun,Goat,Milk/Teddy bear/Coconut,Bull/Snake/Crocodile
 Baseball bat,Bottle opener/Mixing bowl,Baseball bat/Hammer/Helmet,Tennis ball/Golf ball,Butterfly/Human eye/Fruit,Snake/Lizard/Armadillo
 Baseball glove,Kitchen knife/Lipstick/Necklace,Helmet/Punching bag/Cowboy hat,Briefcase/Stethoscope/Suitcase,Towel/Human nose/Clothing,Knife/Sword/Syringe
 Mixing bowl,Mixing bowl/Frying pan/Slow cooker,Punching bag/Bow and arrow/Man,Tennis ball/Golf ball/Golf cart,Wine glass/Spoon/Pancake,Polar bear/Scale/Knife
 Marine invertebrates,Salt and pepper shakers,Marine invertebrates,Lobster/Luggage and bags,Marine invertebrates,Polar bear
-Kitchen utensil,Kitchen utensil/Kitchen knife/Kitchenware,Knife/Screwdriver/Weapon,Coffeemaker,Spoon/Towel/Pasta,Knife/Syringe/Sword
-Light switch,Slow cooker/Mixing bowl/Hair dryer,Bow and arrow/Aircraft/Cowboy hat,Golf cart/Wall clock/Golf ball,Sofa bed/Wine glass/Office building,Polar bear/Medical equipment/Scale
-House,Wardrobe/Salt and pepper shakers/Kitchenware,Person/Man/Shotgun,Castle/Tower/Filing cabinet,Office building/Tree house/Sofa bed,Beehive/Shotgun/Medical equipment
+Kitchen utensil,Kitchen utensil/Kitchen knife/Kitchenware,Knife/Weapon/Sword,Coffeemaker,Spoon/Towel/Pasta,Knife/Syringe/Sword
+Light switch,Slow cooker/Mixing bowl/Hair dryer,Bow and arrow/Aircraft/Cowboy hat,Golf cart/Wall clock/Golf ball,Sofa bed/Wine glass/Mirror,Polar bear/Medical equipment/Scale
+House,Wardrobe/Salt and pepper shakers/Kitchenware,Person/Man/Shotgun,Castle/Tower/Filing cabinet,Tree house/Sofa bed/Fireplace,Beehive/Shotgun/Medical equipment
 Horse,Woman/Girl/Face powder,Man/Person/Cannon,Golf cart/Wine rack/Boat,Woman/Swan/Person,Bull/Snake/Rifle
-Stationary bicycle,Roller skates/Sewing machine/Fashion accessory,Backpack/Helmet/Kite,Golf cart/Segway/Wine rack,Ice cream/Office building/Clothing,Medical equipment/Ambulance/Rocket
+Stationary bicycle,Roller skates/Sewing machine/Fashion accessory,Backpack/Helmet/Kite,Golf cart/Segway/Wine rack,Ice cream/Clothing/Gondola,Medical equipment/Ambulance/Rocket
 Hammer,Kitchen knife/Grinder/Sewing machine,Hammer/Axe/Knife,Cocktail shaker/Tennis ball/Golf ball,Harp/Spoon/Drinking straw,Axe/Knife/Sword
 Ceiling fan,Girl,Ceiling fan,Ceiling fan,Ceiling fan,Ceiling fan
 Sofa bed,Hair dryer/Sewing machine/Mixing bowl,Punching bag,Jacuzzi/Golf cart/Wall clock,Sofa bed/Bed/Infant bed,Medical equipment
-Adhesive tape,Necklace/Kitchen knife/Serving tray,Punching bag/Screwdriver/Knife,Watch/Briefcase/Suitcase,Envelope/Curtain/Mirror,Knife/Stethoscope/Syringe
+Adhesive tape,Necklace/Kitchen knife/Serving tray,Punching bag/Knife,Watch/Briefcase/Suitcase,Envelope/Curtain/Mirror,Knife/Stethoscope/Syringe
 Harp,Harp,Bow and arrow/Hammer/Sword,Stethoscope,Harp/Flute/Violin,Polar bear/Sword/Bull
 Sandal,High heels/Necklace/Brassiere,Sword/Clothing/Knife,Surfboard/Crown/Suit,Clothing/Perfume/Teddy bear,Sword/Knife/Crocodile
 Bicycle helmet,Dress/Necklace/Skirt,Helmet/Cowboy hat/Skull,Suit/Crown/Tower,Human nose/Clothing/Human face,Sword/Chainsaw/Knife
@@ -257,74 +257,74 @@ Harmonica,Sewing machine,Bow and arrow,Harmonica,Harmonica/Piano/Flute,Harmonica
 Hamster,Doll/Sewing machine/Girl,Man,Lobster/Treadmill,Teddy bear/Red panda/Pancake,Hedgehog/Worm/Lizard
 Curtain,Skirt/Serving tray/Hair spray,Cowboy hat,Tower/Tie,Curtain/Envelope/Rose,Curtain
 Bed,Diaper/Mixing bowl/Serving tray,Punching bag/Knife,Jacuzzi/Boat/Suitcase,Bed/Infant bed/Sofa bed,Stretcher/Ambulance/Knife
-Kettle,Frying pan/Kitchenware/Mixing bowl,Punching bag/Screwdriver/Knife,Lobster/Boat/Coffeemaker,Spoon/Drinking straw/Fireplace,Knife
+Kettle,Frying pan/Kitchenware/Mixing bowl,Punching bag/Knife/Hammer,Lobster/Boat/Coffeemaker,Spoon/Drinking straw/Fireplace,Knife
 Fireplace,Hair dryer/Frying pan/Sink,Torch,Coffeemaker/Tower/Castle,Fireplace/Sofa bed/Bathtub,Beehive/Torch
-Scale,Mixing bowl/Sink,Weapon,Parking meter/Wall clock/Wine rack,Human face/Mirror/Office building,Scale
+Scale,Mixing bowl/Sink,Weapon,Parking meter/Wall clock/Wine rack,Human face/Mirror/Envelope,Scale
 Drinking straw,Face powder/Doll/Mixing bowl,Man/Cowboy hat/Punching bag,Tie,Drinking straw/Picnic basket/Beer,Bull
 Insect,Hair spray/Cooking spray/Salt and pepper shakers,Baseball bat/Aircraft/Kite,Airplane/Aircraft/Person,Butterfly/Flower/Fruit,Bee/Worm/Snake
 Hair dryer,Hair dryer/Sewing machine/Frying pan,Clothing/Punching bag/Backpack,Coffeemaker/Tennis ball/Wardrobe,Sofa bed/Jacuzzi/Wine glass,Medical equipment/Beehive/Rifle
-Kitchenware,Kitchenware/Tableware/Sewing machine,Clothing/Knife/Screwdriver,Coffeemaker/Convenience store/Golf cart,Clothing/Office building/Wine glass,Knife/Medical equipment/Chainsaw
+Kitchenware,Kitchenware/Tableware/Sewing machine,Clothing/Knife/Punching bag,Coffeemaker/Convenience store/Golf cart,Clothing/Wine glass/Sofa bed,Knife/Medical equipment/Chainsaw
 Indoor rower,Woman,Man/Person,Boat/Person/Jet ski,Woman/Person/Swimming pool,Indoor rower
 Invertebrate,Fashion accessory/Salt and pepper shakers,Submarine/Man,Lobster/Luggage and bags,Butterfly/Flower,Hedgehog/Lizard/Polar bear
 Food processor,Blender/Kitchen appliance/Slow cooker,Food processor,Wall clock,Food processor,Food processor
 Bookcase,Wardrobe/Serving tray/Doll,Backpack/Skull/Punching bag,Filing cabinet/Briefcase/Suitcase,Nightstand/Fireplace/Sofa bed,Bookcase
 Refrigerator,Hair dryer/Kitchenware/Kitchen appliance,Tank/Punching bag/Backpack,Coffeemaker/Suitcase/Filing cabinet,Bathtub/Fireplace/Sofa bed,Rocket/Medical equipment
-Wood-burning stove,Hair spray/Cooking spray/Frying pan,Torch/Flag/Bow and arrow,Wood-burning stove,Wood-burning stove/Fireplace/Office building,Torch/Chainsaw
+Wood-burning stove,Hair spray/Cooking spray/Frying pan,Torch/Flag/Bow and arrow,Wood-burning stove,Wood-burning stove/Fireplace/Human face,Torch/Chainsaw
 Punching bag,Serving tray/Mixing bowl/Face powder,Punching bag/Backpack/Parachute,Suitcase/Briefcase/Wardrobe,Picnic basket/Envelope/Towel,Syringe/Knife/Shotgun
 Common fig,Common fig,Common fig,Common fig,Christmas tree/Fruit/Pomegranate,Common fig
 Cocktail shaker,Grinder/Mixer/Blender,Hammer/Man,Cocktail shaker/Coffeemaker,Spoon/Cocktail,Cocktail shaker
 Jaguar (Animal),Jaguar (Animal),Skull,Jaguar (Animal),Red panda/Teddy bear,Crocodile/Cheetah/Armadillo
 Golf ball,Mixing bowl/Sewing machine/Hair dryer,Bow and arrow/Shotgun/Weapon,Golf ball/Tennis ball/Golf cart,Swimming pool/Wine glass/Tree house,Shotgun/Medical equipment/Rocket
 Fashion accessory,Fashion accessory/Wardrobe/Kitchen appliance,Clothing/Weapon/Backpack,Wardrobe/Wine rack/Golf cart,Clothing/Teddy bear/Baked goods,Rifle
-Alarm clock,Hair dryer/Slow cooker/Brassiere,Screwdriver/Bow and arrow/Flag,Wall clock/Watch/Stethoscope,Sofa bed/Teddy bear/Wine glass,Stethoscope/Polar bear/Scale
-Filing cabinet,Cutting board/Kitchenware/Wardrobe,Filing cabinet,Filing cabinet/Wardrobe/Coffeemaker,Office building/Nightstand/Sofa bed,Medical equipment
+Alarm clock,Hair dryer/Slow cooker/Brassiere,Bow and arrow/Flag/Bomb,Wall clock/Watch/Stethoscope,Sofa bed/Teddy bear/Wine glass,Stethoscope/Polar bear/Scale
+Filing cabinet,Cutting board/Kitchenware/Wardrobe,Filing cabinet,Filing cabinet/Wardrobe/Coffeemaker,Nightstand/Sofa bed/Human body,Medical equipment
 Artichoke,Mixing bowl/Frying pan/Slow cooker,Punching bag/Bow and arrow/Knife,Lobster/Crown,Pomegranate/Strawberry/Fruit,Knife/Worm/Polar bear
 Table,Serving tray/Tableware/Mixing bowl,Punching bag/Flag,Filing cabinet/Briefcase/Luggage and bags,Cake stand/Bed/Infant bed,Scale
 Tableware,Tableware/Kitchenware/Serving tray,Clothing,Luggage and bags,Dessert/Clothing/Baked goods,Tableware
 Kangaroo,Kangaroo,Kangaroo,Kangaroo,Teddy bear/Pineapple/Christmas tree,Crocodile/Lizard/Skunk
 Koala,Koala,Koala,Koala,Red panda/Teddy bear/Christmas tree,Crocodile/Lizard/Porcupine
 Knife,Kitchen knife/Kitchen utensil/Grinder,Knife/Sword/Axe,Suitcase/Boat/Stethoscope,Spoon/Towel/Cake,Knife/Sword/Axe
-Bottle,Perfume/Serving tray/Mixing bowl,Punching bag/Screwdriver/Tank,Suitcase/Coffeemaker/Tennis ball,Beer/Wine/Wine glass,Syringe/Knife/Rocket
+Bottle,Perfume/Serving tray/Mixing bowl,Punching bag/Tank/Backpack,Suitcase/Coffeemaker/Tennis ball,Beer/Wine/Wine glass,Syringe/Knife/Rocket
 Bottle opener,Bottle opener,Baseball bat/Punching bag,Bottle opener,Human eye,Bottle opener
 Lynx,Lynx,Lynx,Jaguar (Animal),Red panda,Cheetah/Porcupine
 Lavender (Plant),Perfume/Lipstick/Slow cooker,Lavender (Plant),Lavender (Plant),Lavender (Plant)/Flower/Strawberry,Skunk
-Lighthouse,Lighthouse,Submarine,Tower/Castle/Boat,Wine glass/Tree house/Office building,Submarine/Beehive
-Dumbbell,Brassiere/Grinder/Serving tray,Hammer/Bow and arrow/Screwdriver,Treadmill/Tennis ball/Golf ball,Pancake/Spoon/Human body,Shotgun/Beehive/Knife
-Human head,Bust/Cutting board/Salt and pepper shakers,Skull/Hammer/Man,Crown/Filing cabinet/Person,Human body/Human face/Human nose,Bull/Bear/Brown bear
+Lighthouse,Lighthouse,Submarine,Tower/Castle/Boat,Wine glass/Tree house/Mirror,Submarine/Beehive
+Dumbbell,Brassiere/Grinder/Serving tray,Hammer/Bow and arrow/Punching bag,Treadmill/Tennis ball/Golf ball,Pancake/Spoon/Human body,Shotgun/Beehive/Knife
+Human head,Cutting board/Salt and pepper shakers/Kitchen knife,Skull/Hammer/Man,Crown/Filing cabinet/Person,Human body/Human face/Human nose,Bull/Bear/Brown bear
 Bowl,Mixing bowl/Serving tray/Frying pan,Punching bag/Baseball bat/Helmet,Tennis ball/Golf ball/Bronze sculpture,Spoon/Pancake/Cake,Snake
 Humidifier,Hair dryer/Hair spray/Cooking spray,Tank/Punching bag/Backpack,Coffeemaker/Jacuzzi,Bathtub/Perfume/Jacuzzi,Humidifier
-Porch,Mixing bowl,Shotgun,Tower/Castle/Wall clock,Fireplace/Tree house/Office building,Beehive/Shotgun
+Porch,Mixing bowl,Shotgun,Tower/Castle/Wall clock,Fireplace/Tree house/Sofa bed,Beehive/Shotgun
 Lizard,Necklace,Skull/Baseball bat,Jaguar (Animal)/Lobster,Butterfly/Teddy bear/Christmas tree,Lizard/Snake/Crocodile
 Billiard table,Sewing machine/Mixing bowl/Slow cooker,Bow and arrow/Man,Golf cart/Tennis ball/Wall clock,Wine glass/Sofa bed/Tree house,Polar bear/Medical equipment
 Mammal,Woman,Skull/Baseball bat/Man,Jaguar (Animal)/Lobster/Person,Human body/Red panda/Teddy bear,Polar bear/Lizard/Hedgehog
 Mouse,Doll/Fashion accessory/Sewing machine,Mouse,Mouse,Teddy bear/Human eye/Human nose,Hedgehog/Lizard/Porcupine
 Motorcycle,Roller skates/Sewing machine/High heels,Helmet/Backpack/Handgun,Surfboard/Jet ski/Golf cart,Human body/Clothing/Pancake,Ambulance/Chainsaw/Rocket
 Musical instrument,Fashion accessory/Sewing machine/Kitchen knife,Weapon/Aircraft/Knife,Stethoscope/Parking meter/Aircraft,Violin/Flute/Piano,Scale/Stethoscope/Drill (Tool)
-Swim cap,Skirt/Bust/Dress,Cowboy hat/Helmet/Punching bag,Crown/Tie/Suit,Bust/Human face/Curtain,Drill (Tool)/Polar bear
+Swim cap,Skirt/Dress/Mixing bowl,Cowboy hat/Helmet/Punching bag,Crown/Tie/Suit,Bust/Human face/Curtain,Drill (Tool)/Polar bear
 Frying pan,Frying pan/Mixing bowl/Slow cooker,Knife/Bow and arrow/Punching bag,Tennis ball/Golf ball/Jacuzzi,Pancake/Spoon/Swimming pool,Knife/Torch/Rifle
 Snowplow,Roller skates/Sewing machine/Grinder,Tank/Rifle/Aircraft,Ski/Golf cart/Snowboard,Snowman/Pancake/Ice cream,Ambulance/Chainsaw/Rifle
-Bathroom cabinet,Cutting board/Kitchenware/Wardrobe,Bathroom cabinet,Filing cabinet/Wardrobe/Coffeemaker,Office building/Nightstand/Sofa bed,Medical equipment
+Bathroom cabinet,Cutting board/Kitchenware/Wardrobe,Bathroom cabinet,Filing cabinet/Wardrobe/Coffeemaker,Nightstand/Sofa bed/Human body,Medical equipment
 Missile,Face powder/Hair spray/Cooking spray,Missile/Rocket/Weapon,Aircraft/Airplane/Golf ball,Balloon,Missile/Rocket/Submarine
-Bust,Bust/Skirt/Brassiere,Bomb/Hammer/Helmet,Bronze sculpture/Tower/Billboard,Bust/Human face/Mirror,Beehive/Bull/Shotgun
+Bust,Skirt/Brassiere/Miniskirt,Bomb/Hammer/Helmet,Bronze sculpture/Tower/Billboard,Bust/Human face/Mirror,Beehive/Bull/Shotgun
 Man,Woman/Girl/Salt and pepper shakers,Man/Person/Bow and arrow,Person/Luggage and bags/Boat,Woman/Person/Window blind,Snake/Bull/Bear
 Waffle iron,Face powder/Hair dryer/Kitchenware,Hammer/Sword/Cannon,Lobster/Golf ball/Tennis ball,Wine glass/Milk/Curtain,Sword/Axe/Dagger
 Milk,Mixing bowl/Face powder/Diaper,Punching bag/Clothing/Tank,Lobster,Milk/Cream/Drink,Bull/Crocodile/Snake
 Ring binder,Sewing machine/Mixing bowl/Slow cooker,Bow and arrow/Punching bag/Weapon,Briefcase/Convenience store/Wall clock,Teddy bear/Mirror/Envelope,Polar bear/Porcupine/Bear
 Plate,Serving tray/Mixing bowl/Kitchen knife,Hammer/Helmet/Punching bag,Crown/Bronze sculpture/Cocktail shaker,Spoon/Pancake/Dessert,Scale/Stretcher/Knife
-Mobile phone,Sewing machine/Slow cooker/Kitchenware,Mobile phone,Golf cart/Convenience store/Golf ball,Office building/Teddy bear/Beer,Medical equipment/Polar bear
+Mobile phone,Sewing machine/Slow cooker/Kitchenware,Mobile phone,Golf cart/Convenience store/Golf ball,Teddy bear/Beer/Ice cream,Medical equipment/Polar bear
 Baked goods,Cosmetics/Salt and pepper shakers/Kitchenware,Clothing/Aircraft/Punching bag,Luggage and bags/Aircraft/Suitcase,Baked goods/Clothing/Picnic basket,Medical equipment
 Mushroom,Face powder/Mixing bowl/Slow cooker,Punching bag/Skull/Rocket,Lobster/Golf ball,Flower/Pineapple/Pancake,Skunk/Hedgehog/Beehive
-Crutch,Kitchen knife,Screwdriver/Weapon/Hammer,Treadmill,Window blind/Cake stand/Drinking straw,Stretcher/Chainsaw/Knife
+Crutch,Kitchen knife,Weapon/Hammer/Bow and arrow,Treadmill,Window blind/Cake stand/Drinking straw,Stretcher/Chainsaw/Knife
 Pitcher (Container),Mixing bowl/Woman/Girl,Baseball bat/Man/Person,Tennis ball/Person/Golf ball,Beer/Woman/Flower,Snake
-Mirror,Bust/Doll/Lipstick,Helmet/Weapon/Torch,Watch/Bronze sculpture/Tower,Mirror/Human face/Bust,Polar bear/Beehive/Scale
+Mirror,Doll/Lipstick/Skirt,Helmet/Weapon/Torch,Watch/Bronze sculpture/Tower,Mirror/Human face/Bust,Polar bear/Beehive/Scale
 Personal flotation device,Personal flotation device,Parachute/Tank/Punching bag,Boat,Balloon,Personal flotation device/Drill (Tool)
 Table tennis racket,Roller skates/High heels/Sewing machine,Table tennis racket,Tennis ball/Golf ball/Golf cart,Swimming pool/Violin/Piano,Medical equipment
 Pencil case,Salt and pepper shakers/Fashion accessory/Bottle opener,Person/Man/Weapon,Suit/Person/Luggage and bags,Person/Human face/Cake stand,Pencil case
-Musical keyboard,Sewing machine/Cutting board,Screwdriver,Wall clock,Piano/Violin/Flute,Musical keyboard
-Scoreboard,Cutting board,Flag,Wall clock/Tennis ball/Tower,Office building/Cake stand/Mirror,Scoreboard
+Musical keyboard,Sewing machine/Cutting board,Musical keyboard,Wall clock,Piano/Violin/Flute,Musical keyboard
+Scoreboard,Cutting board,Flag,Wall clock/Tennis ball/Tower,Cake stand/Mirror,Scoreboard
 Briefcase,Necklace/Wardrobe/Serving tray,Punching bag/Backpack/Bomb,Briefcase/Suitcase/Limousine,Envelope/Nightstand/Towel,Shotgun/Knife/Dagger
 Kitchen knife,Kitchen knife/Kitchen utensil/Grinder,Knife/Sword/Axe,Suitcase/Boat/Stethoscope,Spoon/Towel/Cake,Knife/Sword/Axe
-Nail (Construction),Lipstick/Kitchen knife/Bust,Hammer/Screwdriver/Knife,Tie/Crown,Human nose/Human face/Bust,Knife/Axe/Drill (Tool)
+Nail (Construction),Lipstick/Kitchen knife/Hair dryer,Hammer/Knife/Axe,Tie/Crown,Human nose/Human face/Bust,Knife/Axe/Drill (Tool)
 Tennis ball,Mixing bowl/Hair dryer/Sewing machine,Bow and arrow/Baseball bat/Kite,Tennis ball/Golf ball/Golf cart,Swimming pool/Wine glass/Teddy bear,Medical equipment/Polar bear/Rifle
 Plastic bag,Kitchenware/Sewing machine/Mixing bowl,Punching bag/Backpack/Clothing,Tennis ball/Suitcase/Golf ball,Teddy bear/Wine glass/Diaper,Medical equipment/Polar bear/Syringe
 Oboe,Oboe,Oboe,Oboe,Flute/Violin/Piano,Oboe
@@ -335,56 +335,56 @@ Girl,Girl/Woman/Doll,Man/Person/Kite,Person/Tennis ball/Ceiling fan,Woman/Person
 Plant,Sewing machine/Grinder/Mixing bowl,Man/Bomb/Weapon,Tower/Aircraft/Luggage and bags,Flower/Christmas tree/Fruit,Medical equipment/Snake/Beehive
 Potato,Slow cooker/Frying pan/Face powder,Punching bag/Bomb,Lobster/Golf ball,Strawberry/Pineapple/Fruit,Hedgehog/Worm/Armadillo
 Hair spray,Hair spray/Cooking spray/Face powder,Punching bag/Bomb/Shotgun,Airplane,Perfume/Shower/Cream,Syringe/Skunk/Beehive
-Sports equipment,Salt and pepper shakers/Kitchen appliance/Kitchenware,Clothing/Aircraft/Weapon,Aircraft/Luggage and bags/Airplane,Clothing/Baked goods/Office building,Medical equipment/Rifle/Ambulance
+Sports equipment,Salt and pepper shakers/Kitchen appliance/Kitchenware,Clothing/Aircraft/Weapon,Aircraft/Luggage and bags/Airplane,Clothing/Baked goods/Human body,Medical equipment/Rifle/Ambulance
 Pasta,Slow cooker/Serving tray/Frying pan,Pasta,Lobster/Coffeemaker,Pasta/Dessert/Croissant,Pasta
 Penguin,Roller skates/Girl/Doll,Man/Cowboy hat,Lobster/Surfboard,Red panda/Snowman/Teddy bear,Polar bear/Crocodile/Lizard
 Pumpkin,Face powder/Slow cooker/Doll,Rocket/Punching bag/Cowboy hat,Lobster/Golf ball/Tennis ball,Strawberry/Fruit/Pancake,Rocket/Beehive/Hedgehog
 Pear,Kitchen knife/Necklace/Skirt,Knife,Golf ball/Crown/Tennis ball,Strawberry/Fruit/Pomegranate,Knife/Beehive/Porcupine
 Infant bed,Diaper/Mixing bowl/Serving tray,Punching bag/Knife,Jacuzzi/Boat/Suitcase,Infant bed/Bed/Sofa bed,Stretcher/Ambulance/Knife
 Polar bear,High heels/Mixing bowl/Sewing machine,Bow and arrow/Man/Skull,Lobster/Tennis ball/Golf cart,Teddy bear/Wine glass/Snowman,Polar bear/Bear/Brown bear
-Mixer,Mixer/Blender/Mixing bowl,Tank/Screwdriver,Cocktail shaker/Coffeemaker,Spoon/Cocktail/Pancake,Mixer
-Cupboard,Wardrobe/Kitchenware/Mixing bowl,Punching bag/Backpack/Screwdriver,Wardrobe/Filing cabinet/Suitcase,Bed/Infant bed/Fireplace,Knife
+Mixer,Mixer/Blender/Mixing bowl,Tank,Cocktail shaker/Coffeemaker,Spoon/Cocktail/Pancake,Mixer
+Cupboard,Wardrobe/Kitchenware/Mixing bowl,Punching bag/Backpack/Knife,Wardrobe/Filing cabinet/Suitcase,Bed/Infant bed/Fireplace,Knife
 Jacuzzi,Hair dryer/Frying pan,Jacuzzi,Jacuzzi/Jet ski/Coffeemaker,Jacuzzi/Bathtub/Swimming pool,Jacuzzi
 Pizza,Slow cooker/Kitchen knife/Mixing bowl,Punching bag/Knife/Rocket,Lobster/Convenience store/Coffeemaker,Pasta/Ice cream/Cake,Knife/Rocket
-Digital clock,Slow cooker/Bust/Grinder,Flag/Hammer/Bomb,Wall clock/Tower/Watch,Picnic basket/Bust/Mirror,Digital clock
+Digital clock,Slow cooker/Grinder,Flag/Hammer/Bomb,Wall clock/Tower/Watch,Picnic basket/Bust/Mirror,Digital clock
 Pig,Lipstick/Girl/Doll,Man/Shotgun/Bow and arrow,Lobster,Teddy bear/Human nose/Milk,Bull/Worm/Hedgehog
 Reptile,Reptile,Skull/Man/Tank,Jaguar (Animal)/Lobster/Golf ball,Human body/Butterfly/Teddy bear,Lizard/Snake/Crocodile
 Rifle,Kitchen knife/Face powder/Sewing machine,Rifle/Shotgun/Handgun,Golf ball/Tennis ball/Golf cart,Teddy bear/Beer/Nightstand,Rifle/Shotgun/Knife
-Lipstick,Lipstick/Cosmetics/Perfume,Clothing/Punching bag/Screwdriver,Wardrobe/Suitcase/Limousine,Perfume/Teddy bear/Human nose,Syringe/Skunk
+Lipstick,Lipstick/Cosmetics/Perfume,Clothing/Punching bag/Cowboy hat,Wardrobe/Suitcase/Limousine,Perfume/Teddy bear/Human nose,Syringe/Skunk
 Skateboard,Roller skates/Cutting board/Blender,Backpack/Kite/Rocket,Snowboard/Surfboard/Jet ski,Ice cream/Teddy bear/Swimming pool,Rocket/Chainsaw
 Raven,Raven,Raven,Jaguar (Animal),Swan/Blue jay/Teddy bear,Raven/Snake/Porcupine
 High heels,High heels/Roller skates/Brassiere,Clothing/Bow and arrow/Cowboy hat,Tennis ball/Convenience store/Wardrobe,Teddy bear/Clothing/Loveseat,Polar bear/Medical equipment
 Red panda,Doll,Red panda,Jaguar (Animal),Red panda/Teddy bear/Strawberry,Cheetah/Porcupine/Bear
 Rose,Hair spray/Cooking spray/Perfume,Human beard/Flag,Crown/Tower/Luggage and bags,Rose/Flower/Curtain,Rose
 Rabbit,Doll/Girl/Slow cooker,Man/Bow and arrow/Punching bag,Golf cart/Golf ball/Tennis ball,Teddy bear/Snowman/Pancake,Hedgehog/Armadillo/Bull
-Sculpture,Bust/Necklace/Doll,Skull/Helmet/Sword,Bronze sculpture/Surfboard/Tower,Bust/Fountain/Office building,Snake/Crocodile/Sword
+Sculpture,Necklace/Doll/Roller skates,Skull/Helmet/Sword,Bronze sculpture/Surfboard/Tower,Bust/Fountain/Flower,Snake/Crocodile/Sword
 Saxophone,Sewing machine,Saxophone,Bronze sculpture/Golf cart/Golf ball,Piano/Flute/Violin,Saxophone
 Shotgun,Kitchen knife/Face powder/Hair spray,Shotgun/Handgun/Rifle,Golf ball/Golf cart/Briefcase,Bust/Cocktail/Teddy bear,Shotgun/Rifle/Knife
 Seafood,Slow cooker/Kitchenware/Cosmetics,Clothing,Lobster/Boat/Convenience store,Wine/Coconut/Pineapple,Shark/Medical equipment/Crocodile
 Submarine sandwich,Mixing bowl/Slow cooker/Frying pan,Punching bag/Knife/Cowboy hat,Lobster/Convenience store/Surfboard,Pancake/Croissant/Cake,Knife/Shark/Submarine
 Snowboard,Roller skates/Cutting board,Backpack/Kite/Parachute,Snowboard/Ski/Surfboard,Snowman/Ice cream/Maple,Chainsaw
 Sword,Kitchen knife/Necklace/Kitchen utensil,Sword/Dagger/Knife,Crown/Castle/Bronze sculpture,Spoon/Flute/Swan,Sword/Dagger/Knife
-Picture frame,Sewing machine/Hair dryer/Slow cooker,Bow and arrow/Shotgun/Clothing,Wall clock/Golf cart/Bronze sculpture,Sofa bed/Wine glass/Office building,Medical equipment/Scale/Polar bear
+Picture frame,Sewing machine/Hair dryer/Slow cooker,Bow and arrow/Shotgun/Clothing,Wall clock/Golf cart/Bronze sculpture,Sofa bed/Wine glass/Tree house,Medical equipment/Scale/Polar bear
 Sushi,Slow cooker/Serving tray/Kitchenware,Sushi,Lobster/Surfboard/Convenience store,Pasta/Dessert/Cocktail,Shark
 Loveseat,Hair dryer/Sewing machine/High heels,Punching bag,Coffeemaker/Tennis ball/Jacuzzi,Loveseat/Sofa bed/Tree house,Medical equipment
 Ski,Roller skates/Swimwear/Skirt,Parachute/Backpack/Kite,Ski/Snowboard/Jet ski,Gondola/Snowman/Swimming pool,Drill (Tool)/Chainsaw
 Squirrel,Girl/Roller skates,Punching bag/Kite/Parachute,Lobster/Jaguar (Animal)/Golf ball,Christmas tree/Red panda/Teddy bear,Porcupine/Snake/Lizard
 Tripod,Tripod,Backpack/Cannon/Binoculars,Tower/Bronze sculpture/Boat,Mirror/Picnic basket,Shotgun/Rifle
-Stethoscope,Sewing machine/Brassiere/Kitchen knife,Screwdriver/Binoculars/Knife,Stethoscope/Treadmill,Balloon/Nightstand/Teddy bear,Stethoscope/Syringe/Medical equipment
+Stethoscope,Sewing machine/Brassiere/Kitchen knife,Binoculars/Knife/Backpack,Stethoscope/Treadmill,Balloon/Nightstand/Teddy bear,Stethoscope/Syringe/Medical equipment
 Submarine,Sink/Sewing machine,Submarine/Missile/Aircraft,Boat/Aircraft/Airplane,Swimming pool/Bathtub/Gondola,Submarine/Missile/Rocket
 Scorpion,Necklace/Hair spray/Cooking spray,Sword/Weapon/Baseball bat,Jaguar (Animal)/Lobster/Crown,Butterfly/Flower/Swan,Snake/Lizard/Armadillo
 Segway,Roller skates/Skirt,Punching bag/Backpack/Parachute,Segway/Jet ski/Golf cart,Segway,Rocket
 Training bench,Cutting board/Mixing bowl/Grinder,Man,Filing cabinet/Wine rack/Treadmill,Cake stand/Bed/Infant bed,Stretcher
 Snake,Necklace/Kitchen knife/Woman,Man/Baseball bat/Knife,Jaguar (Animal)/Lobster/Golf ball,Butterfly/Christmas tree/Swan,Snake/Lizard/Crocodile
 Coffee table,Sewing machine/Kitchenware/Slow cooker,Coffee table,Convenience store/Coffeemaker/Tennis ball,Coffee/Wine glass/Sofa bed,Polar bear/Medical equipment
-Skyscraper,High heels,Bomb,Skyscraper/Tower/Billboard,Office building/Tree house/Pancake,Skyscraper
+Skyscraper,High heels,Bomb,Skyscraper/Tower/Billboard,Tree house/Pancake/Balloon,Skyscraper
 Sheep,Salt and pepper shakers,Clothing/Man,Luggage and bags,Milk/Teddy bear/Clothing,Bull/Polar bear/Hedgehog
-Television,Kitchen appliance/Cosmetics/Wardrobe,Clothing,Watch/Billboard/Coffeemaker,Office building/Sofa bed/Clothing,Medical equipment
+Television,Kitchen appliance/Cosmetics/Wardrobe,Clothing,Watch/Billboard/Coffeemaker,Sofa bed/Clothing/Bed,Medical equipment
 Trombone,Mixing bowl,Shotgun/Bow and arrow,Golf ball/Golf cart,Flute/Violin/Piano,Drill (Tool)/Shotgun
 Tea,Face powder/Mixing bowl/Perfume,Punching bag,Coffeemaker/Tennis ball,Coffee/Drink/Cake,Tea
 Tank,Mixing bowl/Sink/Hair spray,Tank/Rocket/Missile,Boat/Aircraft/Wine rack,Bathtub/Swimming pool/Picnic basket,Rocket/Missile/Submarine
 Taco,Taco,Taco,Lobster,Pasta/Pancake/Candy,Armadillo/Lizard/Snake
-Telephone,Hair dryer/Sewing machine,Person,Tower/Coffeemaker/Stethoscope,Office building/Bathtub/Person,Ambulance/Stethoscope/Medical equipment
+Telephone,Hair dryer/Sewing machine,Person,Tower/Coffeemaker/Stethoscope,Bathtub/Person,Ambulance/Stethoscope/Medical equipment
 Torch,Kitchen knife/Frying pan/Hair spray,Torch/Sword/Flag,Crown/Tower,Wood-burning stove/Fountain/Christmas tree,Torch/Sword/Knife
 Tiger,Girl/Woman,Man/Tank/Bow and arrow,Jaguar (Animal),Red panda/Teddy bear/Butterfly,Crocodile/Cheetah/Snake
 Strawberry,Hair spray/Cooking spray/Perfume,Strawberry,Lobster/Tennis ball/Golf ball,Strawberry/Fruit/Pineapple,Skunk/Bee/Beehive
@@ -392,29 +392,29 @@ Trumpet,Mixing bowl/Sewing machine/Salt and pepper shakers,Bow and arrow/Hammer/
 Tree,Necklace/Girl,Man/Flag/Kite,Crown/Tower/Bronze sculpture,Christmas tree/Tree house/Flower,Snake/Porcupine/Chainsaw
 Tomato,Slow cooker/Kitchen knife/Frying pan,Punching bag/Knife,Lobster,Strawberry/Fruit/Pineapple,Skunk/Snake/Worm
 Train,Roller skates/Salt and pepper shakers/Cutting board,Parachute/Man/Bomb,Boat/Watch/Wine rack,Cake stand/Gondola/Human body,Ambulance/Drill (Tool)/Stretcher
-Tool,Grinder/Kitchen knife/Kitchen appliance,Weapon/Screwdriver/Knife,Luggage and bags/Stethoscope/Treadmill,Mirror/Cookie/Christmas tree,Knife/Drill (Tool)/Chainsaw
+Tool,Grinder/Kitchen knife/Kitchen appliance,Weapon/Knife/Hammer,Luggage and bags/Stethoscope/Treadmill,Mirror/Cookie/Christmas tree,Knife/Drill (Tool)/Chainsaw
 Picnic basket,Serving tray/Mixing bowl/Doll,Punching bag/Backpack/Cowboy hat,Tennis ball/Suitcase/Wine rack,Picnic basket/Baked goods/Balloon,Stretcher/Rocket/Knife
 Cooking spray,Cooking spray/Hair spray/Face powder,Punching bag/Bomb/Shotgun,Airplane,Perfume/Shower/Cream,Syringe/Skunk/Beehive
 Trousers,High heels/Skirt/Miniskirt,Clothing/Cowboy hat/Man,Wardrobe/Suit,Clothing/Teddy bear/Lavender (Plant),Trousers
-Bowling equipment,Salt and pepper shakers/Kitchen appliance/Kitchenware,Clothing/Aircraft/Weapon,Aircraft/Luggage and bags/Airplane,Clothing/Baked goods/Office building,Medical equipment/Rifle/Ambulance
+Bowling equipment,Salt and pepper shakers/Kitchen appliance/Kitchenware,Clothing/Aircraft/Weapon,Aircraft/Luggage and bags/Airplane,Clothing/Baked goods/Human body,Medical equipment/Rifle/Ambulance
 Football helmet,Dress/Necklace/Skirt,Helmet/Cowboy hat/Skull,Suit/Crown/Tower,Human nose/Clothing/Human face,Sword/Chainsaw/Knife
 Truck,Serving tray/Grinder/Sewing machine,Tank/Punching bag/Backpack,Boat/Limousine/Airplane,Picnic basket/Bed/Infant bed,Ambulance/Stretcher/Chainsaw
 Measuring cup,Mixing bowl/Serving tray/Diaper,Punching bag,Crown/Tennis ball/Coffeemaker,Spoon/Coffee/Drink,Syringe
-Coffeemaker,Hair dryer/Sewing machine/Kitchenware,Screwdriver/Punching bag,Coffeemaker/Jacuzzi/Convenience store,Coffee/Sofa bed/Jacuzzi,Medical equipment
+Coffeemaker,Hair dryer/Sewing machine/Kitchenware,Punching bag,Coffeemaker/Jacuzzi/Convenience store,Coffee/Sofa bed/Jacuzzi,Medical equipment
 Violin,Sewing machine/Roller skates/Kitchen knife,Bow and arrow/Knife/Kite,Bronze sculpture/Tennis ball/Golf ball,Violin/Piano/Flute,Knife/Sword
-Vehicle,Kitchen appliance/Fashion accessory/Salt and pepper shakers,Tank/Weapon/Aircraft,Aircraft/Boat/Limousine,Human body/Person/Office building,Rocket/Ambulance/Missile
+Vehicle,Kitchen appliance/Fashion accessory/Salt and pepper shakers,Tank/Weapon/Aircraft,Aircraft/Boat/Limousine,Human body/Person/Clothing,Rocket/Ambulance/Missile
 Handbag,Wardrobe/Lipstick/Necklace,Punching bag/Backpack/Knife,Briefcase/Suitcase/Wardrobe,Perfume/Clothing/Teddy bear,Knife/Crocodile/Shotgun
-Paper cutter,Grinder/Kitchen knife/Sewing machine,Knife/Screwdriver/Hammer,Boat/Lobster/Surfboard,Cookie/Spoon/Cake,Knife/Chainsaw/Axe
+Paper cutter,Grinder/Kitchen knife/Sewing machine,Knife/Hammer/Axe,Boat/Lobster/Surfboard,Cookie/Spoon/Cake,Knife/Chainsaw/Axe
 Wine,Perfume/Mixing bowl/Kitchenware,Wine,Lobster/Coffeemaker,Wine/Wine glass/Beer,Wine
 Weapon,Kitchen knife/Face powder/Fashion accessory,Weapon/Handgun/Sword,Golf ball/Aircraft/Wine rack,Human body/Clothing/Cocktail,Sword/Rifle/Missile
-Wheel,Grinder/Sewing machine/Roller skates,Screwdriver/Hammer/Weapon,Golf cart/Wine rack/Treadmill,Mirror/Spoon/Bed,Scale/Knife/Torch
+Wheel,Grinder/Sewing machine/Roller skates,Hammer/Weapon/Helmet,Golf cart/Wine rack/Treadmill,Mirror/Spoon/Bed,Scale/Knife/Torch
 Worm,Slow cooker/Grinder,Man/Hammer/Bomb,Lobster,Butterfly/Fruit/Teddy bear,Worm/Snake/Hedgehog
 Wok,Frying pan/Serving tray/Kitchen utensil,Wok,Wok,Spoon/Pancake,Wok
 Whale,Whale,Submarine/Man/Skull,Lobster/Boat/Surfboard,Swan/Red panda/Human body,Shark/Polar bear/Crocodile
 Zebra,Zebra,Zebra,Jaguar (Animal),Swan/Butterfly/Red panda,Cheetah/Porcupine/Crocodile
 Auto part,Salt and pepper shakers/Fashion accessory/Bottle opener,Person/Man/Weapon,Person/Luggage and bags/Watch,Human body/Person/Cake stand,Scale/Bear/Brown bear
 Jug,Serving tray/Mixing bowl/Kitchen utensil,Punching bag,Jug,Spoon/Flute/Beer,Syringe
-Pizza cutter,Grinder/Kitchen knife/Sewing machine,Knife/Screwdriver/Hammer,Boat/Lobster/Surfboard,Cookie/Spoon/Cake,Knife/Chainsaw/Axe
+Pizza cutter,Grinder/Kitchen knife/Sewing machine,Knife/Hammer/Axe,Boat/Lobster/Surfboard,Cookie/Spoon/Cake,Knife/Chainsaw/Axe
 Cream,Face powder/Hair spray/Cooking spray,Cream,Cream,Cream/Ice cream/Milk,Cream
 Monkey,Girl/Doll/Sewing machine,Man/Baseball bat/Bow and arrow,Jaguar (Animal)/Person/Lobster,Red panda/Teddy bear/Christmas tree,Snake/Porcupine/Lizard
 Lion,Lion,Sword/Man/Bow and arrow,Jaguar (Animal)/Crown/Bronze sculpture,Red panda/Teddy bear/Swan,Crocodile/Cheetah/Bull
@@ -422,14 +422,14 @@ Bread,Frying pan/Serving tray/Mixing bowl,Knife/Clothing/Punching bag,Bread,Cake
 Platter,Serving tray/Mixing bowl/Kitchen utensil,Hammer/Punching bag/Knife,Wine rack/Cocktail shaker,Spoon/Pancake/Dessert,Knife
 Chicken,Frying pan/Slow cooker/Mixing bowl,Punching bag/Bow and arrow/Kite,Lobster/Golf ball/Wine rack,Pancake/Milk/Swan,Snake/Crocodile/Hedgehog
 Eagle,Necklace,Flag/Kite/Sword,Crown/Jaguar (Animal),Swan/Human eye/Butterfly,Raven/Porcupine/Bull
-Helicopter,Hair spray/Cooking spray,Aircraft/Parachute/Rocket,Aircraft/Airplane/Boat,Balloon/Gondola/Office building,Ambulance/Rocket/Missile
+Helicopter,Hair spray/Cooking spray,Aircraft/Parachute/Rocket,Aircraft/Airplane/Boat,Balloon/Gondola/Tree house,Ambulance/Rocket/Missile
 Owl,Owl,Skull,Jaguar (Animal),Swan/Teddy bear/Butterfly,Raven/Lizard/Porcupine
 Duck,Skirt/Frying pan/Roller skates,Baseball bat/Bow and arrow/Punching bag,Tennis ball/Boat/Lobster,Swan/Pancake/Teddy bear,Crocodile/Armadillo/Skunk
 Turtle,Doll/Necklace,Tank/Kite/Skull,Lobster/Jaguar (Animal)/Boat,Swan/Butterfly/Red panda,Snake/Crocodile/Lizard
 Hippopotamus,Hippopotamus,Skull,Jaguar (Animal),Teddy bear/Swan/Snowman,Crocodile/Porcupine/Cheetah
 Crocodile,Necklace/Kitchen knife,Skull/Man/Bow and arrow,Jaguar (Animal)/Boat/Jet ski,Swan/Teddy bear/Coconut,Crocodile/Snake/Shark
 Toilet,Diaper/Sink/Hair dryer,Punching bag/Tank/Clothing,Coffeemaker/Jacuzzi/Wardrobe,Bathtub/Shower/Towel,Syringe/Knife
-Toilet paper,Sewing machine/Diaper/Kitchenware,Punching bag/Clothing/Backpack,Coffeemaker/Tennis ball/Briefcase,Office building/Bathtub/Diaper,Medical equipment/Syringe/Polar bear
+Toilet paper,Sewing machine/Diaper/Kitchenware,Punching bag/Clothing/Backpack,Coffeemaker/Tennis ball/Briefcase,Bathtub/Diaper/Tree house,Medical equipment/Syringe/Polar bear
 Squid,Slow cooker/Frying pan,Submarine,Lobster/Surfboard,Teddy bear/Pineapple/Butterfly,Shark/Lizard/Worm
 Clothing,Dress/Wardrobe/Cosmetics,Clothing/Backpack/Cowboy hat,Wardrobe/Suit/Suitcase,Clothing/Baked goods/Perfume,Medical equipment/Polar bear
 Footwear,Swimwear/High heels/Cosmetics,Clothing/Backpack,Wardrobe/Snowboard/Golf cart,Clothing/Baked goods/Perfume,Medical equipment
@@ -440,12 +440,12 @@ Frog,Girl,Baseball bat/Kite/Skull,Lobster/Jaguar (Animal)/Tennis ball,Butterfly/
 Banana,Skirt/Slow cooker/Miniskirt,Punching bag/Bomb/Man,Golf ball/Lobster/Tennis ball,Pineapple/Coconut/Fruit,Snake/Crocodile/Worm
 Rocket,Face powder/Slow cooker/Sewing machine,Rocket/Missile/Bomb,Airplane/Boat/Aircraft,Balloon/Pancake/Picnic basket,Rocket/Missile/Submarine
 Wine glass,Mixing bowl/Hair dryer/Sewing machine,Bow and arrow/Skull/Knife,Tennis ball/Golf ball/Golf cart,Wine glass/Wine/Tree house,Polar bear/Medical equipment/Beehive
-Countertop,Kitchenware/Serving tray/Tableware,Screwdriver/Backpack,Coffeemaker/Convenience store/Surfboard,Fireplace/Sofa bed/Nightstand,Countertop
-Tablet computer,Sewing machine/Kitchen appliance/Salt and pepper shakers,Rocket/Person/Weapon,Coffeemaker/Airplane/Wall clock,Office building/Person/Piano,Medical equipment/Rocket/Worm
-Waste container,Serving tray/Blender/Mixing bowl,Punching bag/Tank/Screwdriver,Suitcase/Briefcase/Cocktail shaker,Picnic basket/Spoon/Envelope,Syringe/Stretcher
+Countertop,Kitchenware/Serving tray/Tableware,Backpack,Coffeemaker/Convenience store/Surfboard,Fireplace/Sofa bed/Nightstand,Countertop
+Tablet computer,Sewing machine/Kitchen appliance/Salt and pepper shakers,Rocket/Person/Weapon,Coffeemaker/Airplane/Wall clock,Person/Piano/Sofa bed,Medical equipment/Rocket/Worm
+Waste container,Serving tray/Blender/Mixing bowl,Punching bag/Tank/Backpack,Suitcase/Briefcase/Cocktail shaker,Picnic basket/Spoon/Envelope,Syringe/Stretcher
 Swimming pool,Mixing bowl/Swimwear/Hair dryer,Submarine/Tank,Jacuzzi/Golf cart/Tennis ball,Swimming pool/Jacuzzi/Bathtub,Submarine/Medical equipment/Crocodile
 Dog,Girl/Woman/Roller skates,Man/Person/Punching bag,Person/Golf cart/Treadmill,Person/Teddy bear/Woman,Skunk/Snake/Hedgehog
-Book,Bottle opener,Punching bag,Bronze sculpture/Briefcase/Airplane,Nightstand/Office building/Cake stand,Book
+Book,Bottle opener,Punching bag,Bronze sculpture/Briefcase/Airplane,Nightstand/Cake stand/Tree house,Book
 Elephant,Girl/Doll/Necklace,Skull/Man/Bow and arrow,Jaguar (Animal)/Bronze sculpture/Boat,Red panda/Teddy bear/Swan,Crocodile/Bull/Snake
 Shark,Kitchen knife/Sink,Submarine/Kite/Knife,Lobster/Surfboard/Boat,Swan/Swimming pool/Coconut,Shark/Crocodile/Snake
 Candle,Perfume/Serving tray/Doll,Torch/Cowboy hat/Cannon,Tower,Candy/Wood-burning stove/Fireplace,Torch
@@ -460,7 +460,7 @@ Cheetah,Girl,Cheetah,Jaguar (Animal),Red panda/Butterfly,Cheetah/Porcupine/Croco
 Palm tree,Necklace/Mixing bowl/Sewing machine,Bow and arrow/Sword/Kite,Crown/Golf cart/Golf ball,Christmas tree/Tree house/Coconut,Snake/Porcupine/Crocodile
 Hamburger,Slow cooker/Grinder/Brassiere,Knife/Punching bag/Man,Convenience store/Lobster/Golf ball,Pancake/Croissant/Beer,Knife/Worm
 Maple,Maple,Maple,Crown/Snowboard,Maple/Christmas tree/Strawberry,Porcupine/Chainsaw
-Building,Salt and pepper shakers/Kitchen appliance/Cutting board,Bomb/Aircraft/Tank,Tower/Skyscraper/Castle,Office building/Tree house/Wood-burning stove,Beehive/Medical equipment/Scale
+Building,Salt and pepper shakers/Kitchen appliance/Cutting board,Bomb/Aircraft/Tank,Tower/Skyscraper/Castle,Tree house/Wood-burning stove/Fountain,Beehive/Medical equipment/Scale
 Fish,Slow cooker/Frying pan/Mixing bowl,Man/Tank/Submarine,Lobster/Boat/Golf ball,Swimming pool/Milk/Fruit,Shark/Crocodile/Snake
 Lobster,Slow cooker/Necklace/Frying pan,Submarine/Punching bag/Tank,Lobster/Boat/Surfboard,Strawberry/Ice cream/Pineapple,Shark/Porcupine/Polar bear
 Garden Asparagus,Slow cooker/Kitchen knife/Frying pan,Knife,Lobster,Strawberry/Pineapple/Fruit,Knife
@@ -469,10 +469,10 @@ Hedgehog,Slow cooker,Missile/Baseball bat/Bow and arrow,Golf ball/Lobster/Tennis
 Airplane,Sewing machine/Hair spray/Cooking spray,Aircraft/Parachute/Rocket,Airplane/Aircraft/Boat,Balloon/Bathtub/Gondola,Rocket/Submarine/Missile
 Spoon,Serving tray/Kitchen utensil/Mixing bowl,Knife/Punching bag/Sword,Cocktail shaker/Lobster,Spoon/Cake/Pancake,Knife/Syringe/Sword
 Otter,Otter,Otter,Jaguar (Animal)/Boat/Lobster,Red panda/Swan/Teddy bear,Porcupine/Hedgehog/Crocodile
-Bull,Bust/Girl/Hair spray,Bow and arrow/Shotgun/Man,Crown/Jaguar (Animal)/Wine rack,Bust/Teddy bear/Milk,Bull/Shark/Bear
+Bull,Girl/Hair spray/Cooking spray,Bow and arrow/Shotgun/Man,Crown/Jaguar (Animal)/Wine rack,Bust/Teddy bear/Milk,Bull/Shark/Bear
 Oyster,Slow cooker/Mixing bowl/Grinder,Oyster,Lobster/Boat/Golf ball,Strawberry/Wine/Pineapple,Worm
 Horizontal bar,Horizontal bar,Horizontal bar,Horizontal bar,Cocktail/Beer/Drink,Horizontal bar
-Convenience store,Slow cooker/Sewing machine/Kitchenware,Bow and arrow/Punching bag/Handgun,Convenience store/Golf cart/Coffeemaker,Office building/Teddy bear/Sofa bed,Medical equipment/Polar bear
+Convenience store,Slow cooker/Sewing machine/Kitchenware,Bow and arrow/Punching bag/Handgun,Convenience store/Golf cart/Coffeemaker,Teddy bear/Sofa bed/Coffee,Medical equipment/Polar bear
 Bomb,Pressure cooker/Face powder/Hair spray,Bomb/Weapon/Missile,Suitcase/Airplane/Golf ball,Balloon/Bust/Pancake,Missile/Rocket/Submarine
 Bench,Cutting board/Mixing bowl/Grinder,Man,Filing cabinet/Wine rack/Treadmill,Cake stand/Bed/Infant bed,Stretcher
 Ice cream,Mixing bowl/Slow cooker/Kitchenware,Ice cream,Lobster/Golf cart/Golf ball,Ice cream/Cream/Strawberry,Polar bear
@@ -482,25 +482,25 @@ Parachute,Roller skates/Dress/Skirt,Parachute/Rocket/Punching bag,Airplane/Aircr
 Orange,Lipstick/Necklace/Mixing bowl,Flag/Cowboy hat/Punching bag,Crown/Tennis ball/Golf ball,Strawberry/Fruit/Lavender (Plant),Snake/Polar bear/Skunk
 Antelope,Antelope,Bow and arrow,Jaguar (Animal),Antelope,Cheetah/Porcupine/Armadillo
 Beaker,Mixing bowl/Kitchen utensil/Serving tray,Punching bag/Tank/Skull,Cocktail shaker,Spoon/Wine glass/Flute,Syringe
-Moths and butterflies,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Office building,Medical equipment/Bear/Brown bear
-Window,Serving tray/Hair spray/Cooking spray,Punching bag/Flag/Screwdriver,Tower/Wall clock/Watch,Curtain/Fireplace/Mirror,Shotgun
+Moths and butterflies,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Person,Medical equipment/Bear/Brown bear
+Window,Serving tray/Hair spray/Cooking spray,Punching bag/Flag/Hammer,Tower/Wall clock/Watch,Curtain/Fireplace/Mirror,Shotgun
 Closet,Wardrobe/Sink/Mixing bowl,Punching bag/Backpack/Cowboy hat,Wardrobe/Suitcase/Wine rack,Bed/Infant bed/Bathtub,Closet
 Castle,Wardrobe/Salt and pepper shakers,Cannon/Sword,Castle/Tower/Wardrobe,Tree house/Wine glass/Fireplace,Beehive/Sword
 Jellyfish,Jellyfish,Submarine,Lobster/Surfboard/Golf ball,Butterfly/Pineapple/Strawberry,Shark/Snake/Worm
-Goose,Frying pan/Bust,Bow and arrow/Punching bag/Kite,Lobster,Swan/Pancake/Butterfly,Hedgehog/Porcupine/Snake
+Goose,Frying pan,Bow and arrow/Punching bag/Kite,Lobster,Swan/Pancake/Butterfly,Hedgehog/Porcupine/Snake
 Mule,Sewing machine/Girl/Face powder,Man/Punching bag/Backpack,Golf cart/Wine rack/Segway,Drinking straw/Woman,Bull/Snake/Armadillo
-Swan,Necklace/Doll/Bust,Kite/Sword/Parachute,Boat/Jet ski/Lobster,Swan/Butterfly/Lily,Raven/Crocodile/Snake
+Swan,Necklace/Doll,Kite/Sword/Parachute,Boat/Jet ski/Lobster,Swan/Butterfly/Lily,Raven/Crocodile/Snake
 Peach,Mixing bowl/Girl/Hair spray,Bomb/Man/Punching bag,Golf ball/Tennis ball/Lobster,Strawberry/Fruit/Pineapple,Skunk/Snake/Beehive
 Coconut,Frying pan/Mixing bowl/Face powder,Punching bag,Lobster/Golf ball/Surfboard,Coconut/Pineapple/Fruit,Crocodile/Snake/Shark
 Seat belt,Skirt/Roller skates/Miniskirt,Helmet/Punching bag/Handgun,Airplane/Golf cart/Surfboard,Loveseat/Human nose/Diaper,Seat belt
 Raccoon,Girl/Diaper/Doll,Punching bag/Man/Backpack,Jaguar (Animal)/Lobster/Person,Teddy bear/Red panda/Christmas tree,Porcupine/Skunk/Armadillo
 Chisel,Kitchen knife/Grinder/Kitchen utensil,Hammer/Knife/Axe,Bronze sculpture/Surfboard,Spoon,Knife/Axe/Sword
-Fork,Kitchen knife/Serving tray/Kitchen utensil,Knife/Screwdriver/Hammer,Wine rack,Spoon/Christmas tree/Mirror,Knife/Axe/Sword
+Fork,Kitchen knife/Serving tray/Kitchen utensil,Knife/Hammer/Axe,Wine rack,Spoon/Christmas tree/Mirror,Knife/Axe/Sword
 Lamp,Serving tray/Kitchen appliance/Hair dryer,Torch/Sword/Helmet,Tower/Coffeemaker/Parking meter,Mirror/Fireplace/Fountain,Torch/Snake/Sword
 Camera,Roller skates/Fashion accessory/Wardrobe,Binoculars/Rifle/Backpack,Watch/Parking meter/Airplane,Mirror/Human eye/Human face,Rifle/Shotgun/Ambulance
 Squash (Plant),Frying pan/Mixing bowl/Slow cooker,Bow and arrow/Hammer/Punching bag,Tennis ball/Golf ball/Luggage and bags,Pomegranate/Fruit/Strawberry,Squash (Plant)
-Racket,Sewing machine/Bust/Grinder,Weapon/Baseball bat/Shotgun,Tennis ball/Wine rack/Golf ball,Bust/Violin/Office building,Medical equipment/Shotgun
-Human face,Salt and pepper shakers/Bust/Skirt,Man/Person/Helmet,Luggage and bags/Suit/Crown,Human face/Cake stand/Mirror,Bear/Brown bear/Scale
+Racket,Sewing machine/Grinder/Roller skates,Weapon/Baseball bat/Shotgun,Tennis ball/Wine rack/Golf ball,Bust/Violin/Human body,Medical equipment/Shotgun
+Human face,Salt and pepper shakers/Skirt/Dress,Man/Person/Helmet,Luggage and bags/Suit/Crown,Human face/Cake stand/Mirror,Bear/Brown bear/Scale
 Human arm,Kitchen knife/Sewing machine/Skirt,Weapon/Sword/Knife,Tennis ball/Crown/Wine rack,Human body/Human eye/Mirror,Sword/Knife/Rifle
 Vegetable,Slow cooker/Mixing bowl/Kitchenware,Man/Clothing/Punching bag,Lobster/Convenience store/Golf cart,Fruit/Flower/Strawberry,Medical equipment/Snake/Skunk
 Diaper,Diaper/Dress/Doll,Clothing/Punching bag/Backpack,Surfboard/Wardrobe/Golf cart,Diaper/Clothing/Towel,Medical equipment/Syringe
@@ -534,13 +534,13 @@ Parrot,Necklace/Sewing machine/Doll,Baseball bat/Man/Cowboy hat,Parrot,Swan/Tedd
 Handgun,Kitchen knife/Face powder/Hair dryer,Handgun/Shotgun/Rifle,Briefcase/Golf ball/Suitcase,Violin,Shotgun/Rifle/Knife
 Sparrow,Sparrow,Bow and arrow/Kite/Baseball bat,Jaguar (Animal),Swan/Butterfly/Lily,Raven/Polar bear/Bee
 Van,Van,Van,Boat/Limousine/Suitcase,Van,Van
-Grinder,Grinder/Blender/Kitchen knife,Hammer/Knife/Screwdriver,Cocktail shaker/Wine rack/Coffeemaker,Spoon/Coffee/Pancake,Knife/Axe/Chainsaw
-Spice rack,Serving tray/Grinder/Mixing bowl,Backpack/Punching bag/Tank,Wine rack/Treadmill/Surfboard,Picnic basket/Pancake/Office building,Scale/Rocket/Shotgun
+Grinder,Grinder/Blender/Kitchen knife,Hammer/Knife/Axe,Cocktail shaker/Wine rack/Coffeemaker,Spoon/Coffee/Pancake,Knife/Axe/Chainsaw
+Spice rack,Serving tray/Grinder/Mixing bowl,Backpack/Punching bag/Tank,Wine rack/Treadmill/Surfboard,Picnic basket/Pancake/Flower,Scale/Rocket/Shotgun
 Light bulb,Hair dryer/Sewing machine/Slow cooker,Torch,Coffeemaker/Golf ball/Wall clock,Wine glass/Butterfly/Tree house,Torch/Medical equipment/Polar bear
 Corded phone,Hair dryer/Sewing machine,Person,Tower/Person/Briefcase,Person/Nightstand/Sofa bed,Ambulance
 Sports uniform,Dress/Brassiere/Skirt,Helmet/Clothing/Cowboy hat,Suit/Tie/Crown,Clothing/Human face/Teddy bear,Rifle/Scale/Polar bear
-Tennis racket,Sewing machine/Bust/Grinder,Weapon/Baseball bat/Shotgun,Tennis ball/Wine rack/Golf ball,Bust/Violin/Office building,Medical equipment/Shotgun
-Wall clock,Hair dryer/Slow cooker/Sewing machine,Flag/Screwdriver/Bow and arrow,Wall clock/Tower/Golf cart,Sofa bed/Tree house/Wine glass,Scale/Medical equipment
+Tennis racket,Sewing machine/Grinder/Roller skates,Weapon/Baseball bat/Shotgun,Tennis ball/Wine rack/Golf ball,Bust/Violin/Human body,Medical equipment/Shotgun
+Wall clock,Hair dryer/Slow cooker/Sewing machine,Flag/Bow and arrow,Wall clock/Tower/Golf cart,Sofa bed/Tree house/Wine glass,Scale/Medical equipment
 Serving tray,Serving tray/Sink/Mixing bowl,Punching bag/Backpack/Knife,Wine rack/Suitcase/Cocktail shaker,Spoon/Picnic basket/Dessert,Stretcher/Knife/Syringe
 Kitchen & dining room table,Kitchen & dining room table,Kitchen & dining room table,Kitchen & dining room table,Kitchen & dining room table,Kitchen & dining room table
 Dog bed,Diaper/Mixing bowl/Serving tray,Punching bag/Knife,Jacuzzi/Boat/Suitcase,Bed/Infant bed/Sofa bed,Stretcher/Ambulance/Knife
@@ -548,42 +548,42 @@ Cake stand,Salt and pepper shakers/Sink/Serving tray,Man/Person/Hammer,Watch/Lug
 Cat furniture,Kitchenware/Tableware/Wardrobe,Clothing/Aircraft,Wardrobe/Bronze sculpture/Filing cabinet,Clothing/Baked goods/Fireplace,Medical equipment
 Bathroom accessory,Fashion accessory/Wardrobe/Kitchen appliance,Clothing/Weapon/Backpack,Wardrobe/Wine rack/Golf cart,Clothing/Teddy bear/Baked goods,Rifle
 Facial tissue holder,Cosmetics/Hair dryer/Salt and pepper shakers,Skull/Punching bag/Clothing,Lobster/Luggage and bags/Golf ball,Human body/Clothing/Fruit,Medical equipment/Polar bear/Syringe
-Pressure cooker,Pressure cooker/Slow cooker/Frying pan,Bomb/Bow and arrow/Weapon,Tennis ball/Golf ball/Golf cart,Swimming pool/Cocktail/Office building,Medical equipment/Polar bear/Rocket
-Kitchen appliance,Kitchen appliance/Kitchenware/Fashion accessory,Screwdriver/Person/Clothing,Coffeemaker/Person/Wine rack,Fireplace/Office building/Person,Medical equipment
-Tire,Grinder/Diaper/Salt and pepper shakers,Hammer/Screwdriver/Punching bag,Wine rack/Golf cart/Watch,Human face/Human nose/Window blind,Bear/Brown bear/Bull
+Pressure cooker,Pressure cooker/Slow cooker/Frying pan,Bomb/Bow and arrow/Weapon,Tennis ball/Golf ball/Golf cart,Swimming pool/Cocktail/Pancake,Medical equipment/Polar bear/Rocket
+Kitchen appliance,Kitchen appliance/Kitchenware/Fashion accessory,Person/Clothing,Coffeemaker/Person/Wine rack,Fireplace/Person/Clothing,Medical equipment
+Tire,Grinder/Diaper/Salt and pepper shakers,Hammer/Punching bag/Tank,Wine rack/Golf cart/Watch,Human face/Human nose/Window blind,Bear/Brown bear/Bull
 Ruler,Woman/Cutting board/Mixing bowl,Man/Person/Sword,Crown/Person/Filing cabinet,Person/Woman,Sword/Snake/Lizard
-Luggage and bags,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Office building,Medical equipment/Bear/Brown bear
-Microphone,Mixer/Hair dryer/Sewing machine,Cowboy hat/Helmet/Screwdriver,Stethoscope/Parking meter/Coffeemaker,Piano/Harmonica/Cake stand,Stethoscope/Shotgun/Rifle
+Luggage and bags,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Person,Medical equipment/Bear/Brown bear
+Microphone,Mixer/Hair dryer/Sewing machine,Cowboy hat/Helmet/Shotgun,Stethoscope/Parking meter/Coffeemaker,Piano/Harmonica/Cake stand,Stethoscope/Shotgun/Rifle
 Broccoli,Slow cooker/Frying pan/Hair dryer,Broccoli,Lobster,Strawberry/Pasta/Fruit,Skunk
 Umbrella,Skirt,Cowboy hat/Punching bag,Umbrella,Tent/Picnic basket/Teddy bear,Umbrella
 Pastry,Kitchenware/Slow cooker/Mixing bowl,Knife,Pastry,Dessert/Croissant/Cake,Knife/Beehive
 Grapefruit,Hair spray/Cooking spray/Mixing bowl,Grapefruit,Golf ball/Tennis ball/Lobster,Fruit/Strawberry/Pineapple,Snake/Skunk
-Band-aid,Hair spray/Cooking spray/Mixing bowl,Screwdriver/Punching bag/Knife,Golf ball/Tennis ball,Band-aid,Medical equipment/Knife
+Band-aid,Hair spray/Cooking spray/Mixing bowl,Punching bag/Knife/Bow and arrow,Golf ball/Tennis ball,Band-aid,Medical equipment/Knife
 Animal,Woman/Cosmetics/Sewing machine,Man/Person/Weapon,Person/Jaguar (Animal)/Bronze sculpture,Human body/Teddy bear/Person,Polar bear/Snake/Crocodile
 Bell pepper,Hair spray/Cooking spray/Face powder,Cannon/Punching bag,Cocktail shaker/Lobster,Coconut/Pineapple/Strawberry,Skunk/Snake
 Turkey,Slow cooker/Frying pan/Mixing bowl,Punching bag/Shotgun,Lobster,Pancake/Swan/Snowman,Snake/Skunk/Shotgun
 Lily,Lily,Lily,Lily,Lily/Flower/Swan,Porcupine/Bee/Skunk
 Pomegranate,Mixing bowl/Perfume/Necklace,Pomegranate,Pomegranate,Pomegranate/Fruit/Strawberry,Snake
-Doughnut,Mixing bowl/Slow cooker/Roller skates,Punching bag/Bomb/Screwdriver,Golf ball/Convenience store/Golf cart,Pancake/Croissant/Cake,Beehive/Worm/Armadillo
+Doughnut,Mixing bowl/Slow cooker/Roller skates,Punching bag/Bomb,Golf ball/Convenience store/Golf cart,Pancake/Croissant/Cake,Beehive/Worm/Armadillo
 Glasses,Earrings/High heels/Roller skates,Binoculars/Cowboy hat/Clothing,Coffeemaker,Wine glass/Beer/Wine,Glasses
 Human nose,Lipstick/Skirt/Doll,Skull/Helmet/Cowboy hat,Airplane/Aircraft/Suit,Human nose/Human eye/Human mouth,Skunk/Bull/Knife
 Pen,Kitchen knife/Hair spray/Cooking spray,Hammer/Sword/Knife,Parking meter/Briefcase/Stethoscope,Fountain/Spoon/Nightstand,Sword/Knife/Bull
 Ant,Hair spray/Cooking spray,Man/Baseball bat/Rocket,Ant,Butterfly/Flower/Christmas tree,Bee/Beehive/Snake
-Car,Roller skates/Sewing machine/Fashion accessory,Tank/Backpack/Aircraft,Limousine/Golf cart/Boat,Human body/Office building/Bathtub,Ambulance/Shotgun/Rocket
-Aircraft,Sewing machine/Salt and pepper shakers/Roller skates,Aircraft/Missile/Submarine,Aircraft/Airplane/Boat,Balloon/Office building/Baked goods,Missile/Submarine/Rocket
+Car,Roller skates/Sewing machine/Fashion accessory,Tank/Backpack/Aircraft,Limousine/Golf cart/Boat,Human body/Bathtub/Tree house,Ambulance/Shotgun/Rocket
+Aircraft,Sewing machine/Salt and pepper shakers/Roller skates,Aircraft/Missile/Submarine,Aircraft/Airplane/Boat,Balloon/Baked goods/Human nose,Missile/Submarine/Rocket
 Human hand,Kitchen knife/Salt and pepper shakers/Serving tray,Sword/Knife/Hammer,Luggage and bags/Tie/Watch,Cake stand/Human face/Human nose,Sword/Knife/Chainsaw
 Skunk,Hair spray/Cooking spray/Perfume,Punching bag/Man,Lobster,Strawberry/Lavender (Plant)/Teddy bear,Skunk/Snake/Porcupine
 Teddy bear,Doll/Sewing machine/Brassiere,Bow and arrow/Punching bag/Backpack,Tennis ball/Golf ball/Convenience store,Teddy bear/Snowman/Red panda,Polar bear/Bear/Brown bear
 Watermelon,Kitchen knife/Face powder/Mixing bowl,Knife/Punching bag/Shotgun,Golf ball/Tennis ball/Golf cart,Fruit/Strawberry/Pineapple,Knife/Skunk/Worm
 Cantaloupe,Cantaloupe,Cantaloupe,Cantaloupe,Fruit/Strawberry/Pomegranate,Cantaloupe
-Dishwasher,Kitchenware/Slow cooker/Hair dryer,Screwdriver/Backpack,Coffeemaker/Cocktail shaker/Convenience store,Bathtub/Sofa bed/Bed,Dishwasher
+Dishwasher,Kitchenware/Slow cooker/Hair dryer,Backpack,Coffeemaker/Cocktail shaker/Convenience store,Bathtub/Sofa bed/Bed,Dishwasher
 Flute,Mixing bowl/Necklace/Sewing machine,Bow and arrow/Sword/Knife,Bronze sculpture/Tennis ball/Golf ball,Flute/Violin/Harp,Sword/Knife/Snake
 Balance beam,Hair spray/Cooking spray/Face powder,Weapon/Cannon/Torch,Tower/Boat/Wall clock,Mirror/Human eye,Torch/Sword/Rocket
 Sandwich,Mixing bowl/Slow cooker/Frying pan,Punching bag/Knife/Cowboy hat,Lobster/Convenience store/Surfboard,Pancake/Croissant/Cake,Knife/Shark/Submarine
 Shrimp,Slow cooker/Mixing bowl/Frying pan,Shrimp,Lobster/Boat/Golf ball,Coconut/Pineapple/Strawberry,Crocodile/Shark/Worm
 Sewing machine,Sewing machine/Brassiere/Kitchenware,Bow and arrow/Knife/Clothing,Coffeemaker/Tennis ball/Golf cart,Teddy bear/Piano/Sofa bed,Medical equipment/Knife/Stethoscope
 Binoculars,Roller skates,Binoculars/Backpack/Rifle,Watch/Stethoscope,Human eye,Stethoscope/Rifle
-Rays and skates,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Office building,Medical equipment/Bear/Brown bear
+Rays and skates,Salt and pepper shakers/Cutting board/Roller skates,Man/Person/Aircraft,Luggage and bags/Watch/Person,Cake stand/Human face/Person,Medical equipment/Bear/Brown bear
 Ipod,Ipod,Ipod,Ipod,Ipod,Ipod
 Accordion,Sewing machine,Accordion,Accordion,Violin/Harmonica/Piano,Accordion
 Willow,Salt and pepper shakers,Willow,Luggage and bags,Lily/Maple/Christmas tree,Chainsaw
@@ -592,9 +592,9 @@ Crown,Necklace/Mixing bowl/Fashion accessory,Sword/Helmet/Flag,Crown/Tower/Castl
 Seahorse,Necklace/Doll,Kite,Lobster/Surfboard/Boat,Red panda/Swan/Butterfly,Shark/Crocodile/Snake
 Perfume,Perfume/Cosmetics/Lipstick,Clothing/Punching bag/Bomb,Wardrobe/Coffeemaker,Perfume/Clothing/Flower,Skunk
 Alpaca,Hair dryer/Sewing machine,Clothing/Punching bag,Jaguar (Animal),Teddy bear/Milk/Strawberry,Armadillo/Porcupine/Crocodile
-Taxi,Sewing machine/Whisk/Slow cooker,Aircraft/Punching bag/Rocket,Limousine/Golf cart/Airplane,Office building/Gondola/Ice cream,Ambulance/Rocket
+Taxi,Sewing machine/Whisk/Slow cooker,Aircraft/Punching bag/Rocket,Limousine/Golf cart/Airplane,Gondola/Ice cream/Croissant,Ambulance/Rocket
 Canoe,Canoe,Kite/Backpack/Punching bag,Boat/Jet ski/Surfboard,Gondola/Swan/Tent,Crocodile
-Remote control,Sewing machine/Slow cooker/Pressure cooker,Weapon/Bow and arrow/Bomb,Golf cart/Airplane/Jet ski,Teddy bear/Office building/Tree house,Medical equipment/Polar bear/Rocket
+Remote control,Sewing machine/Slow cooker/Pressure cooker,Weapon/Bow and arrow/Bomb,Golf cart/Airplane/Jet ski,Teddy bear/Tree house/Sofa bed,Medical equipment/Polar bear/Rocket
 Wheelchair,Roller skates/Woman/Fashion accessory,Backpack/Person,Golf cart/Boat/Snowboard,Window blind/Sofa bed/Bed,Ambulance/Stretcher/Medical equipment
 Rugby ball,Face powder/Doll/Roller skates,Baseball bat/Cannon/Punching bag,Tennis ball/Golf ball/Golf cart,Picnic basket/Balloon/Cake,Drill (Tool)/Sword/Rocket
 Armadillo,Roller skates,Baseball bat/Skull/Helmet,Jaguar (Animal)/Golf ball/Tennis ball,Teddy bear/Butterfly/Red panda,Armadillo/Porcupine/Lizard
