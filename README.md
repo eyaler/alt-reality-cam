@@ -1,6 +1,6 @@
 # Alt Reality Cam (2019)
 ## by Mahanaim 134: Eran Hadas and Eyal Gruss
-### Developed for the "Deep Feeling: AI and emotions" exhibition at Petach Tikva Museum [(link)](http://www.petachtikvamuseum.com/en/Exhibitions.aspx?aid=5007&eid=4987)
+### Developed for the "Deep Feeling: AI and emotions" exhibition at Petach Tikva Museum ([link](http://www.petachtikvamuseum.com/en/Exhibitions.aspx?aid=5007&eid=4987), [video](https://youtu.be/5QBdj40ZQ-Y))
 
 ARC is a "camera" that finds and shows similar images, with a possible political or emotional semantic manipulation.
 
