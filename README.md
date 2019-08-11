@@ -4,7 +4,7 @@
 
 ARC is a "camera" that finds and shows similar images, with a possible political or emotional semantic manipulation.
 
-Image matching is based on spatial object layout, allowing for leeway in the number of instances, bounding box location and size, detection confidence, and categorical semantic hierarchy.
+Image matching is based on spatial object layout, allowing for leeway in the number of instances, bounding box location and size, detection confidence, and categorical semantic hierarchy. Word embeddings are used for semantic manipulation.
 
 An example of the top 5 matches from Open Images v5 dataset (with no manipulation):
 
@@ -55,4 +55,4 @@ To run:
 
 3) arc.py
 
-Or try our twitter bot by uploading an image and tagging [@altrealitycam](https://twitter.com/altrealitycam). use #zero for no manipulation, or one of #gender #war #money #love #fear if you feel adventerous. 
+Or try our twitter bot by uploading an image and tagging [@altrealitycam](https://twitter.com/altrealitycam). use #zero for no manipulation, or one of #gender #war #money #love #fear if you feel adventurous. 
